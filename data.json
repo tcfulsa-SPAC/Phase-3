@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-20 13:34",
+ "generated": "2026-08-20 13:41",
  "filters": {
   "min_cap": 100000000.0,
   "max_cap": 20000000000.0,
@@ -19,11 +19,23 @@
    "sponsor_names": [
     "Genelux Corporation"
    ],
-   "market_cap": 123972218.33149314,
+   "market_cap": 123067312.49447942,
    "cap_bucket": "Micro",
-   "price": 2.740000009536743,
+   "price": 2.7200000286102295,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.16667,
+   "analyst_count": 6,
+   "target_price": 17.5,
+   "upside_pct": 543.4,
+   "rating_spread": [
+    1,
+    5,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -64,11 +76,23 @@
    "sponsor_names": [
     "TuHURA Biosciences, Inc."
    ],
-   "market_cap": 147208481.62353373,
+   "market_cap": 146889856.43921065,
    "cap_bucket": "Micro",
-   "price": 2.309999942779541,
+   "price": 2.305000066757202,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.5,
+   "analyst_count": 5,
+   "target_price": 8.04,
+   "upside_pct": 248.8,
+   "rating_spread": [
+    2,
+    2,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -102,11 +126,23 @@
    "sponsor_names": [
     "Corbus Pharmaceuticals Inc."
    ],
-   "market_cap": 191188685.73187065,
+   "market_cap": 191285394.41030598,
    "cap_bucket": "Micro",
-   "price": 9.885000228881836,
+   "price": 9.890000343322754,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.1,
+   "analyst_count": 10,
+   "target_price": 34.525,
+   "upside_pct": 249.1,
+   "rating_spread": [
+    1,
+    9,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -141,11 +177,23 @@
    "sponsor_names": [
     "Protara Therapeutics"
    ],
-   "market_cap": 219224629.7417333,
+   "market_cap": 220320613.32804298,
    "cap_bucket": "Micro",
-   "price": 3.9005000591278076,
+   "price": 3.9200000762939453,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.25,
+   "analyst_count": 7,
+   "target_price": 25.71429,
+   "upside_pct": 556.0,
+   "rating_spread": [
+    2,
+    6,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -174,54 +222,29 @@
    ]
   },
   {
-   "ticker": "GLSI",
-   "name": "Greenwich LifeSciences, Inc.",
-   "cik": 1799788,
-   "sponsor_names": [
-    "Greenwich LifeSciences, Inc."
-   ],
-   "market_cap": 254520126.72,
-   "cap_bucket": "Micro",
-   "price": 17.34,
-   "currency": "USD",
-   "sector": null,
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT05232916",
-     "title": "Phase 3 Study to Evaluate the Efficacy and Safety of HER2/Neu Peptide GLSI-100 (GP2 + GM-CSF) in HER2/Neu Positive Subjects",
-     "area": "Oncology",
-     "sponsor": "Greenwich LifeSciences, Inc.",
-     "status": "RECRUITING",
-     "start_date": "2022-12-16",
-     "primary_completion": "2031-12",
-     "conditions": [
-      "Breast Cancer"
-     ],
-     "enrollment": 2250,
-     "interventions": [
-      "Placebo",
-      "GLSI-100"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05232916"
-    }
-   ]
-  },
-  {
    "ticker": "SLGL",
    "name": "Sol-Gel Technologies Ltd.",
    "cik": 1684693,
    "sponsor_names": [
     "Sol-Gel Technologies, Ltd."
    ],
-   "market_cap": 255045769.3,
+   "market_cap": 249463913.81340027,
    "cap_bucket": "Micro",
-   "price": 78.59,
+   "price": 76.87000274658203,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 3,
+   "target_price": 193.0,
+   "upside_pct": 151.1,
+   "rating_spread": [
+    0,
+    4,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -248,6 +271,55 @@
    ]
   },
   {
+   "ticker": "GLSI",
+   "name": "Greenwich LifeSciences, Inc.",
+   "cik": 1799788,
+   "sponsor_names": [
+    "Greenwich LifeSciences, Inc."
+   ],
+   "market_cap": 256868640.0,
+   "cap_bucket": "Micro",
+   "price": 17.5,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 2,
+   "target_price": 57.0,
+   "upside_pct": 225.7,
+   "rating_spread": [
+    0,
+    2,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT05232916",
+     "title": "Phase 3 Study to Evaluate the Efficacy and Safety of HER2/Neu Peptide GLSI-100 (GP2 + GM-CSF) in HER2/Neu Positive Subjects",
+     "area": "Oncology",
+     "sponsor": "Greenwich LifeSciences, Inc.",
+     "status": "RECRUITING",
+     "start_date": "2022-12-16",
+     "primary_completion": "2031-12",
+     "conditions": [
+      "Breast Cancer"
+     ],
+     "enrollment": 2250,
+     "interventions": [
+      "Placebo",
+      "GLSI-100"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05232916"
+    }
+   ]
+  },
+  {
    "ticker": "ALXO",
    "name": "ALX ONCOLOGY HOLDINGS INC",
    "cik": 1810182,
@@ -258,7 +330,19 @@
    "cap_bucket": "Micro",
    "price": 2.0399999618530273,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.42857,
+   "analyst_count": 5,
+   "target_price": 4.6,
+   "upside_pct": 125.5,
+   "rating_spread": [
+    1,
+    5,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -299,7 +383,19 @@
    "cap_bucket": "Micro",
    "price": 77.66,
    "currency": "USD",
-   "sector": null,
+   "sector": "Communication Equipment",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 1,
+   "target_price": 97.0,
+   "upside_pct": 24.9,
+   "rating_spread": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -352,11 +448,23 @@
    "sponsor_names": [
     "Cartesian Therapeutics"
    ],
-   "market_cap": 312840339.68,
+   "market_cap": 314504397.889801,
    "cap_bucket": "Small",
-   "price": 10.34,
+   "price": 10.395000457763672,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.125,
+   "analyst_count": 7,
+   "target_price": 34.57143,
+   "upside_pct": 232.6,
+   "rating_spread": [
+    1,
+    7,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -389,11 +497,23 @@
    "sponsor_names": [
     "Immuneering Corporation"
    ],
-   "market_cap": 344837147.72397995,
+   "market_cap": 341207630.4809284,
    "cap_bucket": "Small",
-   "price": 5.329999923706055,
+   "price": 5.273900032043457,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.25,
+   "analyst_count": 8,
+   "target_price": 18.25,
+   "upside_pct": 246.0,
+   "rating_spread": [
+    2,
+    6,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -434,11 +554,23 @@
    "sponsor_names": [
     "Lyell Immunopharma, Inc."
    ],
-   "market_cap": 387671323.14162445,
+   "market_cap": 386691118.4364214,
    "cap_bucket": "Small",
-   "price": 15.819999694824219,
+   "price": 15.779999732971191,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.625,
+   "analyst_count": 8,
+   "target_price": 37.875,
+   "upside_pct": 140.0,
+   "rating_spread": [
+    2,
+    5,
+    0,
+    0,
+    1
+   ],
    "areas": [
     "Oncology"
    ],
@@ -484,7 +616,19 @@
    "cap_bucket": "Small",
    "price": 4.550000190734863,
    "currency": "USD",
-   "sector": null,
+   "sector": "Business Equipment & Supplies",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 1,
+   "target_price": 6.0,
+   "upside_pct": 31.9,
+   "rating_spread": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -516,11 +660,23 @@
    "sponsor_names": [
     "Relmada Therapeutics, Inc."
    ],
-   "market_cap": 508815163.38543415,
+   "market_cap": 507215129.9373951,
    "cap_bucket": "Small",
-   "price": 4.769999980926514,
+   "price": 4.755000114440918,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.16667,
+   "analyst_count": 6,
+   "target_price": 12.66667,
+   "upside_pct": 166.4,
+   "rating_spread": [
+    1,
+    5,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -556,11 +712,23 @@
    "sponsor_names": [
     "Kyverna Therapeutics"
    ],
-   "market_cap": 530616744.80171967,
+   "market_cap": 534636601.689682,
    "cap_bucket": "Small",
-   "price": 8.579999923706055,
+   "price": 8.645000457763672,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.33333,
+   "analyst_count": 5,
+   "target_price": 30.4,
+   "upside_pct": 251.6,
+   "rating_spread": [
+    2,
+    4,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -595,11 +763,23 @@
    "sponsor_names": [
     "Delcath Systems Inc."
    ],
-   "market_cap": 590573506.7838478,
+   "market_cap": 589876073.4996414,
    "cap_bucket": "Small",
-   "price": 17.020000457763672,
+   "price": 16.999900817871094,
    "currency": "USD",
-   "sector": null,
+   "sector": "Medical Devices",
+   "rating": "strong_buy",
+   "rating_mean": 1.2,
+   "analyst_count": 5,
+   "target_price": 24.0,
+   "upside_pct": 41.2,
+   "rating_spread": [
+    1,
+    4,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -651,11 +831,23 @@
    "sponsor_names": [
     "Eikon Therapeutics"
    ],
-   "market_cap": 647272098.1688404,
+   "market_cap": 632647566.9298553,
    "cap_bucket": "Small",
-   "price": 11.949999809265137,
+   "price": 11.680000305175781,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 2.0,
+   "analyst_count": 5,
+   "target_price": 24.6,
+   "upside_pct": 110.6,
+   "rating_spread": [
+    2,
+    3,
+    0,
+    1,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -724,54 +916,29 @@
    ]
   },
   {
-   "ticker": "ANGO",
-   "name": "ANGIODYNAMICS INC",
-   "cik": 1275187,
-   "sponsor_names": [
-    "Angiodynamics, Inc."
-   ],
-   "market_cap": 650571793.3997669,
-   "cap_bucket": "Small",
-   "price": 15.739999771118164,
-   "currency": "USD",
-   "sector": null,
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT03899636",
-     "title": "A Pivotal Study of Safety and Effectiveness of NanoKnife IRE for Stage 3 Pancreatic Cancer",
-     "area": "Oncology",
-     "sponsor": "Angiodynamics, Inc.",
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2021-02-23",
-     "primary_completion": "2025-04",
-     "conditions": [
-      "Stage III Pancreatic Cancer"
-     ],
-     "enrollment": 528,
-     "interventions": [
-      "Modified FOLFIRINOX Regimen",
-      "NanoKnife System"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT03899636"
-    }
-   ]
-  },
-  {
    "ticker": "VSTM",
    "name": "Verastem, Inc.",
    "cik": 1526119,
    "sponsor_names": [
     "Verastem, Inc."
    ],
-   "market_cap": 662471576.0970817,
+   "market_cap": 650698318.4029183,
    "cap_bucket": "Small",
-   "price": 7.315000057220459,
+   "price": 7.184999942779541,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.11111,
+   "analyst_count": 8,
+   "target_price": 14.75,
+   "upside_pct": 105.3,
+   "rating_spread": [
+    1,
+    8,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -802,17 +969,78 @@
    ]
   },
   {
+   "ticker": "ANGO",
+   "name": "ANGIODYNAMICS INC",
+   "cik": 1275187,
+   "sponsor_names": [
+    "Angiodynamics, Inc."
+   ],
+   "market_cap": 662764851.308178,
+   "cap_bucket": "Small",
+   "price": 16.03499984741211,
+   "currency": "USD",
+   "sector": "Medical Instruments & Supplies",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 4,
+   "target_price": 20.0,
+   "upside_pct": 24.7,
+   "rating_spread": [
+    0,
+    4,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT03899636",
+     "title": "A Pivotal Study of Safety and Effectiveness of NanoKnife IRE for Stage 3 Pancreatic Cancer",
+     "area": "Oncology",
+     "sponsor": "Angiodynamics, Inc.",
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2021-02-23",
+     "primary_completion": "2025-04",
+     "conditions": [
+      "Stage III Pancreatic Cancer"
+     ],
+     "enrollment": 528,
+     "interventions": [
+      "Modified FOLFIRINOX Regimen",
+      "NanoKnife System"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT03899636"
+    }
+   ]
+  },
+  {
    "ticker": "OCS",
    "name": "Oculis Holding AG",
    "cik": 1953530,
    "sponsor_names": [
     "Oculis"
    ],
-   "market_cap": 740187715.8935528,
+   "market_cap": 746851064.858882,
    "cap_bucket": "Small",
-   "price": 13.329999923706055,
+   "price": 13.449999809265137,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.3,
+   "analyst_count": 10,
+   "target_price": 36.588673,
+   "upside_pct": 172.0,
+   "rating_spread": [
+    3,
+    7,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -846,11 +1074,23 @@
    "sponsor_names": [
     "Aura Biosciences"
    ],
-   "market_cap": 805786363.9519877,
+   "market_cap": 791267704.5380735,
    "cap_bucket": "Small",
-   "price": 7.769999980926514,
+   "price": 7.630000114440918,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.16667,
+   "analyst_count": 5,
+   "target_price": 16.6,
+   "upside_pct": 117.6,
+   "rating_spread": [
+    1,
+    5,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -914,11 +1154,23 @@
    "sponsor_names": [
     "Olema Pharmaceuticals, Inc."
    ],
-   "market_cap": 958098779.9611559,
+   "market_cap": 960286270.2026882,
    "cap_bucket": "Small",
-   "price": 10.949999809265137,
+   "price": 10.975000381469727,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.33333,
+   "analyst_count": 10,
+   "target_price": 39.3,
+   "upside_pct": 258.1,
+   "rating_spread": [
+    2,
+    9,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -983,11 +1235,23 @@
    "sponsor_names": [
     "Candel Therapeutics, Inc."
    ],
-   "market_cap": 971197026.3301134,
+   "market_cap": 967899859.9850378,
    "cap_bucket": "Small",
-   "price": 13.255000114440918,
+   "price": 13.210000038146973,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.22222,
+   "analyst_count": 8,
+   "target_price": 20.875,
+   "upside_pct": 58.0,
+   "rating_spread": [
+    0,
+    8,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1040,11 +1304,23 @@
    "sponsor_names": [
     "Geron Corporation"
    ],
-   "market_cap": 1011895649.8105195,
+   "market_cap": 1021532741.7548636,
    "cap_bucket": "Small",
-   "price": 1.5750000476837158,
+   "price": 1.590000033378601,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.6,
+   "analyst_count": 4,
+   "target_price": 4.25,
+   "upside_pct": 167.3,
+   "rating_spread": [
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1077,11 +1353,23 @@
    "sponsor_names": [
     "Kura Oncology, Inc."
    ],
-   "market_cap": 1093770817.3921566,
+   "market_cap": 1085764348.1078434,
    "cap_bucket": "Small",
-   "price": 12.295000076293945,
+   "price": 12.204999923706055,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.26667,
+   "analyst_count": 12,
+   "target_price": 32.0,
+   "upside_pct": 162.2,
+   "rating_spread": [
+    2,
+    12,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1118,11 +1406,23 @@
    "sponsor_names": [
     "Corvus Pharmaceuticals, Inc."
    ],
-   "market_cap": 1279816020.8368683,
+   "market_cap": 1265178994.5510406,
    "cap_bucket": "Small",
-   "price": 15.21399974822998,
+   "price": 15.039999961853027,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.125,
+   "analyst_count": 7,
+   "target_price": 33.14286,
+   "upside_pct": 120.4,
+   "rating_spread": [
+    1,
+    7,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1162,11 +1462,23 @@
    "sponsor_names": [
     "Vor Biopharma"
    ],
-   "market_cap": 1370790356.4937248,
+   "market_cap": 1370198720.0125504,
    "cap_bucket": "Small",
-   "price": 23.170000076293945,
+   "price": 23.15999984741211,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.33333,
+   "analyst_count": 8,
+   "target_price": 39.0,
+   "upside_pct": 68.4,
+   "rating_spread": [
+    1,
+    7,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1199,11 +1511,23 @@
    "sponsor_names": [
     "Replimune, Inc."
    ],
-   "market_cap": 1372780038.6264496,
+   "market_cap": 1384557492.8764496,
    "cap_bucket": "Small",
-   "price": 14.569999694824219,
+   "price": 14.694999694824219,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.75,
+   "analyst_count": 6,
+   "target_price": 19.33333,
+   "upside_pct": 31.6,
+   "rating_spread": [
+    2,
+    5,
+    0,
+    1,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -1278,11 +1602,23 @@
    "sponsor_names": [
     "MoonLake Immunotherapeutics AG"
    ],
-   "market_cap": 1413622089.7949982,
+   "market_cap": 1390643245.8862495,
    "cap_bucket": "Small",
-   "price": 16.610000610351562,
+   "price": 16.34000015258789,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.86667,
+   "analyst_count": 13,
+   "target_price": 28.53846,
+   "upside_pct": 74.7,
+   "rating_spread": [
+    1,
+    10,
+    2,
+    2,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1316,11 +1652,23 @@
    "sponsor_names": [
     "ArriVent BioPharma, Inc."
    ],
-   "market_cap": 1465918760.598713,
+   "market_cap": 1462220737.3519306,
    "cap_bucket": "Small",
-   "price": 29.729999542236328,
+   "price": 29.655000686645508,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 10,
+   "target_price": 44.7,
+   "upside_pct": 50.7,
+   "rating_spread": [
+    0,
+    11,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1379,11 +1727,23 @@
    "sponsor_names": [
     "Inhibrx Biosciences, Inc"
    ],
-   "market_cap": 1479124830.0,
+   "market_cap": 1480596573.542633,
    "cap_bucket": "Small",
-   "price": 100.5,
+   "price": 100.5999984741211,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.66667,
+   "analyst_count": 2,
+   "target_price": 277.5,
+   "upside_pct": 175.8,
+   "rating_spread": [
+    0,
+    2,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1420,7 +1780,19 @@
    "cap_bucket": "Small",
    "price": 14.430000305175781,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.28571,
+   "analyst_count": 12,
+   "target_price": 20.66667,
+   "upside_pct": 43.2,
+   "rating_spread": [
+    2,
+    11,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Allergy",
     "Oncology"
@@ -1476,11 +1848,23 @@
    "sponsor_names": [
     "Ascentage Pharma Group Inc."
    ],
-   "market_cap": 1679136515.84,
+   "market_cap": 1669802737.2714844,
    "cap_bucket": "Small",
-   "price": 17.99,
+   "price": 17.889999389648438,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.22222,
+   "analyst_count": 9,
+   "target_price": 47.55556,
+   "upside_pct": 165.8,
+   "rating_spread": [
+    2,
+    7,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1610,11 +1994,23 @@
    "sponsor_names": [
     "Bicara Therapeutics"
    ],
-   "market_cap": 1685632727.3452644,
+   "market_cap": 1670192278.7328072,
    "cap_bucket": "Small",
-   "price": 25.655000686645508,
+   "price": 25.420000076293945,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.64286,
+   "analyst_count": 13,
+   "target_price": 33.38462,
+   "upside_pct": 31.3,
+   "rating_spread": [
+    3,
+    8,
+    3,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1649,11 +2045,23 @@
    "sponsor_names": [
     "Health Hope Pharma"
    ],
-   "market_cap": 1778166366.8659286,
+   "market_cap": 1775611471.6703568,
    "cap_bucket": "Small",
-   "price": 13.920000076293945,
+   "price": 13.899999618530273,
    "currency": "USD",
-   "sector": null,
+   "sector": "Banks - Regional",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 4,
+   "target_price": 15.5,
+   "upside_pct": 11.5,
+   "rating_spread": [
+    0,
+    2,
+    2,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1687,11 +2095,23 @@
    "sponsor_names": [
     "Intellia Therapeutics"
    ],
-   "market_cap": 1796704394.5701723,
+   "market_cap": 1790118449.6209087,
    "cap_bucket": "Small",
-   "price": 12.821999549865723,
+   "price": 12.774999618530273,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 2.26316,
+   "analyst_count": 17,
+   "target_price": 23.94118,
+   "upside_pct": 87.4,
+   "rating_spread": [
+    1,
+    9,
+    6,
+    2,
+    1
+   ],
    "areas": [
     "Allergy"
    ],
@@ -1724,11 +2144,23 @@
    "sponsor_names": [
     "Syndax Pharmaceuticals"
    ],
-   "market_cap": 1815973847.3672218,
+   "market_cap": 1814733312.3975487,
    "cap_bucket": "Small",
-   "price": 20.493999481201172,
+   "price": 20.479999542236328,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.16667,
+   "analyst_count": 11,
+   "target_price": 37.90909,
+   "upside_pct": 85.1,
+   "rating_spread": [
+    2,
+    10,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1756,53 +2188,29 @@
    ]
   },
   {
-   "ticker": "LKFT",
-   "name": "Lakefront Biotherapeutics NV",
-   "cik": 1421876,
-   "sponsor_names": [
-    "Lakefront Biotherapeutics NV"
-   ],
-   "market_cap": 1877445493.8960838,
-   "cap_bucket": "Small",
-   "price": 28.670000076293945,
-   "currency": "USD",
-   "sector": null,
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT06652633",
-     "title": "Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies",
-     "area": "Oncology",
-     "sponsor": "Lakefront Biotherapeutics NV",
-     "status": "RECRUITING",
-     "start_date": "2024-09-09",
-     "primary_completion": "2039-07",
-     "conditions": [
-      "Hematological Malignancies"
-     ],
-     "enrollment": 546,
-     "interventions": [
-      "GLPG CAR T-cell therapy"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06652633"
-    }
-   ]
-  },
-  {
    "ticker": "IMCR",
    "name": "Immunocore Ltd",
    "cik": null,
    "sponsor_names": [
     "Immunocore Ltd"
    ],
-   "market_cap": 1884849382.2,
+   "market_cap": 1868112410.2556534,
    "cap_bucket": "Small",
-   "price": 36.6,
+   "price": 36.275001525878906,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 11,
+   "target_price": 63.63436,
+   "upside_pct": 75.4,
+   "rating_spread": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -1869,17 +2277,77 @@
    ]
   },
   {
+   "ticker": "LKFT",
+   "name": "Lakefront Biotherapeutics NV",
+   "cik": 1421876,
+   "sponsor_names": [
+    "Lakefront Biotherapeutics NV"
+   ],
+   "market_cap": 1883993985.876503,
+   "cap_bucket": "Small",
+   "price": 28.770000457763672,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "hold",
+   "rating_mean": 3.4,
+   "analyst_count": 3,
+   "target_price": 23.907585,
+   "upside_pct": -16.9,
+   "rating_spread": [
+    0,
+    0,
+    4,
+    1,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT06652633",
+     "title": "Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies",
+     "area": "Oncology",
+     "sponsor": "Lakefront Biotherapeutics NV",
+     "status": "RECRUITING",
+     "start_date": "2024-09-09",
+     "primary_completion": "2039-07",
+     "conditions": [
+      "Hematological Malignancies"
+     ],
+     "enrollment": 546,
+     "interventions": [
+      "GLPG CAR T-cell therapy"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06652633"
+    }
+   ]
+  },
+  {
    "ticker": "PVLA",
    "name": "PALVELLA THERAPEUTICS, INC.",
    "cik": 1583648,
    "sponsor_names": [
     "Palvella Therapeutics, Inc."
    ],
-   "market_cap": 2099016626.2296753,
+   "market_cap": 2079709413.6148376,
    "cap_bucket": "Mid",
-   "price": 145.67999267578125,
+   "price": 144.33999633789062,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 15,
+   "target_price": 230.53333,
+   "upside_pct": 59.7,
+   "rating_spread": [
+    0,
+    15,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1911,11 +2379,23 @@
    "sponsor_names": [
     "NovoCure GmbH"
    ],
-   "market_cap": 2121515193.622284,
+   "market_cap": 2119314376.8411255,
    "cap_bucket": "Mid",
-   "price": 18.218900680541992,
+   "price": 18.200000762939453,
    "currency": "USD",
-   "sector": null,
+   "sector": "Medical Devices",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 7,
+   "target_price": 27.14286,
+   "upside_pct": 49.1,
+   "rating_spread": [
+    1,
+    3,
+    3,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -1969,11 +2449,23 @@
    "sponsor_names": [
     "Generate Biomedicines"
    ],
-   "market_cap": 2130085703.333023,
+   "market_cap": 2160171488.0874863,
    "cap_bucket": "Mid",
-   "price": 16.595600128173828,
+   "price": 16.829999923706055,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.33333,
+   "analyst_count": 5,
+   "target_price": 25.6,
+   "upside_pct": 52.1,
+   "rating_spread": [
+    2,
+    4,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -2028,7 +2520,19 @@
    "cap_bucket": "Mid",
    "price": 12.547499656677246,
    "currency": "USD",
-   "sector": null,
+   "sector": "Drug Manufacturers - Specialty & Generic",
+   "rating": "buy",
+   "rating_mean": 1.76923,
+   "analyst_count": 14,
+   "target_price": 20.99143,
+   "upside_pct": 67.3,
+   "rating_spread": [
+    2,
+    7,
+    4,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2156,11 +2660,23 @@
    "sponsor_names": [
     "UroGen Pharma Ltd."
    ],
-   "market_cap": 2399546894.218582,
+   "market_cap": 2416488877.1152954,
    "cap_bucket": "Mid",
-   "price": 49.09000015258789,
+   "price": 49.43659973144531,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.375,
+   "analyst_count": 8,
+   "target_price": 60.0,
+   "upside_pct": 21.4,
+   "rating_spread": [
+    1,
+    6,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2231,11 +2747,23 @@
    "sponsor_names": [
     "Prestige Biopharma Limited"
    ],
-   "market_cap": 2448315296.96,
+   "market_cap": 2431260454.582443,
    "cap_bucket": "Mid",
-   "price": 51.68,
+   "price": 51.31999969482422,
    "currency": "USD",
-   "sector": null,
+   "sector": "Drug Manufacturers - Specialty & Generic",
+   "rating": "buy",
+   "rating_mean": 1.71429,
+   "analyst_count": 5,
+   "target_price": 67.8,
+   "upside_pct": 32.1,
+   "rating_spread": [
+    1,
+    4,
+    2,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2271,11 +2799,23 @@
    "sponsor_names": [
     "Nuvation Bio Inc."
    ],
-   "market_cap": 2498241722.42927,
+   "market_cap": 2485952462.8514233,
    "cap_bucket": "Mid",
-   "price": 7.114999771118164,
+   "price": 7.079999923706055,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.5,
+   "analyst_count": 10,
+   "target_price": 13.1,
+   "upside_pct": 85.0,
+   "rating_spread": [
+    3,
+    6,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2373,11 +2913,23 @@
    "sponsor_names": [
     "BioCryst Pharmaceuticals"
    ],
-   "market_cap": 2520853752.337656,
+   "market_cap": 2517020881.7289066,
    "cap_bucket": "Mid",
-   "price": 9.864999771118164,
+   "price": 9.850000381469727,
    "currency": "USD",
-   "sector": null,
+   "sector": "Drug Manufacturers - Specialty & Generic",
+   "rating": "strong_buy",
+   "rating_mean": 1.45455,
+   "analyst_count": 11,
+   "target_price": 20.81818,
+   "upside_pct": 111.4,
+   "rating_spread": [
+    3,
+    7,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -2428,11 +2980,23 @@
    "sponsor_names": [
     "Nektar Therapeutics"
    ],
-   "market_cap": 2561748798.1415405,
+   "market_cap": 2594867544.0,
    "cap_bucket": "Mid",
-   "price": 75.02999877929688,
+   "price": 76.0,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.27273,
+   "analyst_count": 9,
+   "target_price": 153.22221,
+   "upside_pct": 101.6,
+   "rating_spread": [
+    1,
+    9,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -2483,11 +3047,23 @@
    "sponsor_names": [
     "Sellas Life Sciences Group"
    ],
-   "market_cap": 2693866226.295313,
+   "market_cap": 2725327408.131563,
    "cap_bucket": "Mid",
-   "price": 13.699999809265137,
+   "price": 13.859999656677246,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.5,
+   "analyst_count": 2,
+   "target_price": 32.5,
+   "upside_pct": 134.5,
+   "rating_spread": [
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2524,11 +3100,23 @@
    "sponsor_names": [
     "Nurix Therapeutics, Inc."
    ],
-   "market_cap": 2849347208.77195,
+   "market_cap": 2831251073.158388,
    "cap_bucket": "Mid",
-   "price": 27.55500030517578,
+   "price": 27.3799991607666,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.4375,
+   "analyst_count": 16,
+   "target_price": 33.5,
+   "upside_pct": 22.4,
+   "rating_spread": [
+    5,
+    10,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2557,17 +3145,79 @@
    ]
   },
   {
+   "ticker": "IMNM",
+   "name": "Immunome Inc.",
+   "cik": 1472012,
+   "sponsor_names": [
+    "Immunome, Inc."
+   ],
+   "market_cap": 3253117610.851597,
+   "cap_bucket": "Mid",
+   "price": 28.725000381469727,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.21429,
+   "analyst_count": 13,
+   "target_price": 36.30769,
+   "upside_pct": 26.4,
+   "rating_spread": [
+    3,
+    11,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT04871282",
+     "title": "A Study of AL102 in Patients With Progressing Desmoid Tumors",
+     "area": "Oncology",
+     "sponsor": "Immunome, Inc.",
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2021-09-01",
+     "primary_completion": "2025-12-03",
+     "conditions": [
+      "Desmoid",
+      "Desmoid Tumor"
+     ],
+     "enrollment": 198,
+     "interventions": [
+      "AL102",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT04871282"
+    }
+   ]
+  },
+  {
    "ticker": "CLDX",
    "name": "Celldex Therapeutics, Inc.",
    "cik": 744218,
    "sponsor_names": [
     "Celldex Therapeutics"
    ],
-   "market_cap": 3250730013.087967,
+   "market_cap": 3293136032.2639008,
    "cap_bucket": "Mid",
-   "price": 41.39500045776367,
+   "price": 41.935001373291016,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.25,
+   "analyst_count": 15,
+   "target_price": 58.06667,
+   "upside_pct": 38.5,
+   "rating_spread": [
+    2,
+    13,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -2651,40 +3301,52 @@
    ]
   },
   {
-   "ticker": "IMNM",
-   "name": "Immunome Inc.",
-   "cik": 1472012,
+   "ticker": "PII",
+   "name": "Polaris Inc.",
+   "cik": 931015,
    "sponsor_names": [
-    "Immunome, Inc."
+    "Polaris Group"
    ],
-   "market_cap": 3279731306.5561676,
+   "market_cap": 3631582884.3144226,
    "cap_bucket": "Mid",
-   "price": 28.959999084472656,
+   "price": 63.81999969482422,
    "currency": "USD",
-   "sector": null,
+   "sector": "Recreational Vehicles",
+   "rating": "hold",
+   "rating_mean": 2.77778,
+   "analyst_count": 15,
+   "target_price": 72.73333,
+   "upside_pct": 14.0,
+   "rating_spread": [
+    1,
+    2,
+    14,
+    0,
+    1
+   ],
    "areas": [
     "Oncology"
    ],
    "trial_count": 1,
    "trials": [
     {
-     "nct_id": "NCT04871282",
-     "title": "A Study of AL102 in Patients With Progressing Desmoid Tumors",
+     "nct_id": "NCT05317819",
+     "title": "Study of ADI-PEG 20 Versus Placebo in Subjects With High Arginine Level and Unresectable Hepatocellular Carcinoma",
      "area": "Oncology",
-     "sponsor": "Immunome, Inc.",
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2021-09-01",
-     "primary_completion": "2025-12-03",
+     "sponsor": "Polaris Group",
+     "status": "RECRUITING",
+     "start_date": "2022-03-14",
+     "primary_completion": "2028-09",
      "conditions": [
-      "Desmoid",
-      "Desmoid Tumor"
+      "Hepatocellular Carcinoma",
+      "Advanced Hepatocellular Carcinoma"
      ],
-     "enrollment": 198,
+     "enrollment": 300,
      "interventions": [
-      "AL102",
+      "ADI-PEG20",
       "Placebo"
      ],
-     "url": "https://clinicaltrials.gov/study/NCT04871282"
+     "url": "https://clinicaltrials.gov/study/NCT05317819"
     }
    ]
   },
@@ -2695,11 +3357,23 @@
    "sponsor_names": [
     "Iovance Biotherapeutics, Inc."
    ],
-   "market_cap": 3623816814.65818,
+   "market_cap": 3703041542.997444,
    "cap_bucket": "Mid",
-   "price": 8.000100135803223,
+   "price": 8.175000190734863,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.66667,
+   "analyst_count": 9,
+   "target_price": 9.33333,
+   "upside_pct": 14.2,
+   "rating_spread": [
+    2,
+    5,
+    2,
+    0,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -2749,55 +3423,29 @@
    ]
   },
   {
-   "ticker": "PII",
-   "name": "Polaris Inc.",
-   "cik": 931015,
-   "sponsor_names": [
-    "Polaris Group"
-   ],
-   "market_cap": 3650076355.9586487,
-   "cap_bucket": "Mid",
-   "price": 64.1449966430664,
-   "currency": "USD",
-   "sector": null,
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT05317819",
-     "title": "Study of ADI-PEG 20 Versus Placebo in Subjects With High Arginine Level and Unresectable Hepatocellular Carcinoma",
-     "area": "Oncology",
-     "sponsor": "Polaris Group",
-     "status": "RECRUITING",
-     "start_date": "2022-03-14",
-     "primary_completion": "2028-09",
-     "conditions": [
-      "Hepatocellular Carcinoma",
-      "Advanced Hepatocellular Carcinoma"
-     ],
-     "enrollment": 300,
-     "interventions": [
-      "ADI-PEG20",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05317819"
-    }
-   ]
-  },
-  {
    "ticker": "IDYA",
    "name": "IDEAYA Biosciences, Inc.",
    "cik": 1676725,
    "sponsor_names": [
     "IDEAYA Biosciences"
    ],
-   "market_cap": 3680108860.8674927,
+   "market_cap": 3703517160.2161865,
    "cap_bucket": "Mid",
-   "price": 38.13999938964844,
+   "price": 38.382598876953125,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.33333,
+   "analyst_count": 13,
+   "target_price": 52.15385,
+   "upside_pct": 35.9,
+   "rating_spread": [
+    3,
+    11,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -2893,11 +3541,23 @@
    "sponsor_names": [
     "Arcus Biosciences, Inc."
    ],
-   "market_cap": 3782879351.2527847,
+   "market_cap": 3724143403.585846,
    "cap_bucket": "Mid",
-   "price": 30.07699966430664,
+   "price": 29.610000610351562,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.46154,
+   "analyst_count": 12,
+   "target_price": 38.33333,
+   "upside_pct": 29.5,
+   "rating_spread": [
+    0,
+    10,
+    3,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -2974,11 +3634,23 @@
    "sponsor_names": [
     "Relay Therapeutics, Inc."
    ],
-   "market_cap": 4413512314.586563,
+   "market_cap": 4395981000.825743,
    "cap_bucket": "Mid",
-   "price": 20.139999389648438,
+   "price": 20.059999465942383,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.21429,
+   "analyst_count": 13,
+   "target_price": 27.07692,
+   "upside_pct": 35.0,
+   "rating_spread": [
+    3,
+    11,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3017,11 +3689,23 @@
    "sponsor_names": [
     "Celcuity Inc"
    ],
-   "market_cap": 4510298769.2283325,
+   "market_cap": 4514946986.898834,
    "cap_bucket": "Mid",
-   "price": 92.17500305175781,
+   "price": 92.2699966430664,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.16667,
+   "analyst_count": 11,
+   "target_price": 161.54546,
+   "upside_pct": 75.1,
+   "rating_spread": [
+    2,
+    10,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3080,7 +3764,19 @@
    "cap_bucket": "Mid",
    "price": 8.1899995803833,
    "currency": "USD",
-   "sector": null,
+   "sector": "Drug Manufacturers - General",
+   "rating": "buy",
+   "rating_mean": 2.0,
+   "analyst_count": 2,
+   "target_price": 10.865,
+   "upside_pct": 32.7,
+   "rating_spread": [
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3117,11 +3813,23 @@
    "sponsor_names": [
     "Dianthus Therapeutics"
    ],
-   "market_cap": 6094191838.350914,
+   "market_cap": 6113598117.506569,
    "cap_bucket": "Mid",
-   "price": 111.4800033569336,
+   "price": 111.83499908447266,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 13,
+   "target_price": 137.61539,
+   "upside_pct": 23.1,
+   "rating_spread": [
+    0,
+    14,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3156,11 +3864,23 @@
    "sponsor_names": [
     "Erasca, Inc."
    ],
-   "market_cap": 6176797484.730549,
+   "market_cap": 6138323447.402744,
    "cap_bucket": "Mid",
-   "price": 17.65999984741211,
+   "price": 17.549999237060547,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.6,
+   "analyst_count": 10,
+   "target_price": 23.5,
+   "upside_pct": 33.9,
+   "rating_spread": [
+    2,
+    6,
+    2,
+    0,
+    0
+   ],
    "areas": [
     "Melanoma",
     "Oncology"
@@ -3216,11 +3936,23 @@
    "sponsor_names": [
     "Cogent Biosciences, Inc."
    ],
-   "market_cap": 6328577441.347694,
+   "market_cap": 6312839030.504677,
    "cap_bucket": "Mid",
-   "price": 36.470699310302734,
+   "price": 36.380001068115234,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.33333,
+   "analyst_count": 11,
+   "target_price": 55.81818,
+   "upside_pct": 53.4,
+   "rating_spread": [
+    2,
+    9,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3258,11 +3990,23 @@
    "sponsor_names": [
     "CG Oncology, Inc."
    ],
-   "market_cap": 6970873802.347183,
+   "market_cap": 7029624966.425896,
    "cap_bucket": "Mid",
-   "price": 78.64219665527344,
+   "price": 79.30500030517578,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.4,
+   "analyst_count": 13,
+   "target_price": 91.07692,
+   "upside_pct": 14.8,
+   "rating_spread": [
+    4,
+    10,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3317,11 +4061,23 @@
    "sponsor_names": [
     "ImmunityBio, Inc."
    ],
-   "market_cap": 8362108052.466591,
+   "market_cap": 8425698168.202273,
    "cap_bucket": "Mid",
-   "price": 7.889999866485596,
+   "price": 7.949999809265137,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 4,
+   "target_price": 12.75,
+   "upside_pct": 60.4,
+   "rating_spread": [
+    1,
+    3,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3374,11 +4130,23 @@
    "sponsor_names": [
     "Primo Biotechnology Co., Ltd"
    ],
-   "market_cap": 8471654408.935404,
+   "market_cap": 8516535627.177019,
    "cap_bucket": "Mid",
-   "price": 23.4060001373291,
+   "price": 23.530000686645508,
    "currency": "USD",
-   "sector": null,
+   "sector": "Beverages - Non-Alcoholic",
+   "rating": "buy",
+   "rating_mean": 1.75,
+   "analyst_count": 11,
+   "target_price": 30.36364,
+   "upside_pct": 29.0,
+   "rating_spread": [
+    5,
+    5,
+    2,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3411,11 +4179,23 @@
    "sponsor_names": [
     "Crinetics Pharmaceuticals Inc."
    ],
-   "market_cap": 8986794533.791122,
+   "market_cap": 8988916081.736565,
    "cap_bucket": "Mid",
-   "price": 84.70500183105469,
+   "price": 84.7249984741211,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "hold",
+   "rating_mean": 2.85714,
+   "analyst_count": 10,
+   "target_price": 85.5,
+   "upside_pct": 0.9,
+   "rating_spread": [
+    0,
+    1,
+    13,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3456,11 +4236,23 @@
    "sponsor_names": [
     "Immunovant Sciences GmbH"
    ],
-   "market_cap": 9081088695.647438,
+   "market_cap": 9082121679.679504,
    "cap_bucket": "Mid",
-   "price": 43.96500015258789,
+   "price": 43.970001220703125,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.625,
+   "analyst_count": 16,
+   "target_price": 47.875,
+   "upside_pct": 8.9,
+   "rating_spread": [
+    2,
+    10,
+    4,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3515,11 +4307,23 @@
    "sponsor_names": [
     "Compass Therapeutics"
    ],
-   "market_cap": 9584810897.03331,
+   "market_cap": 9503440607.249956,
    "cap_bucket": "Mid",
-   "price": 12.486000061035156,
+   "price": 12.380000114440918,
    "currency": "USD",
-   "sector": null,
+   "sector": "Real Estate Services",
+   "rating": "buy",
+   "rating_mean": 1.75,
+   "analyst_count": 12,
+   "target_price": 15.41667,
+   "upside_pct": 24.5,
+   "rating_spread": [
+    3,
+    6,
+    3,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3555,11 +4359,23 @@
    "sponsor_names": [
     "Ionis Pharmaceuticals, Inc."
    ],
-   "market_cap": 9951117378.864006,
+   "market_cap": 9902923773.337715,
    "cap_bucket": "Mid",
-   "price": 59.880001068115234,
+   "price": 59.59000015258789,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.79167,
+   "analyst_count": 22,
+   "target_price": 88.0,
+   "upside_pct": 47.7,
+   "rating_spread": [
+    9,
+    10,
+    5,
+    0,
+    0
+   ],
    "areas": [
     "Allergy",
     "Oncology"
@@ -3627,11 +4443,23 @@
    "sponsor_names": [
     "Protagonist Therapeutics, Inc."
    ],
-   "market_cap": 10003253541.181183,
-   "cap_bucket": "Large",
-   "price": 154.58999633789062,
+   "market_cap": 9920750872.754211,
+   "cap_bucket": "Mid",
+   "price": 153.31500244140625,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.23077,
+   "analyst_count": 13,
+   "target_price": 170.38461,
+   "upside_pct": 11.1,
+   "rating_spread": [
+    3,
+    10,
+    0,
+    0,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3681,11 +4509,23 @@
    "sponsor_names": [
     "Summit Therapeutics"
    ],
-   "market_cap": 10290969561.482677,
+   "market_cap": 10223160814.880945,
    "cap_bucket": "Large",
-   "price": 12.899999618530273,
+   "price": 12.8149995803833,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.94118,
+   "analyst_count": 13,
+   "target_price": 28.627888,
+   "upside_pct": 123.4,
+   "rating_spread": [
+    1,
+    9,
+    6,
+    0,
+    1
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3772,11 +4612,23 @@
    "sponsor_names": [
     "Axsome Therapeutics, Inc."
    ],
-   "market_cap": 11350923100.74643,
+   "market_cap": 11321066450.105713,
    "cap_bucket": "Large",
-   "price": 216.6999969482422,
+   "price": 216.1300048828125,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.2381,
+   "analyst_count": 21,
+   "target_price": 285.41953,
+   "upside_pct": 32.1,
+   "rating_spread": [
+    3,
+    17,
+    1,
+    0,
+    0
+   ],
    "areas": [
     "Allergy"
    ],
@@ -3826,11 +4678,23 @@
    "sponsor_names": [
     "Corcept Therapeutics"
    ],
-   "market_cap": 12765880325.671051,
+   "market_cap": 12879924167.495064,
    "cap_bucket": "Large",
-   "price": 118.09500122070312,
+   "price": 119.1500015258789,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 2.0,
+   "analyst_count": 5,
+   "target_price": 141.0,
+   "upside_pct": 18.3,
+   "rating_spread": [
+    1,
+    3,
+    0,
+    1,
+    0
+   ],
    "areas": [
     "Oncology"
    ],
@@ -3866,11 +4730,23 @@
    "sponsor_names": [
     "Exelixis"
    ],
-   "market_cap": 13320743346.026657,
+   "market_cap": 13442156791.0,
    "cap_bucket": "Large",
-   "price": 53.7599983215332,
+   "price": 54.25,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 2.4,
+   "analyst_count": 17,
+   "target_price": 53.0,
+   "upside_pct": -2.3,
+   "rating_spread": [
+    1,
+    6,
+    12,
+    0,
+    1
+   ],
    "areas": [
     "Oncology"
    ],
@@ -4090,11 +4966,23 @@
    "sponsor_names": [
     "Jazz Pharmaceuticals"
    ],
-   "market_cap": 16548672639.161438,
+   "market_cap": 16327314684.384995,
    "cap_bucket": "Large",
-   "price": 254.92999267578125,
+   "price": 251.52000427246094,
    "currency": "USD",
-   "sector": null,
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.6,
+   "analyst_count": 20,
+   "target_price": 281.35,
+   "upside_pct": 11.9,
+   "rating_spread": [
+    7,
+    11,
+    1,
+    0,
+    1
+   ],
    "areas": [
     "Oncology"
    ],
