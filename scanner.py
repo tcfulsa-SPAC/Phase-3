@@ -90,6 +90,15 @@ MANUAL_TICKERS: dict[str, str] = {
     "bristol myers squibb": "BMY",
     "astrazeneca": "AZN",
     "hoffmann la roche": "RHHBY",
+    # Trial-registry names that differ from the SEC filing name:
+    "modernatx": "MRNA",
+    "moderna": "MRNA",
+    "regeneron": "REGN",
+    "vertex": "VRTX",
+    "incyte corporation": "INCY",
+    "beigene": "ONC",
+    "legend biotech usa": "LEGN",
+    "jazz": "JAZZ",
 }
 
 # Corporate-form and industry words stripped before matching.
@@ -192,8 +201,18 @@ def parse_study(study: dict, area: str) -> dict | None:
     if "PHASE3" not in (design.get("phases") or []):
         return None
 
-    sponsor = (p.get("sponsorCollaboratorsModule", {}) or {}).get("leadSponsor", {}) or {}
-    if sponsor.get("class") != "INDUSTRY":
+    sc = p.get("sponsorCollaboratorsModule", {}) or {}
+    sponsor = sc.get("leadSponsor", {}) or {}
+
+    # Partnered assets are the norm in biotech: the lead sponsor is often big
+    # pharma while the small-cap partner is the one whose stock moves on the
+    # readout. Keep every industry collaborator, not just the lead.
+    collaborators = [c.get("name", "").strip()
+                     for c in (sc.get("collaborators") or [])
+                     if c.get("class") == "INDUSTRY" and c.get("name")]
+
+    lead_is_industry = sponsor.get("class") == "INDUSTRY"
+    if not lead_is_industry and not collaborators:
         return None
 
     ident = p.get("identificationModule", {})
@@ -215,6 +234,8 @@ def parse_study(study: dict, area: str) -> dict | None:
         "title": ident.get("briefTitle"),
         "area": area,
         "sponsor": sponsor.get("name", "").strip(),
+        "sponsor_is_industry": lead_is_industry,
+        "collaborators": collaborators,
         "status": status.get("overallStatus"),
         "start_date": (status.get("startDateStruct") or {}).get("date"),
         "primary_completion": pc.get("date"),
@@ -386,7 +407,9 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
     for area, query in AREAS.items():
         for study in fetch_area(area, query, statuses, verbose=verbose):
             row = parse_study(study, area)
-            if not row or not row["sponsor"]:
+            if not row:
+                continue
+            if not row.get("sponsor") and not row.get("collaborators"):
                 continue
             # A melanoma trial also matches the oncology query - keep both tags,
             # but never the same (trial, area) pair twice.
@@ -405,7 +428,13 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
 
     sponsors: dict[str, dict] = {}
     for t in trials:
-        sponsors.setdefault(t["sponsor"], {"trials": []})["trials"].append(t)
+        parties = []
+        if t.get("sponsor_is_industry") and t["sponsor"]:
+            parties.append((t["sponsor"], "lead"))
+        for co in t.get("collaborators", []):
+            parties.append((co, "partner"))
+        for name, role in parties:
+            sponsors.setdefault(name, {"trials": []})["trials"].append({**t, "role": role})
 
     matched, unmatched = {}, []
     for name, blob in sponsors.items():
