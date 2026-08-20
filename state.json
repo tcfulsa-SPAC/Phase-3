@@ -1,7 +1,7 @@
 {
  "RNXT": {
   "name": "RenovoRx, Inc.",
-  "market_cap": 56863179.64961147,
+  "market_cap": 57088826.97441721,
   "areas": [
    "Oncology"
   ],
@@ -35,7 +35,7 @@
  },
  "MAIA": {
   "name": "MAIA Biotechnology, Inc.",
-  "market_cap": 84243793.35991955,
+  "market_cap": 83635535.5,
   "areas": [
    "Oncology"
   ],
@@ -52,7 +52,7 @@
  },
  "VRCA": {
   "name": "Verrica Pharmaceuticals Inc.",
-  "market_cap": 85378567.78574705,
+  "market_cap": 85893935.0,
   "areas": [
    "Oncology"
   ],
@@ -85,7 +85,7 @@
  },
  "ALDX": {
   "name": "Aldeyra Therapeutics, Inc.",
-  "market_cap": 92299422.40404725,
+  "market_cap": 91997790.58670604,
   "areas": [
    "Oncology"
   ],
@@ -102,7 +102,7 @@
  },
  "GNLX": {
   "name": "GENELUX Corp",
-  "market_cap": 120126363.13052058,
+  "market_cap": 119900142.0649314,
   "areas": [
    "Oncology"
   ],
@@ -119,7 +119,7 @@
  },
  "HURA": {
   "name": "TuHURA Biosciences, Inc./NV",
-  "market_cap": 141791716.7475562,
+  "market_cap": 142110357.12548876,
   "areas": [
    "Oncology"
   ],
@@ -153,7 +153,7 @@
  },
  "CRBP": {
   "name": "Corbus Pharmaceuticals Holdings, Inc.",
-  "market_cap": 192252444.30407047,
+  "market_cap": 192059045.3924942,
   "areas": [
    "Oncology"
   ],
@@ -170,7 +170,7 @@
  },
  "IPHA": {
   "name": "Innate Pharma SA",
-  "market_cap": 195403347.66482735,
+  "market_cap": 196126399.83015633,
   "areas": [
    "Oncology"
   ],
@@ -221,7 +221,7 @@
  },
  "SLGL": {
   "name": "Sol-Gel Technologies Ltd.",
-  "market_cap": 257433041.25,
+  "market_cap": 255565012.5,
   "areas": [
    "Oncology"
   ],
@@ -238,7 +238,7 @@
  },
  "ALXO": {
   "name": "ALX ONCOLOGY HOLDINGS INC",
-  "market_cap": 279319531.3025756,
+  "market_cap": 277383661.7843337,
   "areas": [
    "Oncology"
   ],
@@ -255,7 +255,7 @@
  },
  "AMRN": {
   "name": "AMARIN CORP PLC\\UK",
-  "market_cap": 298465646.8373165,
+  "market_cap": 295874120.79082775,
   "areas": [
    "Oncology"
   ],
@@ -270,9 +270,26 @@
    }
   }
  },
+ "RNAC": {
+  "name": "Cartesian Therapeutics, Inc.",
+  "market_cap": 312840344.29660034,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06799247": {
+    "status": "RECRUITING",
+    "title": "Investigating an mRNA CAR T-cell Therapy, Known as Descartes-08, as a Potential Approach to Treat Myasthenia Gravis",
+    "area": "Oncology",
+    "primary_completion": "2026-11-30",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "MYGN": {
   "name": "MYRIAD GENETICS INC",
-  "market_cap": 311339605.4212332,
+  "market_cap": 313252596.496861,
   "areas": [
    "Allergy",
    "Oncology"
@@ -320,26 +337,9 @@
    }
   }
  },
- "RNAC": {
-  "name": "Cartesian Therapeutics, Inc.",
-  "market_cap": 311630131.3707504,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06799247": {
-    "status": "RECRUITING",
-    "title": "Investigating an mRNA CAR T-cell Therapy, Known as Descartes-08, as a Potential Approach to Treat Myasthenia Gravis",
-    "area": "Oncology",
-    "primary_completion": "2026-11-30",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "IMRX": {
   "name": "Immuneering Corp",
-  "market_cap": 341505241.63982105,
+  "market_cap": 340955307.305995,
   "areas": [
    "Oncology"
   ],
@@ -356,7 +356,7 @@
  },
  "AGEN": {
   "name": "AGENUS INC",
-  "market_cap": 349049996.00094795,
+  "market_cap": 349275049.5018959,
   "areas": [
    "Oncology"
   ],
@@ -381,7 +381,7 @@
  },
  "LYEL": {
   "name": "Lyell Immunopharma, Inc.",
-  "market_cap": 371988047.85837555,
+  "market_cap": 375173718.9927664,
   "areas": [
    "Oncology"
   ],
@@ -415,7 +415,7 @@
  },
  "RLMD": {
   "name": "RELMADA THERAPEUTICS, INC.",
-  "market_cap": 485881130.21890736,
+  "market_cap": 488014525.1043415,
   "areas": [
    "Oncology"
   ],
@@ -432,7 +432,7 @@
  },
  "KYTX": {
   "name": "Kyverna Therapeutics, Inc.",
-  "market_cap": 505260942.19828033,
+  "market_cap": 506807004.70687866,
   "areas": [
    "Oncology"
   ],
@@ -449,7 +449,7 @@
  },
  "DCTH": {
   "name": "DELCATH SYSTEMS, INC.",
-  "market_cap": 582939729.5269203,
+  "market_cap": 583633721.3107681,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -467,7 +467,7 @@
  },
  "EIKN": {
   "name": "Eikon Therapeutics, Inc.",
-  "market_cap": 594732004.605217,
+  "market_cap": 583899008.9363766,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -493,7 +493,7 @@
  },
  "VSTM": {
   "name": "Verastem, Inc.",
-  "market_cap": 619906734.6440339,
+  "market_cap": 619453950.2588844,
   "areas": [
    "Oncology"
   ],
@@ -510,7 +510,7 @@
  },
  "ANGO": {
   "name": "ANGIODYNAMICS INC",
-  "market_cap": 664624811.966589,
+  "market_cap": 663384811.9158897,
   "areas": [
    "Oncology"
   ],
@@ -543,7 +543,7 @@
  },
  "OCS": {
   "name": "Oculis Holding AG",
-  "market_cap": 729359780.4443417,
+  "market_cap": 728804488.125,
   "areas": [
    "Allergy"
   ],
@@ -560,7 +560,7 @@
  },
  "AURA": {
   "name": "Aura Biosciences, Inc.",
-  "market_cap": 785045421.9321103,
+  "market_cap": 784008350.1059632,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -578,7 +578,7 @@
  },
  "DBVT": {
   "name": "DBV Technologies S.A.",
-  "market_cap": 907493498.9088478,
+  "market_cap": 905608141.3304901,
   "areas": [
    "Allergy"
   ],
@@ -603,7 +603,7 @@
  },
  "CADL": {
   "name": "Candel Therapeutics, Inc.",
-  "market_cap": 942878052.683258,
+  "market_cap": 938591792.3354158,
   "areas": [
    "Oncology"
   ],
@@ -628,7 +628,7 @@
  },
  "OLMA": {
   "name": "Olema Pharmaceuticals, Inc.",
-  "market_cap": 946724081.0378494,
+  "market_cap": 956348871.2121506,
   "areas": [
    "Oncology"
   ],
@@ -653,7 +653,7 @@
  },
  "GERN": {
   "name": "GERON CORP",
-  "market_cap": 1015172271.7940283,
+  "market_cap": 1011895649.8105195,
   "areas": [
    "Oncology"
   ],
@@ -670,7 +670,7 @@
  },
  "KURA": {
   "name": "Kura Oncology, Inc.",
-  "market_cap": 1064467183.9280882,
+  "market_cap": 1060855398.5428915,
   "areas": [
    "Oncology"
   ],
@@ -687,7 +687,7 @@
  },
  "CRVS": {
   "name": "Corvus Pharmaceuticals, Inc.",
-  "market_cap": 1218912459.306244,
+  "market_cap": 1218071230.6124878,
   "areas": [
    "Oncology"
   ],
@@ -702,26 +702,9 @@
    }
   }
  },
- "MLTX": {
-  "name": "MoonLake Immunotherapeutics",
-  "market_cap": 1339579202.4206257,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06641089": {
-    "status": "RECRUITING",
-    "title": "Evaluation of Sonelokimab in Patients With Active Psoriatic Arthritis and Anti-TNF\u03b1 Inadequate Response",
-    "area": "Oncology",
-    "primary_completion": "2027-01-15",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "REPL": {
   "name": "Replimune, Inc.",
-  "market_cap": 1350167348.0316124,
+  "market_cap": 1341216457.6422558,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -745,9 +728,26 @@
    }
   }
  },
+ "MLTX": {
+  "name": "MoonLake Immunotherapeutics",
+  "market_cap": 1341706918.2440615,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06641089": {
+    "status": "RECRUITING",
+    "title": "Evaluation of Sonelokimab in Patients With Active Psoriatic Arthritis and Anti-TNF\u03b1 Inadequate Response",
+    "area": "Oncology",
+    "primary_completion": "2027-01-15",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "VOR": {
   "name": "Vor Biopharma Inc.",
-  "market_cap": 1371381992.9748993,
+  "market_cap": 1377889881.4246979,
   "areas": [
    "Oncology"
   ],
@@ -764,7 +764,7 @@
  },
  "AVBP": {
   "name": "ArriVent BioPharma, Inc.",
-  "market_cap": 1429184555.1600494,
+  "market_cap": 1429431052.4243565,
   "areas": [
    "Oncology"
   ],
@@ -789,7 +789,7 @@
  },
  "INBX": {
   "name": "Inhibrx Biosciences, Inc.",
-  "market_cap": 1442477888.0403137,
+  "market_cap": 1451602765.3767395,
   "areas": [
    "Oncology"
   ],
@@ -806,7 +806,7 @@
  },
  "ORIC": {
   "name": "Oric Pharmaceuticals, Inc.",
-  "market_cap": 1471867695.4298248,
+  "market_cap": 1472904245.714035,
   "areas": [
    "Allergy",
    "Oncology"
@@ -881,7 +881,7 @@
  },
  "BCAX": {
   "name": "Bicara Therapeutics Inc.",
-  "market_cap": 1625513629.8015785,
+  "market_cap": 1622885540.3280716,
   "areas": [
    "Oncology"
   ],
@@ -898,7 +898,7 @@
  },
  "HOPE": {
   "name": "HOPE BANCORP INC",
-  "market_cap": 1771140526.902214,
+  "market_cap": 1773056698.298893,
   "areas": [
    "Oncology"
   ],
@@ -915,7 +915,7 @@
  },
  "NTLA": {
   "name": "Intellia Therapeutics, Inc.",
-  "market_cap": 1788002603.0534983,
+  "market_cap": 1779678999.2325087,
   "areas": [
    "Allergy"
   ],
@@ -932,7 +932,7 @@
  },
  "SNDX": {
   "name": "Syndax Pharmaceuticals Inc",
-  "market_cap": 1793978471.365654,
+  "market_cap": 1780175455.950817,
   "areas": [
    "Oncology"
   ],
@@ -949,7 +949,7 @@
  },
  "IMCR": {
   "name": "Immunocore Ltd",
-  "market_cap": 1843650449.3096733,
+  "market_cap": 1845452893.046608,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1000,7 +1000,7 @@
  },
  "BHVN": {
   "name": "Biohaven Ltd.",
-  "market_cap": 2040601515.881178,
+  "market_cap": 2020965807.065589,
   "areas": [
    "Oncology"
   ],
@@ -1034,7 +1034,7 @@
  },
  "NVCR": {
   "name": "NovoCure Ltd",
-  "market_cap": 2085544976.631775,
+  "market_cap": 2077393803.368225,
   "areas": [
    "Oncology"
   ],
@@ -1059,7 +1059,7 @@
  },
  "GENB": {
   "name": "Generate Biomedicines, Inc.",
-  "market_cap": 2103696347.6998901,
+  "market_cap": 2084443531.2624588,
   "areas": [
    "Allergy"
   ],
@@ -1084,7 +1084,7 @@
  },
  "HCM": {
   "name": "HUTCHMED (China) Ltd",
-  "market_cap": 2177891478.62661,
+  "market_cap": 2175284372.194359,
   "areas": [
    "Oncology"
   ],
@@ -1141,7 +1141,7 @@
  },
  "URGN": {
   "name": "UroGen Pharma Ltd.",
-  "market_cap": 2318649620.4672394,
+  "market_cap": 2309606649.0,
   "areas": [
    "Oncology"
   ],
@@ -1174,7 +1174,7 @@
  },
  "PBH": {
   "name": "Prestige Consumer Healthcare Inc.",
-  "market_cap": 2397624587.3351135,
+  "market_cap": 2396677075.2087784,
   "areas": [
    "Oncology"
   ],
@@ -1230,26 +1230,9 @@
    }
   }
  },
- "WGS": {
-  "name": "GeneDx Holdings Corp.",
-  "market_cap": 2481533609.3066483,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06472245": {
-    "status": "RECRUITING",
-    "title": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
-    "area": "Oncology",
-    "primary_completion": "2027-12-15",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "BCRX": {
   "name": "BIOCRYST PHARMACEUTICALS INC",
-  "market_cap": 2487634159.443984,
+  "market_cap": 2483801288.8352346,
   "areas": [
    "Allergy"
   ],
@@ -1272,9 +1255,26 @@
    }
   }
  },
+ "WGS": {
+  "name": "GeneDx Holdings Corp.",
+  "market_cap": 2494655600.1555862,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06472245": {
+    "status": "RECRUITING",
+    "title": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
+    "area": "Oncology",
+    "primary_completion": "2027-12-15",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "NKTR": {
   "name": "NEKTAR THERAPEUTICS",
-  "market_cap": 2508485810.8584595,
+  "market_cap": 2509510059.0,
   "areas": [
    "Allergy"
   ],
@@ -1299,7 +1299,7 @@
  },
  "NRIX": {
   "name": "Nurix Therapeutics, Inc.",
-  "market_cap": 2799510938.51457,
+  "market_cap": 2781616330.253813,
   "areas": [
    "Oncology"
   ],
@@ -1316,7 +1316,7 @@
  },
  "SLS": {
   "name": "SELLAS Life Sciences Group, Inc.",
-  "market_cap": 2818727955.7909374,
+  "market_cap": 2796115254.786562,
   "areas": [
    "Oncology"
   ],
@@ -1333,7 +1333,7 @@
  },
  "CLDX": {
   "name": "Celldex Therapeutics, Inc.",
-  "market_cap": 3154531156.6481323,
+  "market_cap": 3156101783.2360992,
   "areas": [
    "Allergy"
   ],
@@ -1374,7 +1374,7 @@
  },
  "IMNM": {
   "name": "Immunome Inc.",
-  "market_cap": 3243491215.037445,
+  "market_cap": 3242358685.176487,
   "areas": [
    "Oncology"
   ],
@@ -1391,7 +1391,7 @@
  },
  "VCYT": {
   "name": "VERACYTE, INC.",
-  "market_cap": 3372391226.7832603,
+  "market_cap": 3394498493.8084793,
   "areas": [
    "Oncology"
   ],
@@ -1416,7 +1416,7 @@
  },
  "PII": {
   "name": "Polaris Inc.",
-  "market_cap": 3636704210.1572113,
+  "market_cap": 3634997173.899521,
   "areas": [
    "Oncology"
   ],
@@ -1441,7 +1441,7 @@
  },
  "IDYA": {
   "name": "IDEAYA Biosciences, Inc.",
-  "market_cap": 3690722763.0,
+  "market_cap": 3702301398.018112,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1467,7 +1467,7 @@
  },
  "RCUS": {
   "name": "Arcus Biosciences, Inc.",
-  "market_cap": 3788916505.25,
+  "market_cap": 3799607108.871231,
   "areas": [
    "Oncology"
   ],
@@ -1516,7 +1516,7 @@
  },
  "IOVA": {
   "name": "IOVANCE BIOTHERAPEUTICS, INC.",
-  "market_cap": 3920467623.003578,
+  "market_cap": 3934057076.994377,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1534,7 +1534,7 @@
  },
  "RLAY": {
   "name": "Relay Therapeutics, Inc.",
-  "market_cap": 4328156722.876453,
+  "market_cap": 4333525669.429102,
   "areas": [
    "Oncology"
   ],
@@ -1551,7 +1551,7 @@
  },
  "CELC": {
   "name": "Celcuity Inc.",
-  "market_cap": 4452314204.390167,
+  "market_cap": 4467727874.872833,
   "areas": [
    "Oncology"
   ],
@@ -1576,7 +1576,7 @@
  },
  "GRFS": {
   "name": "Grifols SA",
-  "market_cap": 5539925560.638774,
+  "market_cap": 5539916606.638396,
   "areas": [
    "Oncology"
   ],
@@ -1591,9 +1591,26 @@
    }
   }
  },
+ "DNTH": {
+  "name": "Dianthus Therapeutics, Inc. /DE/",
+  "market_cap": 5974199473.598724,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT07647510": {
+    "status": "RECRUITING",
+    "title": "A Phase 3 Study to Evaluate Claseprubart in Adults With Generalized Myasthenia Gravis (EMERGE)",
+    "area": "Oncology",
+    "primary_completion": "2028-12",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "ERAS": {
   "name": "Erasca, Inc.",
-  "market_cap": 6057878339.461098,
+  "market_cap": 6033395103.75,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1609,26 +1626,9 @@
    }
   }
  },
- "DNTH": {
-  "name": "Dianthus Therapeutics, Inc. /DE/",
-  "market_cap": 6113068222.8294525,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT07647510": {
-    "status": "RECRUITING",
-    "title": "A Phase 3 Study to Evaluate Claseprubart in Adults With Generalized Myasthenia Gravis (EMERGE)",
-    "area": "Oncology",
-    "primary_completion": "2028-12",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "COGT": {
   "name": "Cogent Biosciences, Inc.",
-  "market_cap": 6166210208.892189,
+  "market_cap": 6161871819.564079,
   "areas": [
    "Oncology"
   ],
@@ -1645,7 +1645,7 @@
  },
  "CGON": {
   "name": "CG Oncology, Inc.",
-  "market_cap": 6984418185.819626,
+  "market_cap": 6978657021.309853,
   "areas": [
    "Oncology"
   ],
@@ -1670,7 +1670,7 @@
  },
  "IBRX": {
   "name": "ImmunityBio, Inc.",
-  "market_cap": 8325013944.629772,
+  "market_cap": 8309010414.4817,
   "areas": [
    "Oncology"
   ],
@@ -1712,7 +1712,7 @@
  },
  "CRNX": {
   "name": "Crinetics Pharmaceuticals, Inc.",
-  "market_cap": 8985203170.471497,
+  "market_cap": 8986051465.872803,
   "areas": [
    "Oncology"
   ],
@@ -1729,7 +1729,7 @@
  },
  "IMVT": {
   "name": "Immunovant, Inc.",
-  "market_cap": 9106907780.897438,
+  "market_cap": 9100711452.576942,
   "areas": [
    "Oncology"
   ],
@@ -1754,7 +1754,7 @@
  },
  "COMP": {
   "name": "Compass, Inc.",
-  "market_cap": 9395970095.500088,
+  "market_cap": 9338396894.666681,
   "areas": [
    "Oncology"
   ],
@@ -1771,7 +1771,7 @@
  },
  "PTGX": {
   "name": "Protagonist Therapeutics, Inc",
-  "market_cap": 9790363717.974014,
+  "market_cap": 9810746985.728226,
   "areas": [
    "Oncology"
   ],
@@ -1796,7 +1796,7 @@
  },
  "IONS": {
   "name": "IONIS PHARMACEUTICALS INC",
-  "market_cap": 9899600010.82457,
+  "market_cap": 9897938446.539436,
   "areas": [
    "Allergy",
    "Oncology"
@@ -1830,7 +1830,7 @@
  },
  "SMMT": {
   "name": "Summit Therapeutics Inc.",
-  "market_cap": 9959903507.08441,
+  "market_cap": 9924004714.130945,
   "areas": [
    "Oncology"
   ],
@@ -1879,7 +1879,7 @@
  },
  "AXSM": {
   "name": "Axsome Therapeutics, Inc.",
-  "market_cap": 10986876575.5,
+  "market_cap": 10948638802.154999,
   "areas": [
    "Allergy"
   ],
@@ -1904,7 +1904,7 @@
  },
  "HALO": {
   "name": "HALOZYME THERAPEUTICS, INC.",
-  "market_cap": 12134071595.64209,
+  "market_cap": 12132936373.184204,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1922,7 +1922,7 @@
  },
  "NVMI": {
   "name": "NOVA LTD.",
-  "market_cap": 12175716414.75824,
+  "market_cap": 12200843553.7294,
   "areas": [
    "Oncology"
   ],
@@ -1939,7 +1939,7 @@
  },
  "CORT": {
   "name": "CORCEPT THERAPEUTICS INC",
-  "market_cap": 13073420397.092102,
+  "market_cap": 13098823586.365128,
   "areas": [
    "Oncology"
   ],
@@ -1956,7 +1956,7 @@
  },
  "EXEL": {
   "name": "EXELIXIS, INC.",
-  "market_cap": 13449589939.292114,
+  "market_cap": 13443395964.1194,
   "areas": [
    "Oncology"
   ],
@@ -2069,7 +2069,7 @@
  },
  "JAZZ": {
   "name": "Jazz Pharmaceuticals",
-  "market_cap": 16187747749.524292,
+  "market_cap": 16159185177.161438,
   "areas": [
    "Oncology"
   ],
@@ -2142,7 +2142,7 @@
  },
  "GMAB": {
   "name": "GENMAB A/S",
-  "market_cap": 20956928377.774048,
+  "market_cap": 20950691720.56488,
   "areas": [
    "Allergy",
    "Oncology"
@@ -2264,7 +2264,7 @@
  },
  "GH": {
   "name": "Guardant Health, Inc.",
-  "market_cap": 22860987967.002106,
+  "market_cap": 22916680524.247894,
   "areas": [
    "Oncology"
   ],
@@ -2281,7 +2281,7 @@
  },
  "INCY": {
   "name": "INCYTE CORP",
-  "market_cap": 26285842216.67737,
+  "market_cap": 26277735667.723114,
   "areas": [
    "Allergy",
    "Oncology"
@@ -2355,7 +2355,7 @@
  },
  "BNTX": {
   "name": "BioNTech SE",
-  "market_cap": 28031894282.002136,
+  "market_cap": 28065807408.042557,
   "areas": [
    "Oncology"
   ],
@@ -2468,7 +2468,7 @@
  },
  "VEEV": {
   "name": "VEEVA SYSTEMS INC",
-  "market_cap": 40955201733.73987,
+  "market_cap": 40946268542.505066,
   "areas": [
    "Oncology"
   ],
@@ -2501,7 +2501,7 @@
  },
  "ONC": {
   "name": "BeOne Medicines Ltd.",
-  "market_cap": 42296941470.616425,
+  "market_cap": 42274881820.68997,
   "areas": [
    "Allergy",
    "Oncology"
@@ -2655,7 +2655,7 @@
  },
  "RVMD": {
   "name": "Revolution Medicines, Inc.",
-  "market_cap": 44999930304.99716,
+  "market_cap": 45053514409.49716,
   "areas": [
    "Oncology"
   ],
@@ -2712,7 +2712,7 @@
  },
  "NTRA": {
   "name": "Natera, Inc.",
-  "market_cap": 47750637612.28485,
+  "market_cap": 47883973608.89343,
   "areas": [
    "Oncology"
   ],
@@ -2769,7 +2769,7 @@
  },
  "MRNA": {
   "name": "ModernaTX, Inc.",
-  "market_cap": 55992833432.25,
+  "market_cap": 55874340736.98421,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -2811,7 +2811,7 @@
  },
  "TAK": {
   "name": "TAKEDA PHARMACEUTICAL CO LTD",
-  "market_cap": 58361263877.22533,
+  "market_cap": 58345299042.9296,
   "areas": [
    "Oncology"
   ],
@@ -2884,7 +2884,7 @@
  },
  "ARGX": {
   "name": "ARGENX SE",
-  "market_cap": 64518878684.98132,
+  "market_cap": 64918294576.449585,
   "areas": [
    "Oncology"
   ],
@@ -2941,7 +2941,7 @@
  },
  "REGN": {
   "name": "Regeneron Pharmaceuticals",
-  "market_cap": 86536759079.89941,
+  "market_cap": 86451819958.02466,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -3208,7 +3208,7 @@
  },
  "SNY": {
   "name": "Sanofi",
-  "market_cap": 110240195356.73619,
+  "market_cap": 110167343116.38467,
   "areas": [
    "Allergy",
    "Oncology"
@@ -3660,7 +3660,7 @@
  },
  "BMY": {
   "name": "Bristol-Myers Squibb",
-  "market_cap": 136688253076.40112,
+  "market_cap": 136596537257.9917,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -3999,7 +3999,7 @@
  },
  "PFE": {
   "name": "PFIZER INC",
-  "market_cap": 160206424109.0005,
+  "market_cap": 160303319690.625,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -4354,7 +4354,7 @@
  },
  "GILD": {
   "name": "GILEAD SCIENCES, INC.",
-  "market_cap": 181393031300.0558,
+  "market_cap": 181374432729.53934,
   "areas": [
    "Oncology"
   ],
@@ -4483,7 +4483,7 @@
  },
  "AMGN": {
   "name": "AMGEN INC",
-  "market_cap": 236254706604.0039,
+  "market_cap": 235809346323.13934,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -4678,7 +4678,7 @@
  },
  "AZN": {
   "name": "AstraZeneca",
-  "market_cap": 256252861047.56082,
+  "market_cap": 256516508800.94403,
   "areas": [
    "Allergy",
    "Oncology"
@@ -5992,7 +5992,7 @@
  },
  "NVS": {
   "name": "NOVARTIS AG",
-  "market_cap": 300864139262.453,
+  "market_cap": 300769126722.53845,
   "areas": [
    "Allergy",
    "Oncology"
@@ -6330,7 +6330,7 @@
  },
  "RHHBY": {
   "name": "Hoffmann-La Roche",
-  "market_cap": 370655512453.7464,
+  "market_cap": 370528026989.8225,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -6797,7 +6797,7 @@
  },
  "MRK": {
   "name": "Merck Sharp & Dohme LLC",
-  "market_cap": 374911418674.7427,
+  "market_cap": 375059442949.6544,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -7704,7 +7704,7 @@
  },
  "ABBV": {
   "name": "AbbVie Inc.",
-  "market_cap": 469646741420.3197,
+  "market_cap": 469072460659.57855,
   "areas": [
    "Allergy",
    "Oncology"
@@ -7954,7 +7954,7 @@
  },
  "JNJ": {
   "name": "Janssen Research & Development, LLC",
-  "market_cap": 657336026111.954,
+  "market_cap": 657203425795.4747,
   "areas": [
    "Allergy",
    "Oncology"
