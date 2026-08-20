@@ -18,6 +18,8 @@ DEMO = {
     "companies": [
         {"ticker": "EXMP", "name": "Example Therapeutics Inc.", "market_cap": 420_000_000,
          "cap_bucket": "Small", "price": 6.12, "currency": "USD", "sector": "Biotechnology",
+         "rating": "buy", "rating_mean": 1.8, "analyst_count": 7,
+         "target_price": 14.50, "upside_pct": 136.9, "rating_spread": [4, 2, 1, 0, 0],
          "areas": ["Melanoma", "Oncology"], "trial_count": 2, "sponsor_names": ["Example Therapeutics"],
          "trials": [
              {"nct_id": "NCT00000001", "title": "Study of EXA-101 in advanced melanoma",
@@ -32,6 +34,8 @@ DEMO = {
               "url": "https://clinicaltrials.gov/study/NCT00000002"}]},
         {"ticker": "SMPL", "name": "Sample Biosciences Ltd.", "market_cap": 3_100_000_000,
          "cap_bucket": "Mid", "price": 41.80, "currency": "USD", "sector": "Biotechnology",
+         "rating": "hold", "rating_mean": 2.9, "analyst_count": 12,
+         "target_price": 38.00, "upside_pct": -9.1, "rating_spread": [1, 2, 7, 2, 0],
          "areas": ["Allergy"], "trial_count": 1, "sponsor_names": ["Sample Biosciences"],
          "trials": [
              {"nct_id": "NCT00000003", "title": "Oral immunotherapy for peanut allergy in children",
@@ -57,6 +61,7 @@ TEMPLATE = r"""<!doctype html>
     --paper:#E9EDF0; --card:#FFFFFF; --ink:#0D1218; --muted:#5E6B78;
     --rule:#D2D9E0; --accent:#135A63; --accent-soft:#DCEAEB;
     --oncology:#6B4BC4; --melanoma:#1E4470; --allergy:#B8801C;
+    --r-sb:#1B7A5A; --r-b:#5AA184; --r-h:#9A8B4F; --r-s:#C4703A; --r-ss:#A33B2A;
     --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
     --serif:"IBM Plex Serif",Georgia,serif;
@@ -109,7 +114,7 @@ TEMPLATE = r"""<!doctype html>
   /* company rows */
   .row{background:var(--card);border:1px solid var(--rule);border-top:none}
   .row:first-of-type{border-top:1px solid var(--rule)}
-  .head{display:grid;grid-template-columns:78px 1fr auto;gap:14px;align-items:baseline;
+  .head{display:grid;grid-template-columns:78px 1fr auto auto;gap:14px;align-items:baseline;
         padding:14px 16px;cursor:pointer;width:100%;background:none;border:0;text-align:left;
         font:inherit;color:inherit}
   .head:hover{background:#F5F8F9}
@@ -121,6 +126,18 @@ TEMPLATE = r"""<!doctype html>
   .tag{padding:1px 6px;color:#fff;font-size:10px;letter-spacing:.05em;text-transform:uppercase}
   .tag.Oncology{background:var(--oncology)} .tag.Melanoma{background:var(--melanoma)}
   .tag.Allergy{background:var(--allergy)}
+  /* analyst consensus */
+  .rating{text-align:right;white-space:nowrap;min-width:104px}
+  .rlabel{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.06em;
+          text-transform:uppercase}
+  .rlabel.strong_buy,.rlabel.buy{color:var(--r-sb)}
+  .rlabel.hold{color:var(--r-h)}
+  .rlabel.sell,.rlabel.strong_sell,.rlabel.underperform{color:var(--r-ss)}
+  .rbar{display:flex;height:5px;width:100px;margin:4px 0 0 auto;background:var(--rule)}
+  .rbar span{height:100%}
+  .rup{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px}
+  .rup.pos{color:var(--r-sb)} .rup.neg{color:var(--r-ss)}
+  .rnone{font-family:var(--mono);font-size:11px;color:#A6B0BB}
   .cap{font-family:var(--mono);font-size:15px;font-weight:600;text-align:right;white-space:nowrap}
   .cap small{display:block;font-size:10px;font-weight:400;color:var(--muted);
              letter-spacing:.08em;text-transform:uppercase}
@@ -147,6 +164,8 @@ TEMPLATE = r"""<!doctype html>
   @media (max-width:620px){
     .head{grid-template-columns:1fr auto;gap:8px}
     .tkr{grid-column:1/-1}
+    .rating{grid-column:1/-1;text-align:left}
+    .rbar{margin-left:0}
     .cap{font-size:13px}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -172,6 +191,7 @@ TEMPLATE = r"""<!doctype html>
     <button class="chip" data-area="Allergy" aria-pressed="false">Allergy</button>
     <button class="chip" data-bucket="Small" aria-pressed="false">Small cap</button>
     <button class="chip" data-bucket="Mid" aria-pressed="false">Mid cap</button>
+    <button class="chip" id="buyOnly" aria-pressed="false">Rated buy</button>
     <span class="count" id="count"></span>
   </div>
 
@@ -193,7 +213,32 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, m =>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 const statusLabel = s => String(s||"").replace(/_/g," ").toLowerCase();
 
-const state = {q:"", areas:new Set(), buckets:new Set(), pinned:null};
+const RATING_COLORS = ["var(--r-sb)","var(--r-b)","var(--r-h)","var(--r-s)","var(--r-ss)"];
+
+function ratingHTML(c){
+  if(!c.rating && !c.rating_spread)
+    return `<span class="rating rnone">no coverage</span>`;
+
+  const label = String(c.rating||"").replace(/_/g," ");
+  const n = c.analyst_count;
+  let bar = "";
+  if(c.rating_spread){
+    const total = c.rating_spread.reduce((a,b)=>a+b,0) || 1;
+    bar = `<span class="rbar">` + c.rating_spread.map((v,i)=>
+      v ? `<span style="width:${v/total*100}%;background:${RATING_COLORS[i]}"></span>` : ""
+    ).join("") + `</span>`;
+  }
+  let up = "";
+  if(c.upside_pct != null){
+    const sign = c.upside_pct >= 0 ? "+" : "";
+    up = `<span class="rup ${c.upside_pct>=0?"pos":"neg"}">${sign}${c.upside_pct}% to target</span>`;
+  }
+  return `<span class="rating">
+    <span class="rlabel ${esc(String(c.rating||"").toLowerCase())}">${esc(label||"—")}${n?` ${n}`:""}</span>
+    ${bar}${up ? "<br>"+up : ""}</span>`;
+}
+
+const state = {q:"", areas:new Set(), buckets:new Set(), buyOnly:false, pinned:null};
 
 /* ---- hero: log-scale cap spectrum ---- */
 function drawAxis(){
@@ -238,6 +283,7 @@ function drawAxis(){
 function matches(c){
   if(state.areas.size && !c.areas.some(a=>state.areas.has(a))) return false;
   if(state.buckets.size && !state.buckets.has(c.cap_bucket)) return false;
+  if(state.buyOnly && !/buy/i.test(c.rating||"")) return false;
   if(!state.q) return true;
   const hay = [c.ticker, c.name, ...(c.sponsor_names||[]),
     ...c.trials.flatMap(t=>[t.title, ...(t.conditions||[]), ...(t.interventions||[])])
@@ -282,6 +328,7 @@ function render(){
           </span>
         </span>
         <span class="cap">${fmtCap(c.market_cap)}<small>${esc(c.cap_bucket)} cap</small></span>
+        ${ratingHTML(c)}
       </button>
       <div class="trials">${c.trials.map(trialHTML).join("")}</div>
     </article>`).join("");
@@ -303,6 +350,7 @@ document.querySelectorAll(".chip").forEach(chip=>{
   chip.addEventListener("click", ()=>{
     const on = chip.getAttribute("aria-pressed") === "true";
     chip.setAttribute("aria-pressed", !on);
+    if(chip.id === "buyOnly"){ state.buyOnly = !on; render(); return; }
     const set = chip.dataset.area ? state.areas : state.buckets;
     const val = chip.dataset.area || chip.dataset.bucket;
     on ? set.delete(val) : set.add(val);
@@ -312,7 +360,7 @@ document.querySelectorAll(".chip").forEach(chip=>{
 
 document.getElementById("foot").innerHTML =
   `Trial data: ClinicalTrials.gov API v2. Company identity: SEC company_tickers.
-   Market caps: Yahoo Finance via yfinance, cached up to 24h.<br>
+   Market caps and analyst consensus: Yahoo Finance via yfinance, cached up to 24h.<br>
    ${DATA.unmatched_sponsors?.length || 0} industry sponsors could not be matched to a
    US-listed ticker — most are private, subsidiaries, or listed only outside the US.<br>
    Screening tool, not investment advice. Verify every figure at the source before acting on it.`;
