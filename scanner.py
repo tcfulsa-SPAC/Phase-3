@@ -137,6 +137,14 @@ NOISE = re.compile(
 )
 
 
+# ClinicalTrials.gov expands query.cond through MeSH, so "allergy" also matches
+# "Hypersensitivity" — which includes DENTIN hypersensitivity, a tooth-nerve
+# condition. These patterns drop trials whose conditions are out of scope.
+EXCLUDE_CONDITIONS = re.compile(
+    r"\b(dentin|dental|dentine|tooth|teeth|gingiv|periodont|caries|"
+    r"halitosis|enamel|oral malodou?r|denture)", re.I)
+
+
 def normalize(name: str) -> str:
     """Reduce a company name to a comparable key."""
     s = name.lower()
@@ -240,6 +248,10 @@ def parse_study(study: dict, area: str) -> dict | None:
     if not lead_is_industry and not collaborators:
         return None
 
+    conditions = (p.get("conditionsModule", {}) or {}).get("conditions", [])
+    if conditions and all(EXCLUDE_CONDITIONS.search(c) for c in conditions):
+        return None
+
     ident = p.get("identificationModule", {})
     status = p.get("statusModule", {})
     arms = p.get("armsInterventionsModule", {}) or {}
@@ -270,7 +282,7 @@ def parse_study(study: dict, area: str) -> dict | None:
         "results_posted": results_posted,
         "completion": (status.get("completionDateStruct") or {}).get("date"),
         "last_update": (status.get("lastUpdatePostDateStruct") or {}).get("date"),
-        "conditions": (p.get("conditionsModule", {}) or {}).get("conditions", []),
+        "conditions": conditions,
         "enrollment": enrollment,
         "interventions": interventions[:6],
         "url": f"https://clinicaltrials.gov/study/{ident.get('nctId')}",
@@ -313,10 +325,14 @@ def match_ticker(sponsor: str, index: dict[str, dict]) -> dict | None:
     if key in index:
         return {**index[key], "match": "exact"}
 
-    # Fuzzy: require a high ratio so "Bayer" doesn't grab "Baye Corp".
-    close = difflib.get_close_matches(key, index.keys(), n=1, cutoff=0.90)
-    if close:
-        return {**index[close[0]], "match": "fuzzy"}
+    # Fuzzy matching, but carefully. On short names a single character is a
+    # different company: "intas" (Intas Pharmaceuticals, Indian generics) scores
+    # 0.909 against "cintas" (Cintas Corp, uniform rental). So we require a
+    # longer key, a matching first letter, and a higher ratio.
+    if len(key) >= 9:
+        for cand in difflib.get_close_matches(key, index.keys(), n=3, cutoff=0.93):
+            if cand[0] == key[0]:
+                return {**index[cand], "match": "fuzzy"}
 
     # Last resort: sponsor key is a full prefix of exactly one indexed name.
     prefix = [k for k in index if k.startswith(key + " ") or k == key]
@@ -510,24 +526,6 @@ def build_dataset(min_cap: float = 50e6, max_cap: float = 5e12,
     if verbose:
         print(" " * 40, end="\r")
 
-    # Technicals last, so we only download price history for companies that
-    # survived the cap filter below... except the filter runs after, so we
-    # fetch for all matched tickers and let unused entries sit in the cache.
-    try:
-        import technicals
-        tech = technicals.fetch_all([c["ticker"] for c in companies], verbose=verbose)
-        for c in companies:
-            t = tech.get(c["ticker"]) or {}
-            c["tech_signal"] = t.get("signal")
-            c["tech_score"] = t.get("score")
-            c["rsi"] = t.get("rsi")
-            c["stoch_k"] = t.get("stoch_k")
-            c["macd_hist"] = t.get("macd_hist")
-            c["pos_52w"] = t.get("pos_52w")
-            c["tech_reasons"] = t.get("reasons")
-    except Exception as e:
-        say(f"  technicals unavailable: {str(e)[:100]}")
-
     if cap_filter:
         before = len(companies)
         companies = [c for c in companies
@@ -551,15 +549,12 @@ def write_csvs(companies: list[dict]) -> None:
         w = csv.writer(f)
         w.writerow(["ticker", "name", "market_cap_usd", "cap_bucket", "areas",
                     "phase3_trials", "analyst_rating", "rating_mean", "analysts",
-                    "target_price", "upside_pct", "tech_signal", "rsi", "stoch_k",
-                    "pos_52w"])
+                    "target_price", "upside_pct"])
         for c in companies:
             w.writerow([c["ticker"], c["name"], c["market_cap"], c["cap_bucket"],
                         "; ".join(c["areas"]), c["trial_count"], c.get("rating"),
                         c.get("rating_mean"), c.get("analyst_count"),
-                        c.get("target_price"), c.get("upside_pct"),
-                        c.get("tech_signal"), c.get("rsi"), c.get("stoch_k"),
-                        c.get("pos_52w")])
+                        c.get("target_price"), c.get("upside_pct")])
 
     with open("trials.csv", "w", newline="") as f:
         w = csv.writer(f)
