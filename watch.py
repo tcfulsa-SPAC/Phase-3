@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import time
+from datetime import datetime
 from pathlib import Path
 
 import news
@@ -57,13 +58,32 @@ def snapshot(companies: list[dict]) -> dict:
         "name": c["name"],
         "market_cap": c["market_cap"],
         "areas": c["areas"],
-        "trials": {t["nct_id"]: {"status": t["status"], "title": t["title"],
-                                 "area": t["area"]} for t in c["trials"]},
+        "trials": {t["nct_id"]: {
+            "status": t["status"], "title": t["title"], "area": t["area"],
+            "primary_completion": t.get("primary_completion"),
+            "pc_type": t.get("pc_type"),
+            "has_results": bool(t.get("has_results")),
+        } for t in c["trials"]},
     } for c in companies}
 
 
+def months_until(date_str: str | None) -> float | None:
+    """Rough months from today to a YYYY-MM or YYYY-MM-DD registry date."""
+    if not date_str:
+        return None
+    try:
+        parts = date_str.split("-")
+        y, m = int(parts[0]), int(parts[1]) if len(parts) > 1 else 6
+        d = int(parts[2]) if len(parts) > 2 else 15
+        target = datetime(y, m, min(d, 28))
+        return (target - datetime.now()).days / 30.44
+    except Exception:
+        return None
+
+
 def diff(old: dict, new: dict) -> dict:
-    changes = {"new_companies": [], "new_trials": [], "status_changes": [], "dropped": []}
+    changes = {"results_posted": [], "new_companies": [], "new_trials": [],
+               "status_changes": [], "date_changes": [], "dropped": []}
 
     for tkr, cur in new.items():
         prev = old.get(tkr)
@@ -75,17 +95,64 @@ def diff(old: dict, new: dict) -> dict:
             if not was:
                 changes["new_trials"].append({"ticker": tkr, "name": cur["name"],
                                               "nct_id": nct, **t})
-            elif was["status"] != t["status"]:
+                continue
+
+            # Results appearing on the registry is the readout itself.
+            if t.get("has_results") and not was.get("has_results"):
+                changes["results_posted"].append({
+                    "ticker": tkr, "name": cur["name"], "nct_id": nct,
+                    "title": t["title"], "area": t["area"]})
+
+            if was["status"] != t["status"]:
                 changes["status_changes"].append({
                     "ticker": tkr, "name": cur["name"], "nct_id": nct,
                     "title": t["title"], "area": t["area"],
                     "from": was["status"], "to": t["status"]})
+
+            # A primary completion date moving is a signal in its own right:
+            # pushed out usually means enrolment trouble, pulled in can mean
+            # an interim analysis. Either way the sponsor knows before you do.
+            old_pc, new_pc = was.get("primary_completion"), t.get("primary_completion")
+            if old_pc and new_pc and old_pc != new_pc:
+                changes["date_changes"].append({
+                    "ticker": tkr, "name": cur["name"], "nct_id": nct,
+                    "title": t["title"], "area": t["area"],
+                    "from": old_pc, "to": new_pc,
+                    "direction": "pushed back" if new_pc > old_pc else "pulled forward",
+                    "pc_type": t.get("pc_type")})
 
     for tkr, prev in old.items():
         if tkr not in new:
             changes["dropped"].append({"ticker": tkr, "name": prev["name"]})
 
     return changes
+
+
+def upcoming_catalysts(companies: list[dict], months: float = 4.0) -> list[dict]:
+    """Trials whose primary completion falls inside the next `months`.
+
+    This is the forward view: it doesn't need anything to have changed, it just
+    tells you which readouts are close. Sorted nearest first.
+    """
+    rows = []
+    for c in companies:
+        for t in c["trials"]:
+            if t.get("has_results"):
+                continue  # already read out
+            if t.get("status") in ("TERMINATED", "WITHDRAWN", "SUSPENDED"):
+                continue
+            m = months_until(t.get("primary_completion"))
+            if m is None or m < -1 or m > months:
+                continue
+            rows.append({
+                "ticker": c["ticker"], "name": c["name"],
+                "market_cap": c.get("market_cap"),
+                "nct_id": t["nct_id"], "title": t["title"], "area": t["area"],
+                "status": t.get("status"), "date": t.get("primary_completion"),
+                "pc_type": t.get("pc_type"), "months": round(m, 1),
+                "enrollment": t.get("enrollment")})
+    rows.sort(key=lambda r: r["months"])
+    return rows
 
 
 def has_changes(ch: dict) -> bool:
@@ -96,7 +163,9 @@ def has_changes(ch: dict) -> bool:
 # Digest
 # ---------------------------------------------------------------------------
 
-def build_digest(changes: dict, news_by_ticker: dict, generated: str) -> tuple[str, str]:
+def build_digest(changes: dict, news_by_ticker: dict, generated: str,
+                 calendar: list[dict] | None = None,
+                 cal_months: float = 4.0) -> tuple[str, str]:
     """Return (html, plaintext)."""
     h: list[str] = []
     t: list[str] = []
@@ -131,6 +200,20 @@ def build_digest(changes: dict, news_by_ticker: dict, generated: str) -> tuple[s
 
     card = ('style="background:#fff;border:1px solid #D2D9E0;border-left:3px solid %s;'
             'padding:13px 15px;margin-bottom:9px"')
+
+    section(
+        "READOUT — results posted to the registry", changes["results_posted"],
+        lambda r: (f'<div {card % "#A33B2A"}>'
+                   f'<b style="font-family:ui-monospace,monospace">{r["ticker"]}</b> '
+                   f'{r["name"]}<br>'
+                   f'<a href="https://clinicaltrials.gov/study/{r["nct_id"]}?tab=results" '
+                   f'style="color:#135A63;text-decoration:none">{r["title"]}</a><br>'
+                   f'<span style="font-size:12px;color:#5E6B78">{r["area"]} · '
+                   f'results now available · {r["nct_id"]}</span>'
+                   f'{news_html(r["ticker"])}</div>'),
+        lambda r: (f'\n  {r["ticker"]} — RESULTS POSTED — {r["title"]}\n    '
+                   f'https://clinicaltrials.gov/study/{r["nct_id"]}?tab=results'
+                   + news_text(r["ticker"])))
 
     section(
         "New companies in Phase 3", changes["new_companies"],
@@ -174,6 +257,20 @@ def build_digest(changes: dict, news_by_ticker: dict, generated: str) -> tuple[s
                    f'{label(r["to"])}' + news_text(r["ticker"])))
 
     section(
+        "Completion date moved", changes["date_changes"],
+        lambda r: (f'<div {card % "#1E4470"}>'
+                   f'<b style="font-family:ui-monospace,monospace">{r["ticker"]}</b> '
+                   f'{r["name"]}<br>'
+                   f'<a href="https://clinicaltrials.gov/study/{r["nct_id"]}" '
+                   f'style="color:#135A63;text-decoration:none">{r["title"]}</a><br>'
+                   f'<span style="font-size:12px;color:#5E6B78">primary completion '
+                   f'<b style="color:#0D1218">{r["direction"]}</b>: '
+                   f'{r["from"]} → {r["to"]}</span>'
+                   f'{news_html(r["ticker"])}</div>'),
+        lambda r: (f'\n  {r["ticker"]} — {r["title"]}\n    primary completion '
+                   f'{r["direction"]}: {r["from"]} -> {r["to"]}' + news_text(r["ticker"])))
+
+    section(
         "Dropped out of the screen", changes["dropped"],
         lambda r: (f'<div {card % "#8A96A3"}>'
                    f'<b style="font-family:ui-monospace,monospace">{r["ticker"]}</b> '
@@ -181,6 +278,27 @@ def build_digest(changes: dict, news_by_ticker: dict, generated: str) -> tuple[s
                    f'No longer matching — check for an acquisition, delisting, '
                    f'or a move outside your cap band.</span></div>'),
         lambda r: f'\n  {r["ticker"]} {r["name"]} — no longer matching')
+
+    if calendar:
+        h.append('<h2 style="font:600 12px/1.4 ui-monospace,monospace;letter-spacing:.12em;'
+                 'text-transform:uppercase;color:#5E6B78;margin:26px 0 10px;'
+                 'padding-bottom:6px;border-bottom:1px solid #D2D9E0">'
+                 f'Readouts expected in the next {cal_months:.0f} months — {len(calendar)}</h2>')
+        t.append(f"\nREADOUTS EXPECTED ({len(calendar)})\n" + "-" * 40)
+        for r in calendar[:25]:
+            when = "overdue" if r["months"] < 0 else f'{r["months"]:.1f} mo'
+            est = " (estimated)" if r.get("pc_type") == "ESTIMATED" else ""
+            h.append(f'<div style="background:#fff;border:1px solid #D2D9E0;'
+                     f'border-left:3px solid #B8801C;padding:10px 14px;margin-bottom:6px">'
+                     f'<b style="font-family:ui-monospace,monospace">{r["ticker"]}</b> '
+                     f'<span style="color:#5E6B78">{fmt_cap(r["market_cap"])}</span> · '
+                     f'<b>{when}</b><br>'
+                     f'<a href="https://clinicaltrials.gov/study/{r["nct_id"]}" '
+                     f'style="color:#135A63;text-decoration:none;font-size:14px">'
+                     f'{r["title"]}</a><br>'
+                     f'<span style="font-size:12px;color:#5E6B78">{r["area"]} · '
+                     f'{r["date"]}{est} · {label(r["status"])}</span></div>')
+            t.append(f'\n  {r["ticker"]} ({when}) {r["date"]}{est} — {r["title"]}')
 
     html = (f'<div style="font:15px/1.5 -apple-system,BlinkMacSystemFont,'
             f'\'Segoe UI\',sans-serif;background:#E9EDF0;padding:24px;color:#0D1218">'
@@ -211,6 +329,10 @@ def main() -> int:
                     help="Cap on companies to fetch news for, so one noisy run stays polite.")
     ap.add_argument("--dry-run", action="store_true",
                     help="Write digest.html but send nothing.")
+    ap.add_argument("--calendar-months", type=float, default=4.0,
+                    help="Include readouts expected within this many months.")
+    ap.add_argument("--calendar", action="store_true",
+                    help="Just print the upcoming readout calendar and exit.")
     args = ap.parse_args()
 
     try:
@@ -221,6 +343,17 @@ def main() -> int:
 
     Path("data.json").write_text(json.dumps(payload, indent=1))
     scanner.write_csvs(payload["companies"])
+
+    cal = upcoming_catalysts(payload["companies"], args.calendar_months)
+
+    if args.calendar:
+        print(f"\nReadouts expected within {args.calendar_months:.0f} months "
+              f"({len(cal)} trials)\n" + "=" * 66)
+        for r in cal:
+            when = "overdue" if r["months"] < 0 else f'{r["months"]:>4.1f} mo'
+            print(f'{r["ticker"]:6s} {when}  {r["date"]:10s} {fmt_cap(r["market_cap"]):>8s}  '
+                  f'{r["title"][:58]}')
+        return 0
 
     new_state = snapshot(payload["companies"])
     old_state = json.loads(STATE.read_text()) if STATE.exists() else {}
@@ -256,15 +389,21 @@ def main() -> int:
         print(f"  {i}/{len(tickers)} {tkr}", end="\r", flush=True)
     print(" " * 40, end="\r")
 
-    html, text = build_digest(changes, news_by_ticker, payload["generated"])
+    html, text = build_digest(changes, news_by_ticker, payload["generated"],
+                              calendar=cal, cal_months=args.calendar_months)
     Path("digest.html").write_text(html)
 
-    n_new = counts["new_companies"]
-    subject = (f"TrialScan: {n_new} new Phase 3 "
-               f"{'company' if n_new == 1 else 'companies'}"
-               if n_new else
-               f"TrialScan: {counts['new_trials']} new trials, "
-               f"{counts['status_changes']} status changes")
+    n_res, n_new = counts["results_posted"], counts["new_companies"]
+    if n_res:
+        subject = (f"TrialScan: {n_res} Phase 3 readout"
+                   f"{'' if n_res == 1 else 's'} posted")
+    elif n_new:
+        subject = (f"TrialScan: {n_new} new Phase 3 "
+                   f"{'company' if n_new == 1 else 'companies'}")
+    else:
+        subject = (f"TrialScan: {counts['new_trials']} new trials, "
+                   f"{counts['status_changes']} status changes, "
+                   f"{counts['date_changes']} date moves")
 
     if args.dry_run:
         print("Dry run — wrote digest.html, sent nothing.")
