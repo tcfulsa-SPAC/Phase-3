@@ -140,6 +140,11 @@ NOISE = re.compile(
 # ClinicalTrials.gov expands query.cond through MeSH, so "allergy" also matches
 # "Hypersensitivity" — which includes DENTIN hypersensitivity, a tooth-nerve
 # condition. These patterns drop trials whose conditions are out of scope.
+# Titles that signal a multi-arm platform study rather than one company's trial.
+PLATFORM_TITLE = re.compile(
+    r"\b(multiple regimens|platform trial|master protocol|umbrella|basket|"
+    r"adaptive platform|multi-?arm|agile)\b", re.I)
+
 EXCLUDE_CONDITIONS = re.compile(
     r"\b(dentin|dental|dentine|tooth|teeth|gingiv|periodont|caries|"
     r"halitosis|enamel|oral malodou?r|denture)", re.I)
@@ -248,6 +253,17 @@ def parse_study(study: dict, area: str) -> dict | None:
     if not lead_is_industry and not collaborators:
         return None
 
+    # Platform / umbrella / master-protocol trials test several companies' drugs
+    # as parallel arms. A collaborator on one arm is NOT running the whole study,
+    # so these get flagged rather than silently attributed.
+    title_text = (p.get("identificationModule", {}) or {}).get("briefTitle", "")
+    n_interventions = len((sc.get("collaborators") or []))
+    is_platform = bool(
+        PLATFORM_TITLE.search(title_text)
+        or len(collaborators) >= 3
+        or len([i for i in ((p.get("armsInterventionsModule", {}) or {}).get(
+            "interventions") or [])]) >= 5)
+
     conditions = (p.get("conditionsModule", {}) or {}).get("conditions", [])
     if conditions and all(EXCLUDE_CONDITIONS.search(c) for c in conditions):
         return None
@@ -273,6 +289,7 @@ def parse_study(study: dict, area: str) -> dict | None:
         "sponsor": sponsor.get("name", "").strip(),
         "sponsor_is_industry": lead_is_industry,
         "collaborators": collaborators,
+        "is_platform": is_platform,
         "status": status.get("overallStatus"),
         "start_date": (status.get("startDateStruct") or {}).get("date"),
         "primary_completion": pc.get("date"),
