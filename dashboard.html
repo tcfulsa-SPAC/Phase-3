@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrialScan — Phase 3 screen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9EDF0; --card:#FFFFFF; --ink:#0D1218; --muted:#5E6B78;
+    --rule:#D2D9E0; --accent:#135A63; --accent-soft:#DCEAEB;
+    --oncology:#6B4BC4; --melanoma:#1E4470; --allergy:#B8801C;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+    --serif:"IBM Plex Serif",Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+       font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+
+  /* masthead */
+  header{padding:34px 0 18px;border-bottom:2px solid var(--ink)}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,42px);
+     letter-spacing:-.02em;margin:0}
+  .sub{font-family:var(--mono);font-size:12px;color:var(--muted);
+       text-transform:uppercase;letter-spacing:.09em;margin-top:6px}
+
+  /* hero: cap spectrum */
+  .spectrum{margin:26px 0 8px;padding:22px 16px 10px;background:var(--card);
+            border:1px solid var(--rule)}
+  .spectrum h2{font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+               text-transform:uppercase;color:var(--muted);margin:0 0 20px;font-weight:500}
+  .axis{position:relative;height:66px}
+  .axis-line{position:absolute;left:0;right:0;top:33px;height:1px;background:var(--rule)}
+  .tick{position:absolute;top:41px;transform:translateX(-50%);font-family:var(--mono);
+        font-size:10px;color:var(--muted)}
+  .tick::before{content:"";position:absolute;left:50%;top:-9px;width:1px;height:6px;
+                background:var(--rule)}
+  .dot{position:absolute;top:33px;transform:translate(-50%,-50%);border-radius:50%;
+       cursor:pointer;opacity:.82;transition:transform .15s ease,opacity .15s ease;
+       border:1.5px solid var(--card)}
+  .dot:hover,.dot:focus-visible{transform:translate(-50%,-50%) scale(1.55);opacity:1;z-index:3}
+  .readout{font-family:var(--mono);font-size:12px;color:var(--muted);min-height:18px;
+           margin-top:2px}
+  .readout b{color:var(--ink);font-weight:600}
+
+  /* controls */
+  .controls{position:sticky;top:0;z-index:5;background:var(--paper);
+            padding:14px 0 12px;border-bottom:1px solid var(--rule);
+            display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  input[type=search]{flex:1 1 220px;min-width:0;padding:9px 12px;border:1px solid var(--rule);
+        background:var(--card);font-family:var(--sans);font-size:14px;color:var(--ink)}
+  input[type=search]:focus{outline:2px solid var(--accent);outline-offset:-1px}
+  .chip{padding:8px 13px;border:1px solid var(--rule);background:var(--card);
+        font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+        cursor:pointer;color:var(--muted);white-space:nowrap}
+  .chip[aria-pressed=true]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+  .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+
+  /* company rows */
+  .row{background:var(--card);border:1px solid var(--rule);border-top:none}
+  .row:first-of-type{border-top:1px solid var(--rule)}
+  .head{display:grid;grid-template-columns:78px 1fr auto;gap:14px;align-items:baseline;
+        padding:14px 16px;cursor:pointer;width:100%;background:none;border:0;text-align:left;
+        font:inherit;color:inherit}
+  .head:hover{background:#F5F8F9}
+  .head:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .tkr{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.03em}
+  .nm{font-weight:500}
+  .meta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px;
+        display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .tag{padding:1px 6px;color:#fff;font-size:10px;letter-spacing:.05em;text-transform:uppercase}
+  .tag.Oncology{background:var(--oncology)} .tag.Melanoma{background:var(--melanoma)}
+  .tag.Allergy{background:var(--allergy)}
+  .cap{font-family:var(--mono);font-size:15px;font-weight:600;text-align:right;white-space:nowrap}
+  .cap small{display:block;font-size:10px;font-weight:400;color:var(--muted);
+             letter-spacing:.08em;text-transform:uppercase}
+
+  /* trials */
+  .trials{display:none;border-top:1px solid var(--rule);background:#FBFCFD}
+  .row.open .trials{display:block}
+  .trial{padding:12px 16px 12px 28px;border-bottom:1px solid var(--rule);
+         border-left:3px solid var(--rule)}
+  .trial:last-child{border-bottom:none}
+  .trial.Oncology{border-left-color:var(--oncology)}
+  .trial.Melanoma{border-left-color:var(--melanoma)}
+  .trial.Allergy{border-left-color:var(--allergy)}
+  .trial a{color:var(--accent);text-decoration:none;font-weight:500}
+  .trial a:hover{text-decoration:underline}
+  .tmeta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px}
+  .status{font-weight:600;color:var(--ink)}
+
+  .empty{padding:44px 16px;text-align:center;color:var(--muted);background:var(--card);
+         border:1px solid var(--rule)}
+  footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--rule);
+         font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.8}
+
+  @media (max-width:620px){
+    .head{grid-template-columns:1fr auto;gap:8px}
+    .tkr{grid-column:1/-1}
+    .cap{font-size:13px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>TrialScan</h1>
+    <div class="sub">Phase 3 &middot; oncology, melanoma, allergy &middot; built sample data</div>
+  </header>
+
+  <section class="spectrum">
+    <h2>Market cap spectrum — one dot per company, sized by trial count</h2>
+    <div class="axis" id="axis"><div class="axis-line"></div></div>
+    <div class="readout" id="readout">Hover a dot to identify a company. Click to filter.</div>
+  </section>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search company, ticker, drug or condition" aria-label="Search">
+    <button class="chip" data-area="Oncology" aria-pressed="false">Oncology</button>
+    <button class="chip" data-area="Melanoma" aria-pressed="false">Melanoma</button>
+    <button class="chip" data-area="Allergy" aria-pressed="false">Allergy</button>
+    <button class="chip" data-bucket="Small" aria-pressed="false">Small cap</button>
+    <button class="chip" data-bucket="Mid" aria-pressed="false">Mid cap</button>
+    <span class="count" id="count"></span>
+  </div>
+
+  <main id="list"></main>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const DATA = {"generated": "sample data", "filters": {"min_cap": 100000000.0, "max_cap": 20000000000.0, "cap_filter": true}, "companies": [{"ticker": "EXMP", "name": "Example Therapeutics Inc.", "market_cap": 420000000, "cap_bucket": "Small", "price": 6.12, "currency": "USD", "sector": "Biotechnology", "areas": ["Melanoma", "Oncology"], "trial_count": 2, "sponsor_names": ["Example Therapeutics"], "trials": [{"nct_id": "NCT00000001", "title": "Study of EXA-101 in advanced melanoma", "area": "Melanoma", "status": "RECRUITING", "start_date": "2025-03", "primary_completion": "2027-09", "enrollment": 340, "conditions": ["Metastatic Melanoma"], "interventions": ["EXA-101", "Pembrolizumab"], "url": "https://clinicaltrials.gov/study/NCT00000001"}, {"nct_id": "NCT00000002", "title": "EXA-101 plus chemotherapy in solid tumors", "area": "Oncology", "status": "ACTIVE_NOT_RECRUITING", "start_date": "2024-01", "primary_completion": "2026-11", "enrollment": 512, "conditions": ["Solid Tumor"], "interventions": ["EXA-101"], "url": "https://clinicaltrials.gov/study/NCT00000002"}]}, {"ticker": "SMPL", "name": "Sample Biosciences Ltd.", "market_cap": 3100000000, "cap_bucket": "Mid", "price": 41.8, "currency": "USD", "sector": "Biotechnology", "areas": ["Allergy"], "trial_count": 1, "sponsor_names": ["Sample Biosciences"], "trials": [{"nct_id": "NCT00000003", "title": "Oral immunotherapy for peanut allergy in children", "area": "Allergy", "status": "RECRUITING", "start_date": "2025-06", "primary_completion": "2027-02", "enrollment": 220, "conditions": ["Peanut Allergy"], "interventions": ["SMP-2"], "url": "https://clinicaltrials.gov/study/NCT00000003"}]}], "unmatched_sponsors": ["Some Private Biotech GmbH"]};
+const cos = DATA.companies;
+
+const fmtCap = c => !c ? "—" :
+  c >= 1e9 ? "$" + (c/1e9).toFixed(2) + "B" : "$" + Math.round(c/1e6) + "M";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, m =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const statusLabel = s => String(s||"").replace(/_/g," ").toLowerCase();
+
+const state = {q:"", areas:new Set(), buckets:new Set(), pinned:null};
+
+/* ---- hero: log-scale cap spectrum ---- */
+function drawAxis(){
+  const axis = document.getElementById("axis");
+  const caps = cos.map(c=>c.market_cap).filter(Boolean);
+  if(!caps.length) return;
+  const lo = Math.log10(Math.min(...caps)*0.9), hi = Math.log10(Math.max(...caps)*1.1);
+  const pos = v => ((Math.log10(v)-lo)/(hi-lo))*100;
+
+  [1e8,3e8,1e9,3e9,1e10,3e10].forEach(v=>{
+    const p = pos(v);
+    if(p<1 || p>99) return;
+    const t = document.createElement("div");
+    t.className = "tick"; t.style.left = p+"%"; t.textContent = fmtCap(v);
+    axis.appendChild(t);
+  });
+
+  const maxT = Math.max(...cos.map(c=>c.trial_count||1));
+  cos.forEach(c=>{
+    if(!c.market_cap) return;
+    const d = document.createElement("button");
+    const size = 8 + 12*Math.sqrt((c.trial_count||1)/maxT);
+    d.className = "dot";
+    d.style.cssText = `left:${pos(c.market_cap)}%;width:${size}px;height:${size}px;
+      background:var(--${(c.areas[0]||"Oncology").toLowerCase()})`;
+    d.setAttribute("aria-label", `${c.ticker}, ${fmtCap(c.market_cap)}, ${c.trial_count} trials`);
+    const say = () => document.getElementById("readout").innerHTML =
+      `<b>${esc(c.ticker)}</b> ${esc(c.name)} — ${fmtCap(c.market_cap)} · ${c.trial_count} Phase 3 · ${c.areas.join(", ")}`;
+    d.addEventListener("mouseenter", say);
+    d.addEventListener("focus", say);
+    d.addEventListener("click", ()=>{
+      state.pinned = state.pinned === c.ticker ? null : c.ticker;
+      document.getElementById("q").value = state.pinned || "";
+      state.q = (state.pinned||"").toLowerCase();
+      render();
+    });
+    axis.appendChild(d);
+  });
+}
+
+/* ---- filtering ---- */
+function matches(c){
+  if(state.areas.size && !c.areas.some(a=>state.areas.has(a))) return false;
+  if(state.buckets.size && !state.buckets.has(c.cap_bucket)) return false;
+  if(!state.q) return true;
+  const hay = [c.ticker, c.name, ...(c.sponsor_names||[]),
+    ...c.trials.flatMap(t=>[t.title, ...(t.conditions||[]), ...(t.interventions||[])])
+  ].join(" ").toLowerCase();
+  return hay.includes(state.q);
+}
+
+function trialHTML(t){
+  return `<div class="trial ${t.area}">
+    <a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+    <div class="tmeta"><span class="status">${esc(statusLabel(t.status))}</span>
+      &middot; ${esc(t.nct_id)}
+      &middot; start ${esc(t.start_date||"n/a")}
+      &middot; primary completion ${esc(t.primary_completion||"n/a")}
+      ${t.enrollment ? "&middot; n=" + t.enrollment : ""}
+      ${(t.interventions||[]).length ? "<br>" + esc(t.interventions.join(", ")) : ""}
+    </div></div>`;
+}
+
+function render(){
+  const list = document.getElementById("list");
+  const shown = cos.filter(matches);
+  document.getElementById("count").textContent =
+    `${shown.length} of ${cos.length} companies`;
+
+  if(!shown.length){
+    list.innerHTML = `<div class="empty">No companies match these filters.
+      Widen the cap range or clear the search.</div>`;
+    return;
+  }
+
+  list.innerHTML = shown.map(c=>`
+    <article class="row" data-t="${esc(c.ticker)}">
+      <button class="head" aria-expanded="false">
+        <span class="tkr">${esc(c.ticker)}</span>
+        <span>
+          <span class="nm">${esc(c.name)}</span>
+          <span class="meta">
+            ${c.areas.map(a=>`<span class="tag ${a}">${a}</span>`).join("")}
+            <span>${c.trial_count} Phase 3</span>
+            ${c.price ? `<span>· ${esc(c.currency||"USD")} ${c.price}</span>` : ""}
+          </span>
+        </span>
+        <span class="cap">${fmtCap(c.market_cap)}<small>${esc(c.cap_bucket)} cap</small></span>
+      </button>
+      <div class="trials">${c.trials.map(trialHTML).join("")}</div>
+    </article>`).join("");
+
+  list.querySelectorAll(".head").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const row = btn.closest(".row");
+      const open = row.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open);
+    });
+  });
+}
+
+/* ---- wiring ---- */
+document.getElementById("q").addEventListener("input", e=>{
+  state.q = e.target.value.trim().toLowerCase(); state.pinned = null; render();
+});
+document.querySelectorAll(".chip").forEach(chip=>{
+  chip.addEventListener("click", ()=>{
+    const on = chip.getAttribute("aria-pressed") === "true";
+    chip.setAttribute("aria-pressed", !on);
+    const set = chip.dataset.area ? state.areas : state.buckets;
+    const val = chip.dataset.area || chip.dataset.bucket;
+    on ? set.delete(val) : set.add(val);
+    render();
+  });
+});
+
+document.getElementById("foot").innerHTML =
+  `Trial data: ClinicalTrials.gov API v2. Company identity: SEC company_tickers.
+   Market caps: Yahoo Finance via yfinance, cached up to 24h.<br>
+   ${DATA.unmatched_sponsors?.length || 0} industry sponsors could not be matched to a
+   US-listed ticker — most are private, subsidiaries, or listed only outside the US.<br>
+   Screening tool, not investment advice. Verify every figure at the source before acting on it.`;
+
+drawAxis();
+render();
+</script>
+</body>
+</html>
