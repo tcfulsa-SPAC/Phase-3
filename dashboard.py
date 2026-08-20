@@ -20,12 +20,16 @@ DEMO = {
          "cap_bucket": "Small", "price": 6.12, "currency": "USD", "sector": "Biotechnology",
          "rating": "buy", "rating_mean": 1.8, "analyst_count": 7,
          "target_price": 14.50, "upside_pct": 136.9, "rating_spread": [4, 2, 1, 0, 0],
+         "tech_signal": "buy", "tech_score": 3, "rsi": 28.4, "stoch_k": 16.2,
+         "pos_52w": 12.5, "tech_reasons": ["RSI 28 oversold", "MACD histogram rising",
+         "above 50-day", "stochastic 16 oversold"],
          "areas": ["Melanoma", "Oncology"], "trial_count": 2, "sponsor_names": ["Example Therapeutics"],
          "trials": [
              {"nct_id": "NCT00000001", "title": "Study of EXA-101 in advanced melanoma",
               "area": "Melanoma", "status": "RECRUITING", "start_date": "2025-03",
               "primary_completion": "2027-09", "enrollment": 340,
               "conditions": ["Metastatic Melanoma"], "interventions": ["EXA-101", "Pembrolizumab"],
+              "role": "partner",
               "url": "https://clinicaltrials.gov/study/NCT00000001"},
              {"nct_id": "NCT00000002", "title": "EXA-101 plus chemotherapy in solid tumors",
               "area": "Oncology", "status": "ACTIVE_NOT_RECRUITING", "start_date": "2024-01",
@@ -36,6 +40,9 @@ DEMO = {
          "cap_bucket": "Mid", "price": 41.80, "currency": "USD", "sector": "Biotechnology",
          "rating": "hold", "rating_mean": 2.9, "analyst_count": 12,
          "target_price": 38.00, "upside_pct": -9.1, "rating_spread": [1, 2, 7, 2, 0],
+         "tech_signal": "sell", "tech_score": -3, "rsi": 74.1, "stoch_k": 88.0,
+         "pos_52w": 91.2, "tech_reasons": ["RSI 74 overbought", "MACD below signal",
+         "below 50-day"],
          "areas": ["Allergy"], "trial_count": 1, "sponsor_names": ["Sample Biosciences"],
          "trials": [
              {"nct_id": "NCT00000003", "title": "Oral immunotherapy for peanut allergy in children",
@@ -95,6 +102,13 @@ TEMPLATE = r"""<!doctype html>
   .dot:hover,.dot:focus-visible{transform:translate(-50%,-50%) scale(1.55);opacity:1;z-index:3}
   .readout{font-family:var(--mono);font-size:12px;color:var(--muted);min-height:18px;
            margin-top:2px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px 20px;margin-top:14px;padding-top:12px;
+          border-top:1px solid var(--rule);font-family:var(--mono);font-size:10px;
+          letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .lg{display:flex;align-items:center;gap:6px}
+  .lg i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .lg.sq i{border-radius:0;width:14px;height:6px}
+  .lgh{color:var(--ink);font-weight:600}
   .readout b{color:var(--ink);font-weight:600}
 
   /* controls */
@@ -114,7 +128,7 @@ TEMPLATE = r"""<!doctype html>
   /* company rows */
   .row{background:var(--card);border:1px solid var(--rule);border-top:none}
   .row:first-of-type{border-top:1px solid var(--rule)}
-  .head{display:grid;grid-template-columns:78px 1fr auto auto;gap:14px;align-items:baseline;
+  .head{display:grid;grid-template-columns:70px 1fr auto auto auto;gap:12px;align-items:baseline;
         padding:14px 16px;cursor:pointer;width:100%;background:none;border:0;text-align:left;
         font:inherit;color:inherit}
   .head:hover{background:#F5F8F9}
@@ -138,6 +152,17 @@ TEMPLATE = r"""<!doctype html>
   .rup{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px}
   .rup.pos{color:var(--r-sb)} .rup.neg{color:var(--r-ss)}
   .rnone{font-family:var(--mono);font-size:11px;color:#A6B0BB}
+  /* technicals */
+  .tech{text-align:right;white-space:nowrap;min-width:96px;font-family:var(--mono)}
+  .tsig{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+        padding:1px 6px;color:#fff}
+  .tsig.strong_buy{background:var(--r-sb)} .tsig.buy{background:var(--r-b)}
+  .tsig.neutral{background:#8A96A3} .tsig.sell{background:var(--r-s)}
+  .tsig.strong_sell{background:var(--r-ss)}
+  .tnum{font-size:10px;color:var(--muted);margin-top:4px}
+  .tgauge{display:block;width:88px;height:4px;background:var(--rule);margin:4px 0 0 auto;
+          position:relative}
+  .tgauge i{position:absolute;top:-2px;width:2px;height:8px;background:var(--ink)}
   .cap{font-family:var(--mono);font-size:15px;font-weight:600;text-align:right;white-space:nowrap}
   .cap small{display:block;font-size:10px;font-weight:400;color:var(--muted);
              letter-spacing:.08em;text-transform:uppercase}
@@ -151,6 +176,10 @@ TEMPLATE = r"""<!doctype html>
   .trial.Oncology{border-left-color:var(--oncology)}
   .trial.Melanoma{border-left-color:var(--melanoma)}
   .trial.Allergy{border-left-color:var(--allergy)}
+  .role{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+        padding:1px 5px;border:1px solid var(--rule);color:var(--muted);margin-left:6px;
+        vertical-align:middle}
+  .role.partner{border-color:var(--allergy);color:var(--allergy)}
   .trial a{color:var(--accent);text-decoration:none;font-weight:500}
   .trial a:hover{text-decoration:underline}
   .tmeta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px}
@@ -166,6 +195,8 @@ TEMPLATE = r"""<!doctype html>
     .tkr{grid-column:1/-1}
     .rating{grid-column:1/-1;text-align:left}
     .rbar{margin-left:0}
+    .tech{grid-column:1/-1;text-align:left}
+    .tgauge{margin-left:0}
     .cap{font-size:13px}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -182,6 +213,29 @@ TEMPLATE = r"""<!doctype html>
     <h2>Market cap spectrum — one dot per company, sized by trial count</h2>
     <div class="axis" id="axis"><div class="axis-line"></div></div>
     <div class="readout" id="readout">Hover a dot to identify a company. Click to filter.</div>
+    <div class="legend">
+      <span class="lgh">Dot colour = lead therapeutic area</span>
+      <span class="lg"><i style="background:var(--oncology)"></i>Oncology</span>
+      <span class="lg"><i style="background:var(--melanoma)"></i>Melanoma</span>
+      <span class="lg"><i style="background:var(--allergy)"></i>Allergy</span>
+      <span class="lg"><i style="background:var(--muted);opacity:.4"></i>Dot size = trial count</span>
+    </div>
+    <div class="legend">
+      <span class="lgh">Analyst bar, left to right</span>
+      <span class="lg sq"><i style="background:var(--r-sb)"></i>Strong buy</span>
+      <span class="lg sq"><i style="background:var(--r-b)"></i>Buy</span>
+      <span class="lg sq"><i style="background:var(--r-h)"></i>Hold</span>
+      <span class="lg sq"><i style="background:var(--r-s)"></i>Sell</span>
+      <span class="lg sq"><i style="background:var(--r-ss)"></i>Strong sell</span>
+    </div>
+    <div class="legend">
+      <span class="lgh">Partner tag</span>
+      <span class="lg">Another company is the registered lead sponsor — the asset is co-developed</span>
+    </div>
+    <div class="legend">
+      <span class="lgh">Technical signal</span>
+      <span class="lg">RSI + MACD + stochastic + 50/200-day trend, hover for the breakdown</span>
+    </div>
   </section>
 
   <div class="controls">
@@ -192,6 +246,7 @@ TEMPLATE = r"""<!doctype html>
     <button class="chip" data-bucket="Small" aria-pressed="false">Small cap</button>
     <button class="chip" data-bucket="Mid" aria-pressed="false">Mid cap</button>
     <button class="chip" id="buyOnly" aria-pressed="false">Rated buy</button>
+    <button class="chip" id="techBuy" aria-pressed="false">Tech buy</button>
     <span class="count" id="count"></span>
   </div>
 
@@ -215,6 +270,22 @@ const statusLabel = s => String(s||"").replace(/_/g," ").toLowerCase();
 
 const RATING_COLORS = ["var(--r-sb)","var(--r-b)","var(--r-h)","var(--r-s)","var(--r-ss)"];
 
+function techHTML(c){
+  if(!c.tech_signal)
+    return `<span class="tech rnone">no price data</span>`;
+  const cls = c.tech_signal.replace(/ /g,"_");
+  // RSI 0-100 rendered as a position marker
+  const gauge = c.rsi != null
+    ? `<span class="tgauge" title="RSI ${c.rsi} · 30 oversold, 70 overbought">
+         <i style="left:${Math.max(0,Math.min(100,c.rsi))}%"></i></span>` : "";
+  const bits = [];
+  if(c.rsi != null) bits.push(`RSI ${c.rsi}`);
+  if(c.pos_52w != null) bits.push(`${Math.round(c.pos_52w)}% of 52w range`);
+  return `<span class="tech" title="${esc((c.tech_reasons||[]).join("; "))}">
+    <span class="tsig ${cls}">${esc(c.tech_signal)}</span>
+    ${gauge}<span class="tnum">${bits.join(" · ")}</span></span>`;
+}
+
 function ratingHTML(c){
   if(!c.rating && !c.rating_spread)
     return `<span class="rating rnone">no coverage</span>`;
@@ -224,9 +295,12 @@ function ratingHTML(c){
   let bar = "";
   if(c.rating_spread){
     const total = c.rating_spread.reduce((a,b)=>a+b,0) || 1;
-    bar = `<span class="rbar">` + c.rating_spread.map((v,i)=>
-      v ? `<span style="width:${v/total*100}%;background:${RATING_COLORS[i]}"></span>` : ""
-    ).join("") + `</span>`;
+    const names = ["strong buy","buy","hold","sell","strong sell"];
+    bar = `<span class="rbar" title="${c.rating_spread.map((v,i)=>
+        v ? `${v} ${names[i]}` : "").filter(Boolean).join(", ")}">` +
+      c.rating_spread.map((v,i)=>
+        v ? `<span style="width:${v/total*100}%;background:${RATING_COLORS[i]}"></span>` : ""
+      ).join("") + `</span>`;
   }
   let up = "";
   if(c.upside_pct != null){
@@ -238,7 +312,8 @@ function ratingHTML(c){
     ${bar}${up ? "<br>"+up : ""}</span>`;
 }
 
-const state = {q:"", areas:new Set(), buckets:new Set(), buyOnly:false, pinned:null};
+const state = {q:"", areas:new Set(), buckets:new Set(), buyOnly:false,
+               techBuy:false, pinned:null};
 
 /* ---- hero: log-scale cap spectrum ---- */
 function drawAxis(){
@@ -284,6 +359,7 @@ function matches(c){
   if(state.areas.size && !c.areas.some(a=>state.areas.has(a))) return false;
   if(state.buckets.size && !state.buckets.has(c.cap_bucket)) return false;
   if(state.buyOnly && !/buy/i.test(c.rating||"")) return false;
+  if(state.techBuy && !/buy/i.test(c.tech_signal||"")) return false;
   if(!state.q) return true;
   const hay = [c.ticker, c.name, ...(c.sponsor_names||[]),
     ...c.trials.flatMap(t=>[t.title, ...(t.conditions||[]), ...(t.interventions||[])])
@@ -292,8 +368,11 @@ function matches(c){
 }
 
 function trialHTML(t){
+  const role = t.role === "partner"
+    ? `<span class="role partner" title="Partnered asset — another company is the registered lead sponsor">partner</span>`
+    : "";
   return `<div class="trial ${t.area}">
-    <a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+    <a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>${role}
     <div class="tmeta"><span class="status">${esc(statusLabel(t.status))}</span>
       &middot; ${esc(t.nct_id)}
       &middot; start ${esc(t.start_date||"n/a")}
@@ -329,6 +408,7 @@ function render(){
         </span>
         <span class="cap">${fmtCap(c.market_cap)}<small>${esc(c.cap_bucket)} cap</small></span>
         ${ratingHTML(c)}
+        ${techHTML(c)}
       </button>
       <div class="trials">${c.trials.map(trialHTML).join("")}</div>
     </article>`).join("");
@@ -351,6 +431,7 @@ document.querySelectorAll(".chip").forEach(chip=>{
     const on = chip.getAttribute("aria-pressed") === "true";
     chip.setAttribute("aria-pressed", !on);
     if(chip.id === "buyOnly"){ state.buyOnly = !on; render(); return; }
+    if(chip.id === "techBuy"){ state.techBuy = !on; render(); return; }
     const set = chip.dataset.area ? state.areas : state.buckets;
     const val = chip.dataset.area || chip.dataset.bucket;
     on ? set.delete(val) : set.add(val);
@@ -363,6 +444,8 @@ document.getElementById("foot").innerHTML =
    Market caps and analyst consensus: Yahoo Finance via yfinance, cached up to 24h.<br>
    ${DATA.unmatched_sponsors?.length || 0} industry sponsors could not be matched to a
    US-listed ticker — most are private, subsidiaries, or listed only outside the US.<br>
+   Technical signals assume continuous price discovery, which small-cap biotech does not
+   have — these names gap on trial readouts. Treat them as entry timing, not as a thesis.<br>
    Screening tool, not investment advice. Verify every figure at the source before acting on it.`;
 
 drawAxis();
