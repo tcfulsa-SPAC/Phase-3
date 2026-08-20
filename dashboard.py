@@ -257,6 +257,10 @@ TEMPLATE = r"""<!doctype html>
       <span class="lg sq"><i style="background:var(--r-ss)"></i>Strong sell</span>
     </div>
     <div class="legend">
+      <span class="lgh">Cap buckets</span>
+      <span class="lg">Micro &lt;$300M · Small $300M–2B · Mid $2–10B · Large &gt;$10B</span>
+    </div>
+    <div class="legend">
       <span class="lgh">Partner tag</span>
       <span class="lg">Another company is the registered lead sponsor — the asset is co-developed</span>
     </div>
@@ -285,8 +289,10 @@ TEMPLATE = r"""<!doctype html>
     <button class="chip" data-area="Oncology" aria-pressed="false">Oncology</button>
     <button class="chip" data-area="Melanoma" aria-pressed="false">Melanoma</button>
     <button class="chip" data-area="Allergy" aria-pressed="false">Allergy</button>
-    <button class="chip" data-bucket="Small" aria-pressed="false">Small cap</button>
-    <button class="chip" data-bucket="Mid" aria-pressed="false">Mid cap</button>
+    <button class="chip" data-bucket="Micro" aria-pressed="false">Micro</button>
+    <button class="chip" data-bucket="Small" aria-pressed="false">Small</button>
+    <button class="chip" data-bucket="Mid" aria-pressed="false">Mid</button>
+    <button class="chip" data-bucket="Large" aria-pressed="false">Large</button>
     <button class="chip" id="buyOnly" aria-pressed="false">Rated buy</button>
     <button class="chip" id="techBuy" aria-pressed="false">Tech buy</button>
     <span class="count" id="count"></span>
