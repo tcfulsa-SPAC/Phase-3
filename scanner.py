@@ -137,7 +137,9 @@ def fetch_area(area: str, condition_query: str, statuses: list[str],
         params = {
             "format": "json",
             "query.cond": condition_query,
-            "filter.phase": "PHASE3",
+            # `filter.phase` does NOT exist in API v2 - it returns
+            # "unknown parameter". Phase filtering goes through filter.advanced.
+            "filter.advanced": "AREA[Phase]PHASE3",
             # Comma-separated. A pipe here returns HTTP 400.
             "filter.overallStatus": ",".join(statuses),
             "pageSize": page_size,
