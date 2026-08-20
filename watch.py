@@ -322,8 +322,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="Watch for new Phase 3 entrants and alert.")
     ap.add_argument("--seed", action="store_true",
                     help="Record the baseline without sending anything. Use on first run.")
-    ap.add_argument("--min-cap", type=float, default=100e6)
-    ap.add_argument("--max-cap", type=float, default=20e9)
+    ap.add_argument("--min-cap", type=float, default=50e6)
+    ap.add_argument("--max-cap", type=float, default=5e12)
     ap.add_argument("--news-days", type=int, default=7)
     ap.add_argument("--max-news-lookups", type=int, default=25,
                     help="Cap on companies to fetch news for, so one noisy run stays polite.")
