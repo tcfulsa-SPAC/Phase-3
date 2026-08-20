@@ -26,7 +26,7 @@ DEMO = {
               "area": "Melanoma", "status": "RECRUITING", "start_date": "2025-03",
               "primary_completion": "2026-10", "pc_type": "ESTIMATED", "has_results": False, "enrollment": 340,
               "conditions": ["Metastatic Melanoma"], "interventions": ["EXA-101", "Pembrolizumab"],
-              "role": "partner",
+              "role": "partner", "is_platform": True,
               "url": "https://clinicaltrials.gov/study/NCT00000001"},
              {"nct_id": "NCT00000002", "title": "EXA-101 plus chemotherapy in solid tumors",
               "area": "Oncology", "status": "ACTIVE_NOT_RECRUITING", "start_date": "2024-01",
@@ -201,6 +201,7 @@ TEMPLATE = r"""<!doctype html>
         padding:1px 5px;border:1px solid var(--rule);color:var(--muted);margin-left:6px;
         vertical-align:middle}
   .role.partner{border-color:var(--allergy);color:var(--allergy)}
+  .role.platform{border-color:var(--r-ss);color:var(--r-ss)}
   .trial a{color:var(--accent);text-decoration:none;font-weight:500}
   .trial a:hover{text-decoration:underline}
   .tmeta{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px}
@@ -247,6 +248,10 @@ TEMPLATE = r"""<!doctype html>
       <span class="lg sq"><i style="background:var(--r-h)"></i>Hold</span>
       <span class="lg sq"><i style="background:var(--r-s)"></i>Sell</span>
       <span class="lg sq"><i style="background:var(--r-ss)"></i>Strong sell</span>
+    </div>
+    <div class="legend">
+      <span class="lgh">Platform tag</span>
+      <span class="lg">Several companies' drugs as parallel arms — this company owns one arm, not the study</span>
     </div>
     <div class="legend">
       <span class="lgh">Next readout</span>
@@ -406,7 +411,7 @@ function calendarRows(months, maxCap, showStale){
   // under two areas. Collapse per company+trial and merge the area tags.
   const seen = new Map();
   cos.forEach(c => (c.trials||[]).forEach(t => {
-    if(t.has_results || DEAD.includes(t.status)) return;
+    if(t.has_results || DEAD.includes(t.status) || t.is_platform) return;
     if(maxCap && c.market_cap && c.market_cap > maxCap) return;
     const m = monthsUntil(t.primary_completion);
     if(m === null || m > months) return;
@@ -478,7 +483,7 @@ document.getElementById("calToggle").addEventListener("click", e=>{
 function nextReadout(c){
   let best = null;
   (c.trials||[]).forEach(t=>{
-    if(t.has_results || DEAD.includes(t.status)) return;
+    if(t.has_results || DEAD.includes(t.status) || t.is_platform) return;
     const m = monthsUntil(t.primary_completion);
     if(m === null || m < -12) return;
     const confirmed = t.pc_type === "ACTUAL";
@@ -527,8 +532,11 @@ function trialHTML(t){
   const role = t.role === "partner"
     ? `<span class="role partner" title="Partnered asset — another company is the registered lead sponsor">partner</span>`
     : "";
+  const plat = t.is_platform
+    ? `<span class="role platform" title="Platform trial — several companies' drugs run as parallel arms. This company owns one arm, not the whole study, and its arm may have finished while the platform continues.">platform</span>`
+    : "";
   return `<div class="trial ${t.area}">
-    <a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>${role}
+    <a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>${role}${plat}
     <div class="tmeta"><span class="status">${esc(statusLabel(t.status))}</span>
       &middot; ${esc(t.nct_id)}
       &middot; start ${esc(t.start_date||"n/a")}
