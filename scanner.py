@@ -288,7 +288,11 @@ def fetch_market_cap(ticker: str, cache: dict) -> dict:
         return hit
 
     result = {"ticker": ticker, "market_cap": None, "price": None,
-              "currency": None, "sector": None, "_ts": time.time()}
+              "currency": None, "sector": None,
+              # Analyst consensus (Yahoo Finance aggregate)
+              "rating": None, "rating_mean": None, "analyst_count": None,
+              "target_price": None, "upside_pct": None, "rating_spread": None,
+              "_ts": time.time()}
     try:
         import yfinance as yf
         tk = yf.Ticker(ticker)
@@ -299,12 +303,41 @@ def fetch_market_cap(ticker: str, cache: dict) -> dict:
             result["currency"] = fi.get("currency")
         except Exception:
             pass
-        if not result["market_cap"]:
+
+        # .info is slower than fast_info but it's the only place the analyst
+        # fields live, so we always pay for it.
+        info = {}
+        try:
             info = tk.info or {}
-            result["market_cap"] = info.get("marketCap")
-            result["price"] = info.get("currentPrice")
-            result["currency"] = info.get("currency")
-            result["sector"] = info.get("industry") or info.get("sector")
+        except Exception:
+            pass
+
+        result["market_cap"] = result["market_cap"] or info.get("marketCap")
+        result["price"] = result["price"] or info.get("currentPrice")
+        result["currency"] = result["currency"] or info.get("currency")
+        result["sector"] = info.get("industry") or info.get("sector")
+
+        result["rating"] = info.get("recommendationKey")       # buy / hold / sell
+        result["rating_mean"] = info.get("recommendationMean")  # 1.0 strong buy -> 5.0 strong sell
+        result["analyst_count"] = info.get("numberOfAnalystOpinions")
+        result["target_price"] = info.get("targetMeanPrice")
+
+        if result["target_price"] and result["price"]:
+            result["upside_pct"] = round(
+                (result["target_price"] - result["price"]) / result["price"] * 100, 1)
+
+        # Full strongBuy/buy/hold/sell/strongSell distribution, most recent period.
+        try:
+            rec = tk.get_recommendations()
+            if rec is not None and len(rec):
+                row = rec.iloc[0]
+                spread = [int(row.get(k) or 0) for k in
+                          ("strongBuy", "buy", "hold", "sell", "strongSell")]
+                if sum(spread):
+                    result["rating_spread"] = spread
+        except Exception:
+            pass
+
     except Exception as e:
         result["error"] = str(e)[:120]
 
@@ -390,6 +423,12 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
             "price": fin.get("price"),
             "currency": fin.get("currency"),
             "sector": fin.get("sector"),
+            "rating": fin.get("rating"),
+            "rating_mean": fin.get("rating_mean"),
+            "analyst_count": fin.get("analyst_count"),
+            "target_price": fin.get("target_price"),
+            "upside_pct": fin.get("upside_pct"),
+            "rating_spread": fin.get("rating_spread"),
             "areas": sorted({t["area"] for t in c["trials"]}),
             "trial_count": len(c["trials"]),
             "trials": sorted(c["trials"], key=lambda t: t.get("start_date") or "", reverse=True),
@@ -421,10 +460,14 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
 def write_csvs(companies: list[dict]) -> None:
     with open("companies.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["ticker", "name", "market_cap_usd", "cap_bucket", "areas", "phase3_trials"])
+        w.writerow(["ticker", "name", "market_cap_usd", "cap_bucket", "areas",
+                    "phase3_trials", "analyst_rating", "rating_mean", "analysts",
+                    "target_price", "upside_pct"])
         for c in companies:
             w.writerow([c["ticker"], c["name"], c["market_cap"], c["cap_bucket"],
-                        "; ".join(c["areas"]), c["trial_count"]])
+                        "; ".join(c["areas"]), c["trial_count"], c.get("rating"),
+                        c.get("rating_mean"), c.get("analyst_count"),
+                        c.get("target_price"), c.get("upside_pct")])
 
     with open("trials.csv", "w", newline="") as f:
         w = csv.writer(f)
