@@ -155,6 +155,41 @@ def upcoming_catalysts(companies: list[dict], months: float = 4.0) -> list[dict]
     return rows
 
 
+def sweep_readout_news(companies: list[dict], cal: list[dict], days: int,
+                       max_lookups: int, verbose: bool = True) -> tuple[dict, list]:
+    """Check the news for every company with a readout window open.
+
+    This is the part that catches the actual event. The registry updates weeks
+    after a readout; the press release and the 8-K land the same morning. So for
+    any company with a trial completing soon, we look at its feeds every run —
+    whether or not anything changed in the registry.
+    """
+    by_ticker = {c["ticker"]: c for c in companies}
+    watch = []
+    for r in cal:
+        if r["ticker"] not in watch:
+            watch.append(r["ticker"])
+    watch = watch[:max_lookups]
+
+    if verbose:
+        print(f"Sweeping news for {len(watch)} companies with readouts pending...")
+
+    found, hits = {}, []
+    for i, tkr in enumerate(watch, 1):
+        rows = news.fetch_news(by_ticker[tkr], days=days)
+        found[tkr] = rows
+        for r in rows:
+            if r.get("readout"):
+                hits.append({**r, "ticker": tkr, "name": by_ticker[tkr]["name"],
+                             "market_cap": by_ticker[tkr].get("market_cap")})
+        if verbose:
+            print(f"  {i}/{len(watch)} {tkr}", end="\r", flush=True)
+    if verbose:
+        print(" " * 40, end="\r")
+        print(f"  {len(hits)} possible readout headlines found")
+    return found, hits
+
+
 def has_changes(ch: dict) -> bool:
     return any(ch[k] for k in ch)
 
@@ -165,7 +200,8 @@ def has_changes(ch: dict) -> bool:
 
 def build_digest(changes: dict, news_by_ticker: dict, generated: str,
                  calendar: list[dict] | None = None,
-                 cal_months: float = 4.0) -> tuple[str, str]:
+                 cal_months: float = 4.0,
+                 readout_news: list[dict] | None = None) -> tuple[str, str]:
     """Return (html, plaintext)."""
     h: list[str] = []
     t: list[str] = []
@@ -200,6 +236,22 @@ def build_digest(changes: dict, news_by_ticker: dict, generated: str,
 
     card = ('style="background:#fff;border:1px solid #D2D9E0;border-left:3px solid %s;'
             'padding:13px 15px;margin-bottom:9px"')
+
+    if readout_news:
+        h.append('<h2 style="font:600 12px/1.4 ui-monospace,monospace;letter-spacing:.12em;'
+                 'text-transform:uppercase;color:#A33B2A;margin:20px 0 10px;'
+                 'padding-bottom:6px;border-bottom:2px solid #A33B2A">'
+                 f'Possible readouts in the news — {len(readout_news)}</h2>')
+        t.append(f"\nPOSSIBLE READOUTS IN THE NEWS ({len(readout_news)})\n" + "=" * 44)
+        for r in readout_news:
+            h.append(f'<div style="background:#fff;border:1px solid #D2D9E0;'
+                     f'border-left:3px solid #A33B2A;padding:13px 15px;margin-bottom:9px">'
+                     f'<b style="font-family:ui-monospace,monospace">{r["ticker"]}</b> '
+                     f'<span style="color:#5E6B78">{fmt_cap(r["market_cap"])}</span><br>'
+                     f'<a href="{r["url"]}" style="color:#135A63;text-decoration:none;'
+                     f'font-weight:500">{r["title"]}</a><br>'
+                     f'<span style="font-size:12px;color:#5E6B78">{r["source"]}</span></div>')
+            t.append(f'\n  {r["ticker"]} — {r["title"]}\n    [{r["source"]}] {r["url"]}')
 
     section(
         "READOUT — results posted to the registry", changes["results_posted"],
@@ -325,12 +377,14 @@ def main() -> int:
     ap.add_argument("--min-cap", type=float, default=50e6)
     ap.add_argument("--max-cap", type=float, default=5e12)
     ap.add_argument("--news-days", type=int, default=7)
-    ap.add_argument("--max-news-lookups", type=int, default=25,
+    ap.add_argument("--max-news-lookups", type=int, default=40,
                     help="Cap on companies to fetch news for, so one noisy run stays polite.")
     ap.add_argument("--dry-run", action="store_true",
                     help="Write digest.html but send nothing.")
     ap.add_argument("--calendar-months", type=float, default=4.0,
                     help="Include readouts expected within this many months.")
+    ap.add_argument("--no-sweep", action="store_true",
+                    help="Skip the daily readout news sweep.")
     ap.add_argument("--calendar", action="store_true",
                     help="Just print the upcoming readout calendar and exit.")
     args = ap.parse_args()
@@ -368,7 +422,14 @@ def main() -> int:
     counts = {k: len(v) for k, v in changes.items()}
     print(f"\nChanges: {counts}")
 
-    if not has_changes(changes):
+    # The sweep runs every time, regardless of registry changes. A readout hits
+    # the wire the same morning; the registry catches up weeks later.
+    sweep_news, readout_hits = ({}, [])
+    if not args.no_sweep:
+        sweep_news, readout_hits = sweep_readout_news(
+            payload["companies"], cal, args.news_days, args.max_news_lookups)
+
+    if not has_changes(changes) and not readout_hits:
         STATE.write_text(json.dumps(new_state, indent=1))
         print("Nothing new. No alert sent.")
         return 0
@@ -382,19 +443,26 @@ def main() -> int:
     tickers = tickers[:args.max_news_lookups]
 
     by_ticker = {c["ticker"]: c for c in payload["companies"]}
-    news_by_ticker = {}
-    print(f"Fetching news for {len(tickers)} companies...")
-    for i, tkr in enumerate(tickers, 1):
-        news_by_ticker[tkr] = news.fetch_news(by_ticker[tkr], days=args.news_days)
-        print(f"  {i}/{len(tickers)} {tkr}", end="\r", flush=True)
-    print(" " * 40, end="\r")
+    news_by_ticker = dict(sweep_news)
+    todo = [t for t in tickers if t not in news_by_ticker]
+    if todo:
+        print(f"Fetching news for {len(todo)} changed companies...")
+        for i, tkr in enumerate(todo, 1):
+            news_by_ticker[tkr] = news.fetch_news(by_ticker[tkr], days=args.news_days)
+            print(f"  {i}/{len(todo)} {tkr}", end="\r", flush=True)
+        print(" " * 40, end="\r")
 
     html, text = build_digest(changes, news_by_ticker, payload["generated"],
-                              calendar=cal, cal_months=args.calendar_months)
+                              calendar=cal, cal_months=args.calendar_months,
+                              readout_news=readout_hits)
     Path("digest.html").write_text(html)
 
     n_res, n_new = counts["results_posted"], counts["new_companies"]
-    if n_res:
+    if readout_hits:
+        lead = readout_hits[0]
+        subject = (f"TrialScan: possible readout — {lead['ticker']}"
+                   + (f" +{len(readout_hits)-1} more" if len(readout_hits) > 1 else ""))
+    elif n_res:
         subject = (f"TrialScan: {n_res} Phase 3 readout"
                    f"{'' if n_res == 1 else 's'} posted")
     elif n_new:
