@@ -27,13 +27,13 @@ DEMO = {
          "trials": [
              {"nct_id": "NCT00000001", "title": "Study of EXA-101 in advanced melanoma",
               "area": "Melanoma", "status": "RECRUITING", "start_date": "2025-03",
-              "primary_completion": "2027-09", "enrollment": 340,
+              "primary_completion": "2026-10", "pc_type": "ESTIMATED", "has_results": False, "enrollment": 340,
               "conditions": ["Metastatic Melanoma"], "interventions": ["EXA-101", "Pembrolizumab"],
               "role": "partner",
               "url": "https://clinicaltrials.gov/study/NCT00000001"},
              {"nct_id": "NCT00000002", "title": "EXA-101 plus chemotherapy in solid tumors",
               "area": "Oncology", "status": "ACTIVE_NOT_RECRUITING", "start_date": "2024-01",
-              "primary_completion": "2026-11", "enrollment": 512,
+              "primary_completion": "2026-07", "pc_type": "ESTIMATED", "has_results": False, "enrollment": 512,
               "conditions": ["Solid Tumor"], "interventions": ["EXA-101"],
               "url": "https://clinicaltrials.gov/study/NCT00000002"}]},
         {"ticker": "SMPL", "name": "Sample Biosciences Ltd.", "market_cap": 3_100_000_000,
@@ -47,7 +47,7 @@ DEMO = {
          "trials": [
              {"nct_id": "NCT00000003", "title": "Oral immunotherapy for peanut allergy in children",
               "area": "Allergy", "status": "RECRUITING", "start_date": "2025-06",
-              "primary_completion": "2027-02", "enrollment": 220,
+              "primary_completion": "2027-01", "pc_type": "ACTUAL", "has_results": False, "enrollment": 220,
               "conditions": ["Peanut Allergy"], "interventions": ["SMP-2"],
               "url": "https://clinicaltrials.gov/study/NCT00000003"}]},
     ],
@@ -110,6 +110,34 @@ TEMPLATE = r"""<!doctype html>
   .lg.sq i{border-radius:0;width:14px;height:6px}
   .lgh{color:var(--ink);font-weight:600}
   .readout b{color:var(--ink);font-weight:600}
+
+  /* readout calendar */
+  .cal{margin:22px 0 0;background:var(--card);border:1px solid var(--rule)}
+  .cal h2{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+          color:var(--muted);margin:0;font-weight:500;padding:16px 16px 12px;
+          display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
+  .cal h2 b{color:var(--ink)}
+  .cal h2 .caret{margin-left:auto;font-size:14px;transition:transform .15s ease}
+  .cal.closed h2 .caret{transform:rotate(-90deg)}
+  .cal.closed .calbody{display:none}
+  .calrow{display:grid;grid-template-columns:52px 62px 1fr auto;gap:12px;align-items:baseline;
+          padding:10px 16px;border-top:1px solid var(--rule)}
+  .calrow:hover{background:#F5F8F9}
+  .calwhen{font-family:var(--mono);font-size:11px;font-weight:600;text-align:right}
+  .calwhen.soon{color:var(--r-ss)} .calwhen.near{color:var(--allergy)}
+  .calwhen.later{color:var(--muted)}
+  .caltkr{font-family:var(--mono);font-size:12px;font-weight:600}
+  .caltitle{font-size:13px;line-height:1.4}
+  .caltitle a{color:var(--ink);text-decoration:none}
+  .caltitle a:hover{color:var(--accent);text-decoration:underline}
+  .calmeta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:2px}
+  .calcap{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+  .calempty{padding:20px 16px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px}
+  @media (max-width:620px){
+    .calrow{grid-template-columns:52px 1fr;gap:8px}
+    .caltitle{grid-column:1/-1}
+    .calcap{display:none}
+  }
 
   /* controls */
   .controls{position:sticky;top:0;z-index:5;background:var(--paper);
@@ -238,6 +266,20 @@ TEMPLATE = r"""<!doctype html>
     </div>
   </section>
 
+  <section class="cal" id="cal">
+    <h2 id="calToggle">Readouts expected — <b id="calCount">…</b>
+      <span style="font-weight:400;text-transform:none;letter-spacing:0">
+        primary completion within
+        <select id="calWindow" style="font:inherit;border:1px solid var(--rule);
+          background:var(--card);padding:1px 4px">
+          <option value="3">3 months</option>
+          <option value="6" selected>6 months</option>
+          <option value="12">12 months</option>
+        </select></span>
+      <span class="caret">▾</span></h2>
+    <div class="calbody" id="calBody"></div>
+  </section>
+
   <div class="controls">
     <input type="search" id="q" placeholder="Search company, ticker, drug or condition" aria-label="Search">
     <button class="chip" data-area="Oncology" aria-pressed="false">Oncology</button>
@@ -354,6 +396,68 @@ function drawAxis(){
   });
 }
 
+/* ---- readout calendar ---- */
+function monthsUntil(d){
+  if(!d) return null;
+  const p = String(d).split("-");
+  if(p.length < 2) return null;
+  const dt = new Date(+p[0], +p[1]-1, p.length > 2 ? Math.min(+p[2],28) : 15);
+  if(isNaN(dt)) return null;
+  return (dt - new Date()) / (1000*60*60*24*30.44);
+}
+
+const DEAD = ["TERMINATED","WITHDRAWN","SUSPENDED"];
+
+function calendarRows(months){
+  const rows = [];
+  cos.forEach(c => (c.trials||[]).forEach(t => {
+    if(t.has_results || DEAD.includes(t.status)) return;
+    const m = monthsUntil(t.primary_completion);
+    if(m === null || m < -6 || m > months) return;
+    rows.push({...t, ticker:c.ticker, name:c.name, market_cap:c.market_cap, months:m});
+  }));
+  return rows.sort((a,b)=>a.months-b.months);
+}
+
+function renderCalendar(){
+  const months = +document.getElementById("calWindow").value;
+  const rows = calendarRows(months);
+  document.getElementById("calCount").textContent =
+    `${rows.length} trial${rows.length===1?"":"s"}`;
+
+  const body = document.getElementById("calBody");
+  if(!rows.length){
+    body.innerHTML = `<div class="calempty">No primary completion dates fall in this
+      window. Try widening it — many sponsors list dates a year or more out.</div>`;
+    return;
+  }
+  body.innerHTML = rows.slice(0,40).map(r=>{
+    const cls = r.months < 0 ? "soon" : r.months < 3 ? "near" : "later";
+    const when = r.months < 0 ? "overdue"
+      : r.months < 1 ? `${Math.round(r.months*30)}d` : `${r.months.toFixed(1)}mo`;
+    const est = r.pc_type === "ESTIMATED" ? " est." : "";
+    return `<div class="calrow">
+      <span class="calwhen ${cls}">${when}</span>
+      <span class="caltkr">${esc(r.ticker)}</span>
+      <span class="caltitle">
+        <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>
+        <span class="calmeta">${esc(r.primary_completion)}${est} ·
+          ${esc(statusLabel(r.status))}${r.enrollment?` · n=${r.enrollment}`:""}
+          ${r.role==="partner"?" · partnered":""}</span>
+      </span>
+      <span class="calcap">${fmtCap(r.market_cap)}</span>
+    </div>`;
+  }).join("");
+}
+
+document.getElementById("calWindow").addEventListener("change", e=>{
+  e.stopPropagation(); renderCalendar();
+});
+document.getElementById("calToggle").addEventListener("click", e=>{
+  if(e.target.tagName === "SELECT") return;
+  document.getElementById("cal").classList.toggle("closed");
+});
+
 /* ---- filtering ---- */
 function matches(c){
   if(state.areas.size && !c.areas.some(a=>state.areas.has(a))) return false;
@@ -449,6 +553,7 @@ document.getElementById("foot").innerHTML =
    Screening tool, not investment advice. Verify every figure at the source before acting on it.`;
 
 drawAxis();
+renderCalendar();
 render();
 </script>
 </body>
