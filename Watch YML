@@ -1,0 +1,41 @@
+name: TrialScan daily watch
+
+on:
+  schedule:
+    - cron: "0 12 * * 1-5"   # weekdays, 12:00 UTC
+  workflow_dispatch:          # lets you run it by hand from the Actions tab
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write         # needed to commit the updated state file
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      - name: Run the watcher
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python watch.py
+
+      - name: Publish the dashboard
+        run: python dashboard.py
+
+      - name: Save state so the next run can diff against it
+        run: |
+          git config user.name "trialscan-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A state.json data.json companies.csv trials.csv dashboard.html
+          git diff --staged --quiet || git commit -m "Watch run $(date -u +%Y-%m-%d)"
+          git push
