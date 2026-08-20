@@ -126,6 +126,25 @@ def yahoo_headlines(ticker: str) -> list[dict]:
 
 # ---------------------------------------------------------------------------
 
+# Phrases that mark a press release or filing as an actual trial readout rather
+# than routine corporate news. Deliberately broad — a false positive costs you
+# one line in a digest; a false negative costs you the event.
+READOUT_PATTERNS = re.compile(
+    r"\b(topline|top-line|primary endpoint|primary and (key )?secondary|"
+    r"met (its|the|both)|statistically significant|interim analysis|"
+    r"phase 3 (data|results|readout)|phase iii (data|results)|"
+    r"pivotal (data|results|trial results)|readout|"
+    r"positive (data|results)|failed to meet|did not meet|missed (its|the)|"
+    r"overall survival|progression-free survival|recurrence-free|"
+    r"data monitoring committee|dsmb|stopped early|halt(ed|s)? (the )?trial)\b",
+    re.I)
+
+
+def is_readout(title: str) -> bool:
+    """Does this headline look like trial results rather than corporate noise?"""
+    return bool(READOUT_PATTERNS.search(title or ""))
+
+
 def _key(title: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()[:70]
 
@@ -156,10 +175,10 @@ def fetch_news(company: dict, days: int = 7, limit: int = 6,
         if k in seen:
             continue
         seen.add(k)
-        keep.append({**r, "date": d})
+        keep.append({**r, "date": d, "readout": is_readout(r["title"])})
 
     # Filings first, then newest news.
-    keep.sort(key=lambda r: (r["kind"] != "filing",
+    keep.sort(key=lambda r: (not r["readout"], r["kind"] != "filing",
                              -(r["date"].timestamp() if r["date"] else 0)))
     return keep[:limit]
 
