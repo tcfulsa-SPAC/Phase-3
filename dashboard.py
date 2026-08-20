@@ -120,6 +120,8 @@ TEMPLATE = r"""<!doctype html>
   .calwhen{font-family:var(--mono);font-size:11px;font-weight:600;text-align:right}
   .calwhen.soon{color:var(--r-ss)} .calwhen.near{color:var(--allergy)}
   .calwhen.later{color:var(--muted)}
+  .calwhen.stale{color:#A6B0BB}
+  .calwhen.soon{color:var(--r-ss);font-weight:600}
   .caltkr{font-family:var(--mono);font-size:12px;font-weight:600}
   .caltitle{font-size:13px;line-height:1.4}
   .caltitle a{color:var(--ink);text-decoration:none}
@@ -150,7 +152,7 @@ TEMPLATE = r"""<!doctype html>
   /* company rows */
   .row{background:var(--card);border:1px solid var(--rule);border-top:none}
   .row:first-of-type{border-top:1px solid var(--rule)}
-  .head{display:grid;grid-template-columns:78px 1fr auto auto;gap:14px;align-items:baseline;
+  .head{display:grid;grid-template-columns:72px 1fr auto auto auto;gap:12px;align-items:baseline;
         padding:14px 16px;cursor:pointer;width:100%;background:none;border:0;text-align:left;
         font:inherit;color:inherit}
   .head:hover{background:#F5F8F9}
@@ -173,7 +175,16 @@ TEMPLATE = r"""<!doctype html>
   .rbar span{height:100%}
   .rup{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px}
   .rup.pos{color:var(--r-sb)} .rup.neg{color:var(--r-ss)}
-  .rnone{font-family:var(--mono);font-size:11px;color:#A6B0BB}  .cap{font-family:var(--mono);font-size:15px;font-weight:600;text-align:right;white-space:nowrap}
+  .rnone{font-family:var(--mono);font-size:11px;color:#A6B0BB}  /* next expected readout */
+  .nxt{text-align:right;white-space:nowrap;min-width:98px;font-family:var(--mono)}
+  .nxtwhen{font-size:12px;font-weight:600}
+  .nxtwhen.datain{color:var(--r-ss)}
+  .nxtwhen.near{color:var(--allergy)}
+  .nxtwhen.later{color:var(--ink)}
+  .nxtwhen.none{color:#A6B0BB;font-weight:400}
+  .nxtdate{display:block;font-size:10px;font-weight:400;color:var(--muted);
+           letter-spacing:.04em;margin-top:2px}
+  .cap{font-family:var(--mono);font-size:15px;font-weight:600;text-align:right;white-space:nowrap}
   .cap small{display:block;font-size:10px;font-weight:400;color:var(--muted);
              letter-spacing:.08em;text-transform:uppercase}
 
@@ -205,6 +216,7 @@ TEMPLATE = r"""<!doctype html>
     .tkr{grid-column:1/-1}
     .rating{grid-column:1/-1;text-align:left}
     .rbar{margin-left:0}
+    .nxt{grid-column:1/-1;text-align:left}
     .cap{font-size:13px}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -237,6 +249,10 @@ TEMPLATE = r"""<!doctype html>
       <span class="lg sq"><i style="background:var(--r-ss)"></i>Strong sell</span>
     </div>
     <div class="legend">
+      <span class="lgh">Next readout</span>
+      <span class="lg">Soonest primary completion · DATA IN = endpoint reached, analysis underway</span>
+    </div>
+    <div class="legend">
       <span class="lgh">Cap buckets</span>
       <span class="lg">Micro &lt;$300M · Small $300M–2B · Mid $2–10B · Large &gt;$10B</span>
     </div>
@@ -255,7 +271,18 @@ TEMPLATE = r"""<!doctype html>
           <option value="3">3 months</option>
           <option value="6" selected>6 months</option>
           <option value="12">12 months</option>
-        </select></span>
+        </select>
+        &nbsp;·&nbsp; max cap
+        <select id="calCap" style="font:inherit;border:1px solid var(--rule);
+          background:var(--card);padding:1px 4px">
+          <option value="1e13">any</option>
+          <option value="10e9" selected>$10B</option>
+          <option value="2e9">$2B</option>
+          <option value="300e6">$300M</option>
+        </select>
+        &nbsp;·&nbsp;
+        <label style="cursor:pointer"><input type="checkbox" id="calOverdue">
+          show stale</label></span>
       <span class="caret">▾</span></h2>
     <div class="calbody" id="calBody"></div>
   </section>
@@ -269,6 +296,7 @@ TEMPLATE = r"""<!doctype html>
     <button class="chip" data-bucket="Small" aria-pressed="false">Small</button>
     <button class="chip" data-bucket="Mid" aria-pressed="false">Mid</button>
     <button class="chip" data-bucket="Large" aria-pressed="false">Large</button>
+    <button class="chip" id="soonOnly" aria-pressed="false">Readout &le;3mo</button>
     <button class="chip" id="buyOnly" aria-pressed="false">Rated buy</button>
     <span class="count" id="count"></span>
   </div>
@@ -319,7 +347,8 @@ function ratingHTML(c){
     ${bar}${up ? "<br>"+up : ""}</span>`;
 }
 
-const state = {q:"", areas:new Set(), buckets:new Set(), buyOnly:false, pinned:null};
+const state = {q:"", areas:new Set(), buckets:new Set(), buyOnly:false,
+               soonOnly:false, pinned:null};
 
 /* ---- hero: log-scale cap spectrum ---- */
 function drawAxis(){
@@ -372,14 +401,21 @@ function monthsUntil(d){
 
 const DEAD = ["TERMINATED","WITHDRAWN","SUSPENDED"];
 
-function calendarRows(months){
+function calendarRows(months, maxCap, showStale){
   // A melanoma trial also matches the oncology query, so the same NCT can appear
   // under two areas. Collapse per company+trial and merge the area tags.
   const seen = new Map();
   cos.forEach(c => (c.trials||[]).forEach(t => {
     if(t.has_results || DEAD.includes(t.status)) return;
+    if(maxCap && c.market_cap && c.market_cap > maxCap) return;
     const m = monthsUntil(t.primary_completion);
-    if(m === null || m < -6 || m > months) return;
+    if(m === null || m > months) return;
+    // A date in the past only means something if the sponsor marked it ACTUAL —
+    // that confirms the endpoint was reached. An ESTIMATED date sitting in the
+    // past is just an un-edited record, so it's hidden unless asked for.
+    const confirmed = t.pc_type === "ACTUAL";
+    if(m < 0 && !confirmed && !showStale) return;
+    if(m < -12) return;
     const key = c.ticker + "|" + t.nct_id;
     if(seen.has(key)){
       const prev = seen.get(key);
@@ -387,28 +423,33 @@ function calendarRows(months){
       return;
     }
     seen.set(key, {...t, ticker:c.ticker, name:c.name, market_cap:c.market_cap,
-                   months:m, areas:[t.area].filter(Boolean)});
+                   months:m, confirmed, areas:[t.area].filter(Boolean)});
   }));
-  return [...seen.values()].sort((a,b)=>a.months-b.months);
+  return [...seen.values()].sort((a,b)=>
+    (b.confirmed?1:0)-(a.confirmed?1:0) || a.months-b.months);
 }
 
 function renderCalendar(){
   const months = +document.getElementById("calWindow").value;
-  const rows = calendarRows(months);
+  const maxCap = +document.getElementById("calCap").value;
+  const showStale = document.getElementById("calOverdue").checked;
+  const rows = calendarRows(months, maxCap, showStale);
   document.getElementById("calCount").textContent =
     `${rows.length} trial${rows.length===1?"":"s"}`;
 
   const body = document.getElementById("calBody");
   if(!rows.length){
     body.innerHTML = `<div class="calempty">No primary completion dates fall in this
-      window. Try widening it — many sponsors list dates a year or more out.</div>`;
+      window. Try widening it, raising the cap ceiling, or ticking "show stale".</div>`;
     return;
   }
   body.innerHTML = rows.slice(0,40).map(r=>{
-    const cls = r.months < 0 ? "soon" : r.months < 3 ? "near" : "later";
-    const when = r.months < 0 ? "overdue"
+    const cls = r.confirmed ? "soon" : r.months < 0 ? "stale"
+      : r.months < 3 ? "near" : "later";
+    const when = r.confirmed ? "DATA IN"
+      : r.months < 0 ? "stale"
       : r.months < 1 ? `${Math.round(r.months*30)}d` : `${r.months.toFixed(1)}mo`;
-    const est = r.pc_type === "ESTIMATED" ? " est." : "";
+    const est = r.confirmed ? " actual" : " est.";
     return `<div class="calrow">
       <span class="calwhen ${cls}">${when}</span>
       <span class="caltkr">${esc(r.ticker)}</span>
@@ -424,18 +465,56 @@ function renderCalendar(){
   }).join("");
 }
 
-document.getElementById("calWindow").addEventListener("change", e=>{
-  e.stopPropagation(); renderCalendar();
-});
+["calWindow","calCap","calOverdue"].forEach(id=>
+  document.getElementById(id).addEventListener("change", e=>{
+    e.stopPropagation(); renderCalendar();
+  }));
 document.getElementById("calToggle").addEventListener("click", e=>{
-  if(e.target.tagName === "SELECT") return;
+  if(["SELECT","INPUT","LABEL"].includes(e.target.tagName)) return;
   document.getElementById("cal").classList.toggle("closed");
 });
+
+/* ---- next expected readout, per company ---- */
+function nextReadout(c){
+  let best = null;
+  (c.trials||[]).forEach(t=>{
+    if(t.has_results || DEAD.includes(t.status)) return;
+    const m = monthsUntil(t.primary_completion);
+    if(m === null || m < -12) return;
+    const confirmed = t.pc_type === "ACTUAL";
+    // A confirmed past date beats anything still estimated.
+    if(m < 0 && !confirmed) return;
+    if(!best || (confirmed && !best.confirmed) ||
+       (confirmed === best.confirmed && m < best.months)){
+      best = {months:m, date:t.primary_completion, confirmed, title:t.title};
+    }
+  });
+  return best;
+}
+
+function nextHTML(c){
+  const n = nextReadout(c);
+  if(!n) return `<span class="nxt"><span class="nxtwhen none">no date</span></span>`;
+  const cls = n.confirmed ? "datain" : n.months < 3 ? "near" : "later";
+  const when = n.confirmed ? "DATA IN"
+    : n.months < 1 ? `${Math.max(0,Math.round(n.months*30))}d`
+    : `${n.months.toFixed(1)}mo`;
+  const tip = n.confirmed
+    ? `Primary endpoint reached (actual date) — ${n.title}`
+    : `Estimated primary completion — ${n.title}`;
+  return `<span class="nxt" title="${esc(tip)}">
+    <span class="nxtwhen ${cls}">${when}</span>
+    <span class="nxtdate">${esc(n.date)}${n.confirmed?" actual":" est."}</span></span>`;
+}
 
 /* ---- filtering ---- */
 function matches(c){
   if(state.areas.size && !c.areas.some(a=>state.areas.has(a))) return false;
   if(state.buckets.size && !state.buckets.has(c.cap_bucket)) return false;
+  if(state.soonOnly){
+    const n = nextReadout(c);
+    if(!n || (!n.confirmed && n.months > 3)) return false;
+  }
   if(state.buyOnly && !/buy/i.test(c.rating||"")) return false;
   if(!state.q) return true;
   const hay = [c.ticker, c.name, ...(c.sponsor_names||[]),
@@ -485,6 +564,7 @@ function render(){
         </span>
         <span class="cap">${fmtCap(c.market_cap)}<small>${esc(c.cap_bucket)} cap</small></span>
         ${ratingHTML(c)}
+        ${nextHTML(c)}
       </button>
       <div class="trials">${c.trials.map(trialHTML).join("")}</div>
     </article>`).join("");
@@ -507,6 +587,7 @@ document.querySelectorAll(".chip").forEach(chip=>{
     const on = chip.getAttribute("aria-pressed") === "true";
     chip.setAttribute("aria-pressed", !on);
     if(chip.id === "buyOnly"){ state.buyOnly = !on; render(); return; }
+    if(chip.id === "soonOnly"){ state.soonOnly = !on; render(); return; }
     const set = chip.dataset.area ? state.areas : state.buckets;
     const val = chip.dataset.area || chip.dataset.bucket;
     on ? set.delete(val) : set.add(val);
