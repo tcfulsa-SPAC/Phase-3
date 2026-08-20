@@ -101,6 +101,31 @@ MANUAL_TICKERS: dict[str, str] = {
     "jazz": "JAZZ",
 }
 
+# Contract research organisations, labs and service providers. They appear on
+# trials they don't own, across dozens of unrelated sponsors, so they pollute the
+# screen badly. Matched on the normalised name, exactly.
+CRO_EXCLUDE = {
+    "icon", "iqvia", "syneos", "parexel", "ppd", "medpace", "fortrea",
+    "labcorp", "laboratory corporation of america", "charles river", "covance",
+    "novotech", "thermo fisher", "worldwide clinical trials",
+    "veristat", "emmes", "premier research", "ergomed", "clinipace", "celerion",
+    "george clinical", "tigermed", "wuxi apptec", "catalent", "lonza",
+    "simbec orion", "cromsource", "linical", "sgs", "eurofins",
+}
+
+
+
+
+def is_cro(name: str) -> bool:
+    """True for contract research organisations and service providers.
+
+    Prefix-matched, so 'Parexel International' and 'ICON Clinical Research'
+    are both caught by their base name.
+    """
+    n = normalize(name)
+    return any(n == key or n.startswith(key + " ") for key in CRO_EXCLUDE)
+
+
 # Corporate-form and industry words stripped before matching.
 NOISE = re.compile(
     r"\b(inc|incorporated|corp|corporation|co|company|ltd|limited|llc|lp|plc|"
@@ -394,7 +419,7 @@ def cap_bucket(cap: float | None) -> str:
 # Main
 # ---------------------------------------------------------------------------
 
-def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
+def build_dataset(min_cap: float = 50e6, max_cap: float = 5e12,
                   statuses: list[str] | None = None, cap_filter: bool = True,
                   verbose: bool = True) -> dict:
     """Run the whole pipeline and return the payload. Reused by watch.py."""
@@ -427,6 +452,7 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
     say(f"  SEC index: {len(index)} filers")
 
     sponsors: dict[str, dict] = {}
+    n_cro = 0
     for t in trials:
         parties = []
         if t.get("sponsor_is_industry") and t["sponsor"]:
@@ -434,6 +460,9 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
         for co in t.get("collaborators", []):
             parties.append((co, "partner"))
         for name, role in parties:
+            if is_cro(name):
+                n_cro += 1
+                continue  # service provider, not the asset owner
             sponsors.setdefault(name, {"trials": []})["trials"].append({**t, "role": role})
 
     matched, unmatched = {}, []
@@ -446,7 +475,8 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
             matched[m["ticker"]]["trials"].extend(blob["trials"])
         else:
             unmatched.append(name)
-    say(f"  matched {len(matched)} listed companies, {len(unmatched)} sponsors unresolved\n")
+    say(f"  matched {len(matched)} listed companies, {len(unmatched)} sponsors unresolved")
+    say(f"  ({n_cro} CRO/service-provider entries skipped)\n")
 
     say("Fetching market caps...")
     cache = load_cap_cache()
@@ -546,8 +576,9 @@ def write_csvs(companies: list[dict]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Find small/mid-cap companies with Phase 3 trials.")
-    ap.add_argument("--min-cap", type=float, default=100e6, help="Minimum market cap (USD).")
-    ap.add_argument("--max-cap", type=float, default=20e9, help="Maximum market cap (USD).")
+    ap.add_argument("--min-cap", type=float, default=50e6, help="Minimum market cap (USD).")
+    ap.add_argument("--max-cap", type=float, default=5e12,
+                    help="Maximum market cap (USD). Default admits large caps; filter in the dashboard.")
     ap.add_argument("--no-cap-filter", action="store_true", help="Keep every matched company.")
     ap.add_argument("--status", nargs="*", default=DEFAULT_STATUSES,
                     help=f"Trial statuses. Default: {' '.join(DEFAULT_STATUSES)}")
