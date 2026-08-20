@@ -373,14 +373,23 @@ function monthsUntil(d){
 const DEAD = ["TERMINATED","WITHDRAWN","SUSPENDED"];
 
 function calendarRows(months){
-  const rows = [];
+  // A melanoma trial also matches the oncology query, so the same NCT can appear
+  // under two areas. Collapse per company+trial and merge the area tags.
+  const seen = new Map();
   cos.forEach(c => (c.trials||[]).forEach(t => {
     if(t.has_results || DEAD.includes(t.status)) return;
     const m = monthsUntil(t.primary_completion);
     if(m === null || m < -6 || m > months) return;
-    rows.push({...t, ticker:c.ticker, name:c.name, market_cap:c.market_cap, months:m});
+    const key = c.ticker + "|" + t.nct_id;
+    if(seen.has(key)){
+      const prev = seen.get(key);
+      if(t.area && !prev.areas.includes(t.area)) prev.areas.push(t.area);
+      return;
+    }
+    seen.set(key, {...t, ticker:c.ticker, name:c.name, market_cap:c.market_cap,
+                   months:m, areas:[t.area].filter(Boolean)});
   }));
-  return rows.sort((a,b)=>a.months-b.months);
+  return [...seen.values()].sort((a,b)=>a.months-b.months);
 }
 
 function renderCalendar(){
@@ -405,7 +414,8 @@ function renderCalendar(){
       <span class="caltkr">${esc(r.ticker)}</span>
       <span class="caltitle">
         <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>
-        <span class="calmeta">${esc(r.primary_completion)}${est} ·
+        <span class="calmeta">${esc((r.areas||[]).join(", "))} ·
+          ${esc(r.primary_completion)}${est} ·
           ${esc(statusLabel(r.status))}${r.enrollment?` · n=${r.enrollment}`:""}
           ${r.role==="partner"?" · partnered":""}</span>
       </span>
