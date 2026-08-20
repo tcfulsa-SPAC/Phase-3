@@ -1,4 +1,49 @@
-<!doctype html>
+#!/usr/bin/env python3
+"""
+Build a self-contained dashboard.html from the data.json that scanner.py writes.
+
+    python dashboard.py            # uses ./data.json
+    python dashboard.py --demo     # sample data, no network needed
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+
+DEMO = {
+    "generated": "sample data",
+    "filters": {"min_cap": 100e6, "max_cap": 20e9, "cap_filter": True},
+    "companies": [
+        {"ticker": "EXMP", "name": "Example Therapeutics Inc.", "market_cap": 420_000_000,
+         "cap_bucket": "Small", "price": 6.12, "currency": "USD", "sector": "Biotechnology",
+         "areas": ["Melanoma", "Oncology"], "trial_count": 2, "sponsor_names": ["Example Therapeutics"],
+         "trials": [
+             {"nct_id": "NCT00000001", "title": "Study of EXA-101 in advanced melanoma",
+              "area": "Melanoma", "status": "RECRUITING", "start_date": "2025-03",
+              "primary_completion": "2027-09", "enrollment": 340,
+              "conditions": ["Metastatic Melanoma"], "interventions": ["EXA-101", "Pembrolizumab"],
+              "url": "https://clinicaltrials.gov/study/NCT00000001"},
+             {"nct_id": "NCT00000002", "title": "EXA-101 plus chemotherapy in solid tumors",
+              "area": "Oncology", "status": "ACTIVE_NOT_RECRUITING", "start_date": "2024-01",
+              "primary_completion": "2026-11", "enrollment": 512,
+              "conditions": ["Solid Tumor"], "interventions": ["EXA-101"],
+              "url": "https://clinicaltrials.gov/study/NCT00000002"}]},
+        {"ticker": "SMPL", "name": "Sample Biosciences Ltd.", "market_cap": 3_100_000_000,
+         "cap_bucket": "Mid", "price": 41.80, "currency": "USD", "sector": "Biotechnology",
+         "areas": ["Allergy"], "trial_count": 1, "sponsor_names": ["Sample Biosciences"],
+         "trials": [
+             {"nct_id": "NCT00000003", "title": "Oral immunotherapy for peanut allergy in children",
+              "area": "Allergy", "status": "RECRUITING", "start_date": "2025-06",
+              "primary_completion": "2027-02", "enrollment": 220,
+              "conditions": ["Peanut Allergy"], "interventions": ["SMP-2"],
+              "url": "https://clinicaltrials.gov/study/NCT00000003"}]},
+    ],
+    "unmatched_sponsors": ["Some Private Biotech GmbH"],
+}
+
+TEMPLATE = r"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -111,7 +156,7 @@
 <div class="wrap">
   <header>
     <h1>TrialScan</h1>
-    <div class="sub">Phase 3 &middot; oncology, melanoma, allergy &middot; built sample data</div>
+    <div class="sub">Phase 3 &middot; oncology, melanoma, allergy &middot; built __GENERATED__</div>
   </header>
 
   <section class="spectrum">
@@ -136,7 +181,7 @@
 </div>
 
 <script>
-const DATA = {"generated": "sample data", "filters": {"min_cap": 100000000.0, "max_cap": 20000000000.0, "cap_filter": true}, "companies": [{"ticker": "EXMP", "name": "Example Therapeutics Inc.", "market_cap": 420000000, "cap_bucket": "Small", "price": 6.12, "currency": "USD", "sector": "Biotechnology", "areas": ["Melanoma", "Oncology"], "trial_count": 2, "sponsor_names": ["Example Therapeutics"], "trials": [{"nct_id": "NCT00000001", "title": "Study of EXA-101 in advanced melanoma", "area": "Melanoma", "status": "RECRUITING", "start_date": "2025-03", "primary_completion": "2027-09", "enrollment": 340, "conditions": ["Metastatic Melanoma"], "interventions": ["EXA-101", "Pembrolizumab"], "url": "https://clinicaltrials.gov/study/NCT00000001"}, {"nct_id": "NCT00000002", "title": "EXA-101 plus chemotherapy in solid tumors", "area": "Oncology", "status": "ACTIVE_NOT_RECRUITING", "start_date": "2024-01", "primary_completion": "2026-11", "enrollment": 512, "conditions": ["Solid Tumor"], "interventions": ["EXA-101"], "url": "https://clinicaltrials.gov/study/NCT00000002"}]}, {"ticker": "SMPL", "name": "Sample Biosciences Ltd.", "market_cap": 3100000000, "cap_bucket": "Mid", "price": 41.8, "currency": "USD", "sector": "Biotechnology", "areas": ["Allergy"], "trial_count": 1, "sponsor_names": ["Sample Biosciences"], "trials": [{"nct_id": "NCT00000003", "title": "Oral immunotherapy for peanut allergy in children", "area": "Allergy", "status": "RECRUITING", "start_date": "2025-06", "primary_completion": "2027-02", "enrollment": 220, "conditions": ["Peanut Allergy"], "interventions": ["SMP-2"], "url": "https://clinicaltrials.gov/study/NCT00000003"}]}], "unmatched_sponsors": ["Some Private Biotech GmbH"]};
+const DATA = __DATA__;
 const cos = DATA.companies;
 
 const fmtCap = c => !c ? "—" :
@@ -274,3 +319,31 @@ render();
 </script>
 </body>
 </html>
+"""
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--data", default="data.json")
+    ap.add_argument("--out", default="dashboard.html")
+    ap.add_argument("--demo", action="store_true", help="Render sample data instead.")
+    args = ap.parse_args()
+
+    if args.demo:
+        data = DEMO
+    else:
+        p = Path(args.data)
+        if not p.exists():
+            print(f"{p} not found. Run scanner.py first, or try --demo.")
+            raise SystemExit(1)
+        data = json.loads(p.read_text())
+
+    html = (TEMPLATE
+            .replace("__DATA__", json.dumps(data))
+            .replace("__GENERATED__", str(data.get("generated", ""))))
+    Path(args.out).write_text(html)
+    print(f"Wrote {args.out} — {len(data.get('companies', []))} companies. Open it in a browser.")
+
+
+if __name__ == "__main__":
+    main()
