@@ -123,6 +123,7 @@ FIELD_PATHS = ",".join([
     "protocolSection.conditionsModule",
     "protocolSection.designModule",
     "protocolSection.armsInterventionsModule",
+    "hasResults",
 ])
 
 
@@ -204,6 +205,11 @@ def parse_study(study: dict, area: str) -> dict | None:
         i.get("name") for i in (arms.get("interventions") or []) if i.get("name")
     ]
 
+    pc = status.get("primaryCompletionDateStruct") or {}
+    results_posted = (status.get("resultsFirstPostDateStruct") or {}).get("date")
+    # `hasResults` sits alongside protocolSection, not inside it.
+    has_results = bool(study.get("hasResults") or results_posted)
+
     return {
         "nct_id": ident.get("nctId"),
         "title": ident.get("briefTitle"),
@@ -211,7 +217,13 @@ def parse_study(study: dict, area: str) -> dict | None:
         "sponsor": sponsor.get("name", "").strip(),
         "status": status.get("overallStatus"),
         "start_date": (status.get("startDateStruct") or {}).get("date"),
-        "primary_completion": (status.get("primaryCompletionDateStruct") or {}).get("date"),
+        "primary_completion": pc.get("date"),
+        # ESTIMATED vs ACTUAL - an estimated date is a plan, actual means it happened
+        "pc_type": pc.get("type"),
+        "has_results": has_results,
+        "results_posted": results_posted,
+        "completion": (status.get("completionDateStruct") or {}).get("date"),
+        "last_update": (status.get("lastUpdatePostDateStruct") or {}).get("date"),
         "conditions": (p.get("conditionsModule", {}) or {}).get("conditions", []),
         "enrollment": enrollment,
         "interventions": interventions[:6],
@@ -439,6 +451,24 @@ def build_dataset(min_cap: float = 100e6, max_cap: float = 20e9,
     if verbose:
         print(" " * 40, end="\r")
 
+    # Technicals last, so we only download price history for companies that
+    # survived the cap filter below... except the filter runs after, so we
+    # fetch for all matched tickers and let unused entries sit in the cache.
+    try:
+        import technicals
+        tech = technicals.fetch_all([c["ticker"] for c in companies], verbose=verbose)
+        for c in companies:
+            t = tech.get(c["ticker"]) or {}
+            c["tech_signal"] = t.get("signal")
+            c["tech_score"] = t.get("score")
+            c["rsi"] = t.get("rsi")
+            c["stoch_k"] = t.get("stoch_k")
+            c["macd_hist"] = t.get("macd_hist")
+            c["pos_52w"] = t.get("pos_52w")
+            c["tech_reasons"] = t.get("reasons")
+    except Exception as e:
+        say(f"  technicals unavailable: {str(e)[:100]}")
+
     if cap_filter:
         before = len(companies)
         companies = [c for c in companies
@@ -462,12 +492,15 @@ def write_csvs(companies: list[dict]) -> None:
         w = csv.writer(f)
         w.writerow(["ticker", "name", "market_cap_usd", "cap_bucket", "areas",
                     "phase3_trials", "analyst_rating", "rating_mean", "analysts",
-                    "target_price", "upside_pct"])
+                    "target_price", "upside_pct", "tech_signal", "rsi", "stoch_k",
+                    "pos_52w"])
         for c in companies:
             w.writerow([c["ticker"], c["name"], c["market_cap"], c["cap_bucket"],
                         "; ".join(c["areas"]), c["trial_count"], c.get("rating"),
                         c.get("rating_mean"), c.get("analyst_count"),
-                        c.get("target_price"), c.get("upside_pct")])
+                        c.get("target_price"), c.get("upside_pct"),
+                        c.get("tech_signal"), c.get("rsi"), c.get("stoch_k"),
+                        c.get("pos_52w")])
 
     with open("trials.csv", "w", newline="") as f:
         w = csv.writer(f)
