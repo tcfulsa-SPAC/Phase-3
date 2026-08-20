@@ -186,6 +186,9 @@ const cos = DATA.companies;
 
 const fmtCap = c => !c ? "—" :
   c >= 1e9 ? "$" + (c/1e9).toFixed(2) + "B" : "$" + Math.round(c/1e6) + "M";
+const fmtPrice = p => typeof p === "number"
+  ? p.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})
+  : p;
 const esc = s => String(s ?? "").replace(/[&<>"]/g, m =>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 const statusLabel = s => String(s||"").replace(/_/g," ").toLowerCase();
@@ -275,7 +278,7 @@ function render(){
           <span class="meta">
             ${c.areas.map(a=>`<span class="tag ${a}">${a}</span>`).join("")}
             <span>${c.trial_count} Phase 3</span>
-            ${c.price ? `<span>· ${esc(c.currency||"USD")} ${c.price}</span>` : ""}
+            ${c.price ? `<span>· ${esc(c.currency||"USD")} ${fmtPrice(c.price)}</span>` : ""}
           </span>
         </span>
         <span class="cap">${fmtCap(c.market_cap)}<small>${esc(c.cap_bucket)} cap</small></span>
