@@ -137,8 +137,9 @@ def fetch_area(area: str, condition_query: str, statuses: list[str],
         params = {
             "format": "json",
             "query.cond": condition_query,
-            "filter.advanced": "AREA[Phase]PHASE3",
-            "filter.overallStatus": "|".join(statuses),
+            "filter.phase": "PHASE3",
+            # Comma-separated. A pipe here returns HTTP 400.
+            "filter.overallStatus": ",".join(statuses),
             "pageSize": page_size,
         }
         if use_fields:
@@ -146,12 +147,22 @@ def fetch_area(area: str, condition_query: str, statuses: list[str],
         if token:
             params["pageToken"] = token
 
-        r = requests.get(CTG_API, params=params, timeout=60)
+        r = requests.get(CTG_API, params=params,
+                         headers={"User-Agent": SEC_USER_AGENT}, timeout=60)
 
         # If the server rejects the field projection, fall back to full records.
         if r.status_code == 400 and use_fields:
+            print(f"\n  field projection rejected, retrying without it")
             use_fields = False
             continue
+
+        # Surface the server's own explanation instead of a bare HTTPError.
+        if r.status_code >= 400:
+            raise RuntimeError(
+                f"ClinicalTrials.gov returned {r.status_code} for area '{area}'.\n"
+                f"  URL:  {r.url}\n"
+                f"  Body: {r.text[:400]}")
+
         r.raise_for_status()
 
         payload = r.json()
