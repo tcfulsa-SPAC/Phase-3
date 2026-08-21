@@ -28,6 +28,18 @@ import notify
 import scanner
 
 STATE = Path("state.json")
+SEEN_NEWS = Path("seen_news.json")
+
+
+def load_seen() -> dict:
+    return json.loads(SEEN_NEWS.read_text()) if SEEN_NEWS.exists() else {}
+
+
+def save_seen(seen: dict) -> None:
+    """Keep 30 days of headline keys so we never alert on the same story twice."""
+    cutoff = time.time() - 30 * 86400
+    SEEN_NEWS.write_text(json.dumps(
+        {k: v for k, v in seen.items() if v > cutoff}, indent=1))
 
 STATUS_NOTE = {
     "COMPLETED": "trial completed — readout window",
@@ -174,19 +186,27 @@ def sweep_readout_news(companies: list[dict], cal: list[dict], days: int,
     if verbose:
         print(f"Sweeping news for {len(watch)} companies with readouts pending...")
 
+    seen = load_seen()
+    now = time.time()
     found, hits = {}, []
     for i, tkr in enumerate(watch, 1):
         rows = news.fetch_news(by_ticker[tkr], days=days)
         found[tkr] = rows
         for r in rows:
-            if r.get("readout"):
-                hits.append({**r, "ticker": tkr, "name": by_ticker[tkr]["name"],
-                             "market_cap": by_ticker[tkr].get("market_cap")})
+            if not r.get("readout"):
+                continue
+            key = f"{tkr}:{news._key(r['title'])}"
+            if key in seen:
+                continue  # already alerted on this story
+            seen[key] = now
+            hits.append({**r, "ticker": tkr, "name": by_ticker[tkr]["name"],
+                         "market_cap": by_ticker[tkr].get("market_cap")})
         if verbose:
             print(f"  {i}/{len(watch)} {tkr}", end="\r", flush=True)
     if verbose:
         print(" " * 40, end="\r")
-        print(f"  {len(hits)} possible readout headlines found")
+        print(f"  {len(hits)} new readout headlines ({len(seen)} seen previously)")
+    save_seen(seen)
     return found, hits
 
 
@@ -383,20 +403,33 @@ def main() -> int:
                     help="Write digest.html but send nothing.")
     ap.add_argument("--calendar-months", type=float, default=4.0,
                     help="Include readouts expected within this many months.")
+    ap.add_argument("--news-only", action="store_true",
+                    help="Skip the registry rescan; just sweep the wires. For intraday runs.")
     ap.add_argument("--no-sweep", action="store_true",
                     help="Skip the daily readout news sweep.")
     ap.add_argument("--calendar", action="store_true",
                     help="Just print the upcoming readout calendar and exit.")
     args = ap.parse_args()
 
-    try:
-        payload = scanner.build_dataset(args.min_cap, args.max_cap)
-    except RuntimeError as e:
-        print(e)
-        return 1
-
-    Path("data.json").write_text(json.dumps(payload, indent=1))
-    scanner.write_csvs(payload["companies"])
+    if args.news_only:
+        # Light mode for intraday runs: reuse the last full scan and only check
+        # the wires. Takes ~2 minutes instead of ~8, and the registry rarely
+        # changes between morning and evening anyway.
+        data_file = Path("data.json")
+        if not data_file.exists():
+            print("data.json not found — run a full pass first.")
+            return 1
+        payload = json.loads(data_file.read_text())
+        print(f"News-only pass over {len(payload['companies'])} companies "
+              f"(dataset built {payload.get('generated')}).")
+    else:
+        try:
+            payload = scanner.build_dataset(args.min_cap, args.max_cap)
+        except RuntimeError as e:
+            print(e)
+            return 1
+        Path("data.json").write_text(json.dumps(payload, indent=1))
+        scanner.write_csvs(payload["companies"])
 
     cal = upcoming_catalysts(payload["companies"], args.calendar_months)
 
@@ -407,6 +440,31 @@ def main() -> int:
             when = "overdue" if r["months"] < 0 else f'{r["months"]:>4.1f} mo'
             print(f'{r["ticker"]:6s} {when}  {r["date"]:10s} {fmt_cap(r["market_cap"]):>8s}  '
                   f'{r["title"][:58]}')
+        return 0
+
+    if args.news_only:
+        _, readout_hits = sweep_readout_news(
+            payload["companies"], cal, args.news_days, args.max_news_lookups)
+        if not readout_hits:
+            print("No new readout headlines. Nothing sent.")
+            return 0
+        empty = {k: [] for k in ("results_posted", "new_companies", "new_trials",
+                                 "status_changes", "date_changes", "dropped")}
+        html, text = build_digest(empty, {}, payload.get("generated", ""),
+                                  calendar=cal, cal_months=args.calendar_months,
+                                  readout_news=readout_hits)
+        Path("digest.html").write_text(html)
+        lead = readout_hits[0]
+        subject = (f"TrialScan: possible readout — {lead['ticker']}"
+                   + (f" +{len(readout_hits)-1} more" if len(readout_hits) > 1 else ""))
+        if args.dry_run:
+            print("Dry run — wrote digest.html, sent nothing.")
+        else:
+            cfg = notify.load_config()
+            ok = notify.send_email(subject, html, text, cfg)
+            ok |= notify.send_webhook(f"*{subject}*\n{text[:1400]}", cfg)
+            if not ok:
+                print("No delivery configured. See digest.html.")
         return 0
 
     new_state = snapshot(payload["companies"])
