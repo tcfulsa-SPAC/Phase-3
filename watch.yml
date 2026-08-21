@@ -1,0 +1,60 @@
+name: TrialScan daily watch
+
+on:
+  schedule:
+    # Full pass — rebuilds the screen, diffs the registry, sweeps the news.
+    # 10:30 UTC = 6:30am ET, just before US biotech press releases land.
+    - cron: "30 10 * * *"
+    # Light passes — news only, no registry rescan. ~2 min each.
+    - cron: "0 14 * * *"    # 10:00am ET, mid-morning
+    - cron: "0 21 * * *"    # 5:00pm ET, after the close
+  workflow_dispatch:
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+
+      # The 10:30 UTC slot does the full job; the other two only check the wires.
+      - name: Decide which mode to run
+        id: mode
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 10 * * *" ] || [ -z "${{ github.event.schedule }}" ]; then
+            echo "flags=" >> $GITHUB_OUTPUT
+            echo "full=true" >> $GITHUB_OUTPUT
+          else
+            echo "flags=--news-only" >> $GITHUB_OUTPUT
+            echo "full=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run the watcher
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python watch.py ${{ steps.mode.outputs.flags }}
+
+      - name: Publish the dashboard
+        if: steps.mode.outputs.full == 'true'
+        run: python dashboard.py
+
+      - name: Save state so the next run can diff against it
+        run: |
+          git config user.name "trialscan-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A state.json seen_news.json data.json companies.csv trials.csv dashboard.html 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Watch run $(date -u +'%Y-%m-%d %H:%M')"
+          git pull --rebase --autostash || true
+          git push
