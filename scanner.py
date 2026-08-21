@@ -351,11 +351,9 @@ def match_ticker(sponsor: str, index: dict[str, dict]) -> dict | None:
             if cand[0] == key[0]:
                 return {**index[cand], "match": "fuzzy"}
 
-    # Last resort: sponsor key is a full prefix of exactly one indexed name.
-    prefix = [k for k in index if k.startswith(key + " ") or k == key]
-    if len(prefix) == 1:
-        return {**index[prefix[0]], "match": "prefix"}
-
+    # A prefix fallback used to live here: it matched "acacia" (Acacia Pharma)
+    # to "acacia research" and "prestige" (Prestige Biopharma) to "prestige
+    # consumer". Too loose for company identity — removed deliberately.
     return None
 
 
@@ -381,6 +379,7 @@ def fetch_market_cap(ticker: str, cache: dict) -> dict:
     result = {"ticker": ticker, "market_cap": None, "price": None,
               "currency": None, "sector": None,
               # Analyst consensus (Yahoo Finance aggregate)
+              "industry": None, "sector_raw": None,
               "rating": None, "rating_mean": None, "analyst_count": None,
               "target_price": None, "upside_pct": None, "rating_spread": None,
               "_ts": time.time()}
@@ -407,6 +406,8 @@ def fetch_market_cap(ticker: str, cache: dict) -> dict:
         result["price"] = result["price"] or info.get("currentPrice")
         result["currency"] = result["currency"] or info.get("currency")
         result["sector"] = info.get("industry") or info.get("sector")
+        result["industry"] = info.get("industry")
+        result["sector_raw"] = info.get("sector")
 
         result["rating"] = info.get("recommendationKey")       # buy / hold / sell
         result["rating_mean"] = info.get("recommendationMean")  # 1.0 strong buy -> 5.0 strong sell
@@ -434,6 +435,22 @@ def fetch_market_cap(ticker: str, cache: dict) -> dict:
 
     cache[ticker] = result
     return result
+
+
+# Name matching alone cannot tell "Polaris Group" (Taiwan biotech) from
+# "Polaris Inc" (snowmobiles) — both normalise to "polaris". So after resolving
+# a ticker we check what industry the company is actually in.
+HEALTHCARE_OK = re.compile(
+    r"(biotech|pharmac|drug|medical|health|life scien|diagnost|therapeut|"
+    r"medicine|clinical|hospital|device)", re.I)
+
+
+def looks_healthcare(fin: dict) -> bool | None:
+    """True / False / None when we have no sector data to judge by."""
+    blob = " ".join(str(fin.get(k) or "") for k in ("sector", "industry"))
+    if not blob.strip():
+        return None
+    return bool(HEALTHCARE_OK.search(blob))
 
 
 def cap_bucket(cap: float | None) -> str:
@@ -514,9 +531,17 @@ def build_dataset(min_cap: float = 50e6, max_cap: float = 5e12,
     say("Fetching market caps...")
     cache = load_cap_cache()
     companies = []
+    wrong_sector = []
     for i, (ticker, c) in enumerate(sorted(matched.items()), 1):
         fin = fetch_market_cap(ticker, cache)
         cap = fin.get("market_cap")
+
+        # A snowmobile maker does not run oncology trials. Only drop when we
+        # actually know the sector — missing data is not evidence.
+        hc = looks_healthcare(fin)
+        if hc is False:
+            wrong_sector.append(f"{ticker} ({fin.get('sector_raw') or 'unknown'})")
+            continue
         companies.append({
             "ticker": ticker,
             "name": c["legal_name"],
@@ -542,6 +567,10 @@ def build_dataset(min_cap: float = 50e6, max_cap: float = 5e12,
     save_cap_cache(cache)
     if verbose:
         print(" " * 40, end="\r")
+        if wrong_sector:
+            say(f"  dropped {len(wrong_sector)} non-healthcare name collisions: "
+                f"{', '.join(wrong_sector[:8])}"
+                + (" ..." if len(wrong_sector) > 8 else ""))
 
     if cap_filter:
         before = len(companies)
