@@ -1,7 +1,7 @@
 {
  "LONA": {
   "name": "LeonaBio, Inc.",
-  "market_cap": 57379811.50661707,
+  "market_cap": 55587812.5985198,
   "areas": [
    "Oncology"
   ],
@@ -18,7 +18,7 @@
  },
  "RNXT": {
   "name": "RenovoRx, Inc.",
-  "market_cap": 76043218.39766884,
+  "market_cap": 77171460.40155411,
   "areas": [
    "Oncology"
   ],
@@ -33,9 +33,26 @@
    }
   }
  },
+ "ALDX": {
+  "name": "Aldeyra Therapeutics, Inc.",
+  "market_cap": 80234142.51892912,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT07402876": {
+    "status": "RECRUITING",
+    "title": "A Clinical Trial Evaluating Patients With Primary Vitreoretinal Lymphoma",
+    "area": "Oncology",
+    "primary_completion": "2026-12",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "VRCA": {
   "name": "Verrica Pharmaceuticals Inc.",
-  "market_cap": 79194210.36361551,
+  "market_cap": 80437956.14139318,
   "areas": [
    "Oncology"
   ],
@@ -68,7 +85,7 @@
  },
  "MAIA": {
   "name": "MAIA Biotechnology, Inc.",
-  "market_cap": 80909496.59072089,
+  "market_cap": 81822008.8104806,
   "areas": [
    "Oncology"
   ],
@@ -83,26 +100,9 @@
    }
   }
  },
- "ALDX": {
-  "name": "Aldeyra Therapeutics, Inc.",
-  "market_cap": 83853724.32702363,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT07402876": {
-    "status": "RECRUITING",
-    "title": "A Clinical Trial Evaluating Patients With Primary Vitreoretinal Lymphoma",
-    "area": "Oncology",
-    "primary_completion": "2026-12",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "GNLX": {
   "name": "GENELUX Corp",
-  "market_cap": 118090319.60357547,
+  "market_cap": 114018243.33701372,
   "areas": [
    "Oncology"
   ],
@@ -119,7 +119,7 @@
  },
  "KZIA": {
   "name": "KAZIA THERAPEUTICS LTD",
-  "market_cap": 124953145.35991764,
+  "market_cap": 117411382.86598396,
   "areas": [
    "Oncology"
   ],
@@ -136,7 +136,7 @@
  },
  "HURA": {
   "name": "TuHURA Biosciences, Inc./NV",
-  "market_cap": 137012232.6274438,
+  "market_cap": 132869998.87597752,
   "areas": [
    "Oncology"
   ],
@@ -153,7 +153,7 @@
  },
  "CRBP": {
   "name": "Corbus Pharmaceuticals Holdings, Inc.",
-  "market_cap": 148734544.27671766,
+  "market_cap": 152215973.69656467,
   "areas": [
    "Oncology"
   ],
@@ -168,26 +168,9 @@
    }
   }
  },
- "IPHA": {
-  "name": "Innate Pharma SA",
-  "market_cap": 201060619.2737124,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT04590963": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "Assessment of Efficacy and Safety of Monalizumab Plus Cetuximab Compared to Placebo Plus Cetuximab in Recurrent or Metastatic Head and Neck Cancer",
-    "area": "Oncology",
-    "primary_completion": "2022-05-11",
-    "pc_type": "ACTUAL",
-    "has_results": true
-   }
-  }
- },
  "TARA": {
   "name": "Protara Therapeutics, Inc.",
-  "market_cap": 204864442.79298925,
+  "market_cap": 197557898.9510591,
   "areas": [
    "Oncology"
   ],
@@ -202,9 +185,26 @@
    }
   }
  },
+ "IPHA": {
+  "name": "Innate Pharma SA",
+  "market_cap": 199943616.86896992,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT04590963": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "Assessment of Efficacy and Safety of Monalizumab Plus Cetuximab Compared to Placebo Plus Cetuximab in Recurrent or Metastatic Head and Neck Cancer",
+    "area": "Oncology",
+    "primary_completion": "2022-05-11",
+    "pc_type": "ACTUAL",
+    "has_results": true
+   }
+  }
+ },
  "ALXO": {
   "name": "ALX ONCOLOGY HOLDINGS INC",
-  "market_cap": 224257626.24431467,
+  "market_cap": 206724111.1743561,
   "areas": [
    "Oncology"
   ],
@@ -221,7 +221,7 @@
  },
  "RNAC": {
   "name": "Cartesian Therapeutics, Inc.",
-  "market_cap": 248396441.0741501,
+  "market_cap": 232361098.16632462,
   "areas": [
    "Oncology"
   ],
@@ -238,7 +238,7 @@
  },
  "LYEL": {
   "name": "Lyell Immunopharma, Inc.",
-  "market_cap": 269556551.0,
+  "market_cap": 259999537.5968275,
   "areas": [
    "Oncology"
   ],
@@ -255,7 +255,7 @@
  },
  "GLSI": {
   "name": "Greenwich LifeSciences, Inc.",
-  "market_cap": 280500563.8388672,
+  "market_cap": 269051551.5201416,
   "areas": [
    "Oncology"
   ],
@@ -272,7 +272,7 @@
  },
  "IMRX": {
   "name": "Immuneering Corp",
-  "market_cap": 299225484.25,
+  "market_cap": 288873909.8020401,
   "areas": [
    "Oncology"
   ],
@@ -287,9 +287,34 @@
    }
   }
  },
+ "AGEN": {
+  "name": "AGENUS INC",
+  "market_cap": 383424656.50325775,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06346197": {
+    "status": "RECRUITING",
+    "title": "Combination of Immune Checkpoint in Locally Advanced or Metastatic MSI/dMMR Esogastric Adenocarcinomas",
+    "area": "Oncology",
+    "primary_completion": "2028-05-15",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   },
+   "NCT06279130": {
+    "status": "RECRUITING",
+    "title": "Pan-tumor Neoadjuvant Basket Study of Immune Check-point Inhibition and Novel Immuno-oncology Combinations",
+    "area": "Oncology",
+    "primary_completion": "2029-01-29",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "MYGN": {
   "name": "MYRIAD GENETICS INC",
-  "market_cap": 378772597.8487444,
+  "market_cap": 393120053.7206054,
   "areas": [
    "Allergy",
    "Oncology"
@@ -337,51 +362,9 @@
    }
   }
  },
- "AGEN": {
-  "name": "AGENUS INC",
-  "market_cap": 392908660.5860481,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06346197": {
-    "status": "RECRUITING",
-    "title": "Combination of Immune Checkpoint in Locally Advanced or Metastatic MSI/dMMR Esogastric Adenocarcinomas",
-    "area": "Oncology",
-    "primary_completion": "2028-05-15",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
-   "NCT06279130": {
-    "status": "RECRUITING",
-    "title": "Pan-tumor Neoadjuvant Basket Study of Immune Check-point Inhibition and Novel Immuno-oncology Combinations",
-    "area": "Oncology",
-    "primary_completion": "2029-01-29",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
- "TTRX": {
-  "name": "Turn Therapeutics Inc.",
-  "market_cap": 443064805.9937439,
-  "areas": [
-   "Allergy"
-  ],
-  "trials": {
-   "NCT07355075": {
-    "status": "RECRUITING",
-    "title": "A Double-Blind, Randomized, Vehicle-Controlled Phase 2 Study to Assess the Efficacy and Safety of GX-03 in Adult Subjects With Moderate to Severe Atopic Dermatitis (Eczema)",
-    "area": "Allergy",
-    "primary_completion": "2027-01-20",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "RLMD": {
   "name": "RELMADA THERAPEUTICS, INC.",
-  "market_cap": 449080055.7291317,
+  "market_cap": 419052483.2969327,
   "areas": [
    "Oncology"
   ],
@@ -398,7 +381,7 @@
  },
  "KYTX": {
   "name": "Kyverna Therapeutics, Inc.",
-  "market_cap": 449601836.7004299,
+  "market_cap": 438470027.39656067,
   "areas": [
    "Oncology"
   ],
@@ -415,7 +398,7 @@
  },
  "EIKN": {
   "name": "Eikon Therapeutics, Inc.",
-  "market_cap": 489110206.4363766,
+  "market_cap": 450111422.0285511,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -439,9 +422,26 @@
    }
   }
  },
+ "TTRX": {
+  "name": "Turn Therapeutics Inc.",
+  "market_cap": 454604536.9890518,
+  "areas": [
+   "Allergy"
+  ],
+  "trials": {
+   "NCT07355075": {
+    "status": "RECRUITING",
+    "title": "A Double-Blind, Randomized, Vehicle-Controlled Phase 2 Study to Assess the Efficacy and Safety of GX-03 in Adult Subjects With Moderate to Severe Atopic Dermatitis (Eczema)",
+    "area": "Allergy",
+    "primary_completion": "2027-01-20",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "DCTH": {
   "name": "DELCATH SYSTEMS, INC.",
-  "market_cap": 559691534.2296124,
+  "market_cap": 551710827.2634602,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -459,7 +459,7 @@
  },
  "OCS": {
   "name": "Oculis Holding AG",
-  "market_cap": 576657887.6943417,
+  "market_cap": 574714417.5322361,
   "areas": [
    "Allergy"
   ],
@@ -474,9 +474,27 @@
    }
   }
  },
+ "AURA": {
+  "name": "Aura Biosciences, Inc.",
+  "market_cap": 625858506.490902,
+  "areas": [
+   "Melanoma",
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06007690": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "A Phase 3 Randomized, Masked, Controlled Trial to Evaluate Efficacy and Safety of Belzupacap Sarotalocan (AU-011) Treatment Compared to Sham Control in Subjects With Primary Indeterminate Lesions or Small Choroidal Melanoma",
+    "area": "Melanoma",
+    "primary_completion": "2027-11-15",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "ANGO": {
   "name": "ANGIODYNAMICS INC",
-  "market_cap": 643131990.1837606,
+  "market_cap": 645611911.4498835,
   "areas": [
    "Oncology"
   ],
@@ -507,27 +525,9 @@
    }
   }
  },
- "AURA": {
-  "name": "Aura Biosciences, Inc.",
-  "market_cap": 655414410.6821103,
-  "areas": [
-   "Melanoma",
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06007690": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "A Phase 3 Randomized, Masked, Controlled Trial to Evaluate Efficacy and Safety of Belzupacap Sarotalocan (AU-011) Treatment Compared to Sham Control in Subjects With Primary Indeterminate Lesions or Small Choroidal Melanoma",
-    "area": "Melanoma",
-    "primary_completion": "2027-11-15",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "VSTM": {
   "name": "Verastem, Inc.",
-  "market_cap": 757110335.66751,
+  "market_cap": 722696260.9073606,
   "areas": [
    "Oncology"
   ],
@@ -542,26 +542,9 @@
    }
   }
  },
- "GERN": {
-  "name": "GERON CORP",
-  "market_cap": 835215401.0644805,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT04576156": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "A Study Comparing Imetelstat Versus Best Available Therapy for the Treatment of Intermediate-2 or High-risk Myelofibrosis (MF) Who Have Not Responded to Janus Kinase (JAK)-Inhibitor Treatment",
-    "area": "Oncology",
-    "primary_completion": "2028-06-30",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "OLMA": {
   "name": "Olema Pharmaceuticals, Inc.",
-  "market_cap": 848726771.2111559,
+  "market_cap": 788790957.1449194,
   "areas": [
    "Oncology"
   ],
@@ -584,9 +567,26 @@
    }
   }
  },
+ "GERN": {
+  "name": "GERON CORP",
+  "market_cap": 796667033.2871039,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT04576156": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "A Study Comparing Imetelstat Versus Best Available Therapy for the Treatment of Intermediate-2 or High-risk Myelofibrosis (MF) Who Have Not Responded to Janus Kinase (JAK)-Inhibitor Treatment",
+    "area": "Oncology",
+    "primary_completion": "2028-06-30",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "CADL": {
   "name": "Candel Therapeutics, Inc.",
-  "market_cap": 853598256.399622,
+  "market_cap": 855796413.8803024,
   "areas": [
    "Oncology"
   ],
@@ -611,7 +611,7 @@
  },
  "KURA": {
   "name": "Kura Oncology, Inc.",
-  "market_cap": 1040394412.0563736,
+  "market_cap": 975453200.9093132,
   "areas": [
    "Oncology"
   ],
@@ -628,7 +628,7 @@
  },
  "CRVS": {
   "name": "Corvus Pharmaceuticals, Inc.",
-  "market_cap": 1095254729.3875122,
+  "market_cap": 1057568470.1022797,
   "areas": [
    "Oncology"
   ],
@@ -645,7 +645,7 @@
  },
  "MLTX": {
   "name": "MoonLake Immunotherapeutics",
-  "market_cap": 1095323026.2103128,
+  "market_cap": 1098301747.1990633,
   "areas": [
    "Oncology"
   ],
@@ -660,9 +660,26 @@
    }
   }
  },
+ "VOR": {
+  "name": "Vor Biopharma Inc.",
+  "market_cap": 1195669907.5753021,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06456580": {
+    "status": "RECRUITING",
+    "title": "A Study of Telitacicept for the Treatment of Generalized Myasthenia Gravis (UPSTREAM MG)",
+    "area": "Oncology",
+    "primary_completion": "2027-05",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "REPL": {
   "name": "Replimune, Inc.",
-  "market_cap": 1274791622.8606434,
+  "market_cap": 1209780114.9367752,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -688,7 +705,7 @@
  },
  "ORIC": {
   "name": "Oric Pharmaceuticals, Inc.",
-  "market_cap": 1340747148.8543854,
+  "market_cap": 1363032386.8596497,
   "areas": [
    "Allergy",
    "Oncology"
@@ -704,26 +721,9 @@
    }
   }
  },
- "VOR": {
-  "name": "Vor Biopharma Inc.",
-  "market_cap": 1378481405.0627518,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06456580": {
-    "status": "RECRUITING",
-    "title": "A Study of Telitacicept for the Treatment of Generalized Myasthenia Gravis (UPSTREAM MG)",
-    "area": "Oncology",
-    "primary_completion": "2027-05",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "BCAX": {
   "name": "Bicara Therapeutics Inc.",
-  "market_cap": 1488192539.8359642,
+  "market_cap": 1408362332.62035,
   "areas": [
    "Oncology"
   ],
@@ -740,7 +740,7 @@
  },
  "AVBP": {
   "name": "ArriVent BioPharma, Inc.",
-  "market_cap": 1495996505.3837624,
+  "market_cap": 1513993815.1831188,
   "areas": [
    "Oncology"
   ],
@@ -763,9 +763,26 @@
    }
   }
  },
+ "INBX": {
+  "name": "Inhibrx Biosciences, Inc.",
+  "market_cap": 1534536810.9170532,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06295731": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "INBRX-106 in Combination With Pembrolizumab in First-line PD-L1 CPS\u226520 HNSCC",
+    "area": "Oncology",
+    "primary_completion": "2029-05",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "SNDX": {
   "name": "Syndax Pharmaceuticals Inc",
-  "market_cap": 1612705325.470211,
+  "market_cap": 1543946698.693924,
   "areas": [
    "Oncology"
   ],
@@ -790,7 +807,7 @@
  },
  "IMCR": {
   "name": "Immunocore Ltd",
-  "market_cap": 1659542854.2443466,
+  "market_cap": 1609331781.25,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -822,26 +839,9 @@
    }
   }
  },
- "INBX": {
-  "name": "Inhibrx Biosciences, Inc.",
-  "market_cap": 1663316335.9170532,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06295731": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "INBRX-106 in Combination With Pembrolizumab in First-line PD-L1 CPS\u226520 HNSCC",
-    "area": "Oncology",
-    "primary_completion": "2029-05",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "NTLA": {
   "name": "Intellia Therapeutics, Inc.",
-  "market_cap": 1785914686.2487726,
+  "market_cap": 1703239915.997136,
   "areas": [
    "Allergy"
   ],
@@ -858,7 +858,7 @@
  },
  "NVCR": {
   "name": "NovoCure Ltd",
-  "market_cap": 1931836503.368225,
+  "market_cap": 1892827031.474762,
   "areas": [
    "Oncology"
   ],
@@ -881,18 +881,26 @@
    }
   }
  },
- "LKFT": {
-  "name": "Lakefront Biotherapeutics NV",
-  "market_cap": 1979929037.4186707,
+ "NKTR": {
+  "name": "NEKTAR THERAPEUTICS",
+  "market_cap": 1958612908.1178818,
   "areas": [
-   "Oncology"
+   "Allergy"
   ],
   "trials": {
-   "NCT06652633": {
+   "NCT07711418": {
     "status": "RECRUITING",
-    "title": "Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies",
-    "area": "Oncology",
-    "primary_completion": "2039-07",
+    "title": "A Phase 3 Study of Rezpegaldesleukin (NKTR-358) for Patients \u2265 12 Years of Age With Moderate-to-Severe Atopic Dermatitis",
+    "area": "Allergy",
+    "primary_completion": "2028-06",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   },
+   "NCT07690371": {
+    "status": "RECRUITING",
+    "title": "A Phase 3 Study of Rezpegaldesleukin (NKTR-358) for Patients \u2265 12 Years of Age With Moderate-to-Severe Atopic Dermatitis",
+    "area": "Allergy",
+    "primary_completion": "2028-05",
     "pc_type": "ESTIMATED",
     "has_results": false
    }
@@ -900,7 +908,7 @@
  },
  "URGN": {
   "name": "UroGen Pharma Ltd.",
-  "market_cap": 2107729867.469925,
+  "market_cap": 1996770964.8141785,
   "areas": [
    "Oncology"
   ],
@@ -931,9 +939,26 @@
    }
   }
  },
+ "LKFT": {
+  "name": "Lakefront Biotherapeutics NV",
+  "market_cap": 2059492921.4608383,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06652633": {
+    "status": "RECRUITING",
+    "title": "Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies",
+    "area": "Oncology",
+    "primary_completion": "2039-07",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "NUVB": {
   "name": "Nuvation Bio Inc.",
-  "market_cap": 2134829229.8514233,
+  "market_cap": 2069871451.8378558,
   "areas": [
    "Oncology"
   ],
@@ -974,7 +999,7 @@
  },
  "BHVN": {
   "name": "Biohaven Ltd.",
-  "market_cap": 2232427042.846959,
+  "market_cap": 2129717369.7186298,
   "areas": [
    "Oncology"
   ],
@@ -991,7 +1016,7 @@
  },
  "GENB": {
   "name": "Generate Biomedicines, Inc.",
-  "market_cap": 2246167630.0,
+  "market_cap": 2130008587.2873764,
   "areas": [
    "Allergy"
   ],
@@ -1014,9 +1039,26 @@
    }
   }
  },
+ "PVLA": {
+  "name": "PALVELLA THERAPEUTICS, INC.",
+  "market_cap": 2177036734.2694855,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06239480": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "SELVA: A Phase 3 Study Evaluating QTORIN 3.9% Rapamycin Anhydrous Gel in the Treatment of Microcystic Lymphatic Malformations",
+    "area": "Oncology",
+    "primary_completion": "2026-01-14",
+    "pc_type": "ACTUAL",
+    "has_results": false
+   }
+  }
+ },
  "BCRX": {
   "name": "BIOCRYST PHARMACEUTICALS INC",
-  "market_cap": 2276817746.5584373,
+  "market_cap": 2186102901.2581253,
   "areas": [
    "Allergy"
   ],
@@ -1039,26 +1081,9 @@
    }
   }
  },
- "PVLA": {
-  "name": "PALVELLA THERAPEUTICS, INC.",
-  "market_cap": 2289351779.4358063,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06239480": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "SELVA: A Phase 3 Study Evaluating QTORIN 3.9% Rapamycin Anhydrous Gel in the Treatment of Microcystic Lymphatic Malformations",
-    "area": "Oncology",
-    "primary_completion": "2026-01-14",
-    "pc_type": "ACTUAL",
-    "has_results": false
-   }
-  }
- },
  "SLS": {
   "name": "SELLAS Life Sciences Group, Inc.",
-  "market_cap": 2317314854.5862503,
+  "market_cap": 2273072637.9503117,
   "areas": [
    "Oncology"
   ],
@@ -1073,34 +1098,9 @@
    }
   }
  },
- "NKTR": {
-  "name": "NEKTAR THERAPEUTICS",
-  "market_cap": 2317797220.627304,
-  "areas": [
-   "Allergy"
-  ],
-  "trials": {
-   "NCT07711418": {
-    "status": "RECRUITING",
-    "title": "A Phase 3 Study of Rezpegaldesleukin (NKTR-358) for Patients \u2265 12 Years of Age With Moderate-to-Severe Atopic Dermatitis",
-    "area": "Allergy",
-    "primary_completion": "2028-06",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
-   "NCT07690371": {
-    "status": "RECRUITING",
-    "title": "A Phase 3 Study of Rezpegaldesleukin (NKTR-358) for Patients \u2265 12 Years of Age With Moderate-to-Severe Atopic Dermatitis",
-    "area": "Allergy",
-    "primary_completion": "2028-05",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "CLDX": {
   "name": "Celldex Therapeutics, Inc.",
-  "market_cap": 2651156868.510788,
+  "market_cap": 2436378700.343361,
   "areas": [
    "Allergy"
   ],
@@ -1139,26 +1139,9 @@
    }
   }
  },
- "WGS": {
-  "name": "GeneDx Holdings Corp.",
-  "market_cap": 2670310348.4433517,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06472245": {
-    "status": "RECRUITING",
-    "title": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
-    "area": "Oncology",
-    "primary_completion": "2027-12-15",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
  "NRIX": {
   "name": "Nurix Therapeutics, Inc.",
-  "market_cap": 2672378337.25,
+  "market_cap": 2545764755.2512264,
   "areas": [
    "Oncology"
   ],
@@ -1173,9 +1156,26 @@
    }
   }
  },
+ "WGS": {
+  "name": "GeneDx Holdings Corp.",
+  "market_cap": 2640487807.4433517,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06472245": {
+    "status": "RECRUITING",
+    "title": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
+    "area": "Oncology",
+    "primary_completion": "2027-12-15",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "IMNM": {
   "name": "Immunome Inc.",
-  "market_cap": 2892415166.4438324,
+  "market_cap": 2792754698.7593613,
   "areas": [
    "Oncology"
   ],
@@ -1192,7 +1192,7 @@
  },
  "RCUS": {
   "name": "Arcus Biosciences, Inc.",
-  "market_cap": 3336762074.2215767,
+  "market_cap": 3306576544.128769,
   "areas": [
    "Oncology"
   ],
@@ -1233,7 +1233,7 @@
  },
  "VCYT": {
   "name": "VERACYTE, INC.",
-  "market_cap": 3464840383.4334793,
+  "market_cap": 3490163659.9649124,
   "areas": [
    "Oncology"
   ],
@@ -1258,7 +1258,7 @@
  },
  "IDYA": {
   "name": "IDEAYA Biosciences, Inc.",
-  "market_cap": 3813264451.8493805,
+  "market_cap": 3694582430.698761,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1292,7 +1292,7 @@
  },
  "RLAY": {
   "name": "Relay Therapeutics, Inc.",
-  "market_cap": 4047545774.0973835,
+  "market_cap": 3830595609.5649223,
   "areas": [
    "Oncology"
   ],
@@ -1309,7 +1309,7 @@
  },
  "CELC": {
   "name": "Celcuity Inc.",
-  "market_cap": 4094622076.3728333,
+  "market_cap": 3972536831.517334,
   "areas": [
    "Oncology"
   ],
@@ -1334,7 +1334,7 @@
  },
  "IOVA": {
   "name": "IOVANCE BIOTHERAPEUTICS, INC.",
-  "market_cap": 4695048789.003067,
+  "market_cap": 4661076018.000511,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1352,7 +1352,7 @@
  },
  "GRFS": {
   "name": "Grifols SA",
-  "market_cap": 5046504433.442914,
+  "market_cap": 4958028889.646656,
   "areas": [
    "Oncology"
   ],
@@ -1369,7 +1369,7 @@
  },
  "ERAS": {
   "name": "Erasca, Inc.",
-  "market_cap": 5484268815.538902,
+  "market_cap": 5047066271.788902,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1387,7 +1387,7 @@
  },
  "COGT": {
   "name": "Cogent Biosciences, Inc.",
-  "market_cap": 5590975131.862488,
+  "market_cap": 5410508991.715622,
   "areas": [
    "Oncology"
   ],
@@ -1404,7 +1404,7 @@
  },
  "CGON": {
   "name": "CG Oncology, Inc.",
-  "market_cap": 6933006606.014252,
+  "market_cap": 6600162241.347313,
   "areas": [
    "Oncology"
   ],
@@ -1427,9 +1427,26 @@
    }
   }
  },
+ "IMVT": {
+  "name": "Immunovant, Inc.",
+  "market_cap": 7008332563.294876,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT07039916": {
+    "status": "RECRUITING",
+    "title": "Study to Assess the Efficacy and Safety of IMVT-1402 in Participants With Mild to Severe Generalized Myasthenia Gravis",
+    "area": "Oncology",
+    "primary_completion": "2027-12",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   }
+  }
+ },
  "IONS": {
   "name": "IONIS PHARMACEUTICALS INC",
-  "market_cap": 7518179006.214867,
+  "market_cap": 7224032680.201721,
   "areas": [
    "Allergy",
    "Oncology"
@@ -1461,51 +1478,9 @@
    }
   }
  },
- "IMVT": {
-  "name": "Immunovant, Inc.",
-  "market_cap": 7720939473.782066,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT07039916": {
-    "status": "RECRUITING",
-    "title": "Study to Assess the Efficacy and Safety of IMVT-1402 in Participants With Mild to Severe Generalized Myasthenia Gravis",
-    "area": "Oncology",
-    "primary_completion": "2027-12",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   }
-  }
- },
- "IBRX": {
-  "name": "ImmunityBio, Inc.",
-  "market_cap": 9427244133.489544,
-  "areas": [
-   "Oncology"
-  ],
-  "trials": {
-   "NCT06745908": {
-    "status": "RECRUITING",
-    "title": "Clinical Trial of N-803 Plus Tislelizumab or Prior Failed Immune Checkpoint Inhibitor and Docetaxel Versus Docetaxel Monotherapy in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer Who Have Acquired Resistance to Immune Checkpoint In",
-    "area": "Oncology",
-    "primary_completion": "2028-09",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
-   "NCT03022825": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "QUILT-3.032: A Multicenter Clinical Trial of Intravesical Bacillus Calmette-Guerin (BCG) in Combination With ALT-803 (N-803) in Patients With BCG Unresponsive High Grade Non-Muscle Invasive Bladder Cancer",
-    "area": "Oncology",
-    "primary_completion": "2024-10-01",
-    "pc_type": "ACTUAL",
-    "has_results": false
-   }
-  }
- },
  "PTGX": {
   "name": "Protagonist Therapeutics, Inc",
-  "market_cap": 9458409899.965591,
+  "market_cap": 9059159900.0,
   "areas": [
    "Oncology"
   ],
@@ -1528,9 +1503,34 @@
    }
   }
  },
+ "IBRX": {
+  "name": "ImmunityBio, Inc.",
+  "market_cap": 9252265061.317608,
+  "areas": [
+   "Oncology"
+  ],
+  "trials": {
+   "NCT06745908": {
+    "status": "RECRUITING",
+    "title": "Clinical Trial of N-803 Plus Tislelizumab or Prior Failed Immune Checkpoint Inhibitor and Docetaxel Versus Docetaxel Monotherapy in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer Who Have Acquired Resistance to Immune Checkpoint In",
+    "area": "Oncology",
+    "primary_completion": "2028-09",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   },
+   "NCT03022825": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "QUILT-3.032: A Multicenter Clinical Trial of Intravesical Bacillus Calmette-Guerin (BCG) in Combination With ALT-803 (N-803) in Patients With BCG Unresponsive High Grade Non-Muscle Invasive Bladder Cancer",
+    "area": "Oncology",
+    "primary_completion": "2024-10-01",
+    "pc_type": "ACTUAL",
+    "has_results": false
+   }
+  }
+ },
  "AXSM": {
   "name": "Axsome Therapeutics, Inc.",
-  "market_cap": 10756662656.595001,
+  "market_cap": 10299901859.693573,
   "areas": [
    "Allergy"
   ],
@@ -1555,7 +1555,7 @@
  },
  "CORT": {
   "name": "CORCEPT THERAPEUTICS INC",
-  "market_cap": 12667510388.532898,
+  "market_cap": 12535630212.236847,
   "areas": [
    "Oncology"
   ],
@@ -1572,7 +1572,7 @@
  },
  "HALO": {
   "name": "HALOZYME THERAPEUTICS, INC.",
-  "market_cap": 12895643071.731567,
+  "market_cap": 12884292578.994751,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -1590,7 +1590,7 @@
  },
  "SMMT": {
   "name": "Summit Therapeutics Inc.",
-  "market_cap": 13705338405.813858,
+  "market_cap": 13083093168.482677,
   "areas": [
    "Oncology"
   ],
@@ -1647,7 +1647,7 @@
  },
  "EXEL": {
   "name": "EXELIXIS, INC.",
-  "market_cap": 14578235621.969086,
+  "market_cap": 13992232449.707886,
   "areas": [
    "Oncology"
   ],
@@ -1752,7 +1752,7 @@
  },
  "JAZZ": {
   "name": "Jazz Pharmaceuticals",
-  "market_cap": 15726205067.433578,
+  "market_cap": 15307181354.036438,
   "areas": [
    "Oncology"
   ],
@@ -1825,7 +1825,7 @@
  },
  "GH": {
   "name": "Guardant Health, Inc.",
-  "market_cap": 23929190381.17737,
+  "market_cap": 23877523545.217896,
   "areas": [
    "Oncology"
   ],
@@ -1850,7 +1850,7 @@
  },
  "BNTX": {
   "name": "BioNTech SE",
-  "market_cap": 25542460011.54149,
+  "market_cap": 25141788741.125534,
   "areas": [
    "Oncology"
   ],
@@ -1963,7 +1963,7 @@
  },
  "INCY": {
   "name": "INCYTE CORP",
-  "market_cap": 25720316866.223114,
+  "market_cap": 25255125910.303772,
   "areas": [
    "Allergy",
    "Oncology"
@@ -2044,8 +2044,8 @@
   }
  },
  "ONC": {
-  "name": "BeOne Medicines Ltd.",
-  "market_cap": 40939475538.616425,
+  "name": "BeiGene",
+  "market_cap": 40960402862.22427,
   "areas": [
    "Allergy",
    "Oncology"
@@ -2056,6 +2056,14 @@
     "title": "Addition of Platinum-based Chemotherapy to Tislelizumab in PD-L1high Metastatic Non-small Cell Lung Cancer With a High Tumor Burden",
     "area": "Oncology",
     "primary_completion": "2031-10-30",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   },
+   "NCT07836530": {
+    "status": "NOT_YET_RECRUITING",
+    "title": "Study Comparing BGB-B2033 With Sorafenib or Lenvatinib in Relapsed Hepatocellular Carcinoma",
+    "area": "Oncology",
+    "primary_completion": "2029-09-21",
     "pc_type": "ESTIMATED",
     "has_results": false
    },
@@ -2207,7 +2215,7 @@
  },
  "RVMD": {
   "name": "Revolution Medicines, Inc.",
-  "market_cap": 41797743696.79489,
+  "market_cap": 41081860845.5983,
   "areas": [
    "Oncology"
   ],
@@ -2272,7 +2280,7 @@
  },
  "VEEV": {
   "name": "VEEVA SYSTEMS INC",
-  "market_cap": 42293829994.64264,
+  "market_cap": 43700818296.42792,
   "areas": [
    "Oncology"
   ],
@@ -2305,7 +2313,7 @@
  },
  "NTRA": {
   "name": "Natera, Inc.",
-  "market_cap": 55969741001.00067,
+  "market_cap": 56516044238.07037,
   "areas": [
    "Oncology"
   ],
@@ -2362,7 +2370,7 @@
  },
  "TAK": {
   "name": "TAKEDA PHARMACEUTICAL CO LTD",
-  "market_cap": 60724455276.01053,
+  "market_cap": 60213495302.8204,
   "areas": [
    "Oncology"
   ],
@@ -2435,7 +2443,7 @@
  },
  "MRNA": {
   "name": "ModernaTX, Inc.",
-  "market_cap": 73435450397.357,
+  "market_cap": 73381549653.55402,
   "areas": [
    "Melanoma",
    "Oncology"
@@ -2477,7 +2485,7 @@
  },
  "REGN": {
   "name": "Regeneron Pharmaceuticals",
-  "market_cap": 82944658040.4497,
+  "market_cap": 81867746603.77515,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -2736,7 +2744,7 @@
  },
  "SNY": {
   "name": "Sanofi",
-  "market_cap": 103101287149.75829,
+  "market_cap": 101122309070.37085,
   "areas": [
    "Allergy",
    "Oncology"
@@ -2914,7 +2922,7 @@
  },
  "BMY": {
   "name": "Bristol-Myers Squibb",
-  "market_cap": 128159920946.06873,
+  "market_cap": 126403185095.13464,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -3229,7 +3237,7 @@
  },
  "PFE": {
   "name": "PFIZER INC",
-  "market_cap": 158621915547.0194,
+  "market_cap": 160075327528.85797,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -3600,7 +3608,7 @@
  },
  "GILD": {
   "name": "GILEAD SCIENCES, INC.",
-  "market_cap": 188753543293.37997,
+  "market_cap": 187530824453.4771,
   "areas": [
    "Oncology"
   ],
@@ -3721,7 +3729,7 @@
  },
  "AMGN": {
   "name": "AMGEN INC",
-  "market_cap": 220423775938.72147,
+  "market_cap": 219430367929.28986,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -3924,7 +3932,7 @@
  },
  "AZN": {
   "name": "AstraZeneca",
-  "market_cap": 261682660943.0778,
+  "market_cap": 255378265266.3008,
   "areas": [
    "Allergy",
    "Oncology"
@@ -4278,8 +4286,8 @@
     "status": "ACTIVE_NOT_RECRUITING",
     "title": "A Phase III, Randomised Study of Adjuvant Dato-DXd in Combination With Rilvegostomig or Rilvegostomig Monotherapy Versus Standard of Care, Following Complete Tumour Resection, in Participants With Stage I Adenocarcinoma NSCLC Who Are ctDNA-positive or Have High-risk Pathological Features",
     "area": "Oncology",
-    "primary_completion": "2027-06-30",
-    "pc_type": "ESTIMATED",
+    "primary_completion": "2026-07-10",
+    "pc_type": "ACTUAL",
     "has_results": false
    },
    "NCT06417814": {
@@ -4682,19 +4690,19 @@
     "pc_type": "ESTIMATED",
     "has_results": false
    },
-   "NCT05043090": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "Savolitinib Plus Durvalumab Versus Sunitinib and Durvalumab Monotherapy in MET-Driven, Unresectable and Locally Advanced or Metastatic PRCC",
-    "area": "Oncology",
-    "primary_completion": "2025-12-31",
-    "pc_type": "ACTUAL",
-    "has_results": false
-   },
    "NCT05048797": {
     "status": "ACTIVE_NOT_RECRUITING",
     "title": "A Study to Investigate the Efficacy and Safety of Trastuzumab Deruxtecan as the First Treatment Option for Unresectable, Locally Advanced/Metastatic Non-Small Cell Lung Cancer With HER2 Mutations",
     "area": "Oncology",
     "primary_completion": "2026-06-09",
+    "pc_type": "ACTUAL",
+    "has_results": false
+   },
+   "NCT05043090": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "Savolitinib Plus Durvalumab Versus Sunitinib and Durvalumab Monotherapy in MET-Driven, Unresectable and Locally Advanced or Metastatic PRCC",
+    "area": "Oncology",
+    "primary_completion": "2025-12-31",
     "pc_type": "ACTUAL",
     "has_results": false
    },
@@ -5034,14 +5042,6 @@
     "pc_type": "ACTUAL",
     "has_results": true
    },
-   "NCT03682068": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "Study of Durvalumab Given With Chemotherapy, Durvalumab in Combination With Tremelimumab Given With Chemotherapy, or Chemotherapy in Patients With Unresectable Urothelial Cancer",
-    "area": "Oncology",
-    "primary_completion": "2026-06-01",
-    "pc_type": "ACTUAL",
-    "has_results": false
-   },
    "NCT03703297": {
     "status": "ACTIVE_NOT_RECRUITING",
     "title": "Study of Durvalumab + Tremelimumab, Durvalumab, and Placebo in Limited Stage Small-Cell Lung Cancer in Patients Who Have Not Progressed Following Concurrent Chemoradiation Therapy",
@@ -5049,6 +5049,14 @@
     "primary_completion": "2024-01-15",
     "pc_type": "ACTUAL",
     "has_results": true
+   },
+   "NCT03682068": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "Study of Durvalumab Given With Chemotherapy, Durvalumab in Combination With Tremelimumab Given With Chemotherapy, or Chemotherapy in Patients With Unresectable Urothelial Cancer",
+    "area": "Oncology",
+    "primary_completion": "2026-06-01",
+    "pc_type": "ACTUAL",
+    "has_results": false
    },
    "NCT03529110": {
     "status": "ACTIVE_NOT_RECRUITING",
@@ -5246,7 +5254,7 @@
  },
  "NVS": {
   "name": "NOVARTIS AG",
-  "market_cap": 268685050942.50427,
+  "market_cap": 270224625322.48718,
   "areas": [
    "Allergy",
    "Oncology"
@@ -5464,8 +5472,8 @@
     "status": "ACTIVE_NOT_RECRUITING",
     "title": "Study of JDQ443 in Comparison With Docetaxel in Participants With Locally Advanced or Metastatic KRAS G12C Mutant Non-small Cell Lung Cancer",
     "area": "Oncology",
-    "primary_completion": "2026-08-25",
-    "pc_type": "ESTIMATED",
+    "primary_completion": "2026-09-03",
+    "pc_type": "ACTUAL",
     "has_results": false
    },
    "NCT05038735": {
@@ -5592,7 +5600,7 @@
  },
  "RHHBY": {
   "name": "Hoffmann-La Roche",
-  "market_cap": 352744205975.9746,
+  "market_cap": 351150674149.9746,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -5775,18 +5783,18 @@
     "pc_type": "ESTIMATED",
     "has_results": false
    },
-   "NCT05722886": {
-    "status": "RECRUITING",
-    "title": "DETERMINE (Determining Extended Therapeutic Indications for Existing Drugs in Rare Molecularly Defined Indications Using a National Evaluation Platform Trial) - Master Screening Protocol",
-    "area": "Oncology",
-    "primary_completion": "2029-10",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
    "NCT05768178": {
     "status": "RECRUITING",
     "title": "DETERMINE Trial Treatment Arm 05: Vemurafenib in Combination With Cobimetinib in Adult Patients With BRAF Positive Cancers.",
     "area": "Melanoma",
+    "primary_completion": "2029-10",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   },
+   "NCT05722886": {
+    "status": "RECRUITING",
+    "title": "DETERMINE (Determining Extended Therapeutic Indications for Existing Drugs in Rare Molecularly Defined Indications Using a National Evaluation Platform Trial) - Master Screening Protocol",
+    "area": "Oncology",
     "primary_completion": "2029-10",
     "pc_type": "ESTIMATED",
     "has_results": false
@@ -6051,7 +6059,7 @@
  },
  "MRK": {
   "name": "Merck Sharp & Dohme LLC",
-  "market_cap": 377625284888.91174,
+  "market_cap": 364228560964.6765,
   "areas": [
    "Allergy",
    "Melanoma",
@@ -6174,7 +6182,7 @@
     "status": "RECRUITING",
     "title": "Extension Study for Participants in Studies That Include Belzutifan (MK-6482-043/LITESPARK-043)",
     "area": "Oncology",
-    "primary_completion": "2034-01-14",
+    "primary_completion": "2034-04-22",
     "pc_type": "ESTIMATED",
     "has_results": false
    },
@@ -6498,19 +6506,19 @@
     "pc_type": "ESTIMATED",
     "has_results": false
    },
-   "NCT06132958": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "Sacituzumab Tirumotecan (MK-2870) in Post Platinum and Post Immunotherapy Endometrial Cancer (MK-2870-005)",
-    "area": "Oncology",
-    "primary_completion": "2028-01-10",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
    "NCT06077760": {
     "status": "ACTIVE_NOT_RECRUITING",
     "title": "A Study of Intismeran Autogene (V940) Plus Pembrolizumab (MK-3475) Versus Placebo Plus Pembrolizumab in Participants With Non-small Cell Lung Cancer (V940-002)",
     "area": "Oncology",
     "primary_completion": "2030-06-25",
+    "pc_type": "ESTIMATED",
+    "has_results": false
+   },
+   "NCT06132958": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "Sacituzumab Tirumotecan (MK-2870) in Post Platinum and Post Immunotherapy Endometrial Cancer (MK-2870-005)",
+    "area": "Oncology",
+    "primary_completion": "2028-01-10",
     "pc_type": "ESTIMATED",
     "has_results": false
    },
@@ -6826,14 +6834,6 @@
     "pc_type": "ACTUAL",
     "has_results": true
    },
-   "NCT04199689": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "Efficacy Against Oral Persistent Infection, Immunogenicity and Safety of the 9-valent Human Papillomavirus Vaccine (9vHPV) in Men Aged 20-45 Years (V503-049)",
-    "area": "Oncology",
-    "primary_completion": "2027-08-27",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
    "NCT04195750": {
     "status": "ACTIVE_NOT_RECRUITING",
     "title": "A Study of Belzutifan (MK-6482) Versus Everolimus in Participants With Advanced Renal Cell Carcinoma (MK-6482-005)",
@@ -6841,6 +6841,14 @@
     "primary_completion": "2024-04-15",
     "pc_type": "ACTUAL",
     "has_results": true
+   },
+   "NCT04199689": {
+    "status": "ACTIVE_NOT_RECRUITING",
+    "title": "Efficacy Against Oral Persistent Infection, Immunogenicity and Safety of the 9-valent Human Papillomavirus Vaccine (9vHPV) in Men Aged 20-45 Years (V503-049)",
+    "area": "Oncology",
+    "primary_completion": "2027-08-27",
+    "pc_type": "ESTIMATED",
+    "has_results": false
    },
    "NCT03924895": {
     "status": "ACTIVE_NOT_RECRUITING",
@@ -6974,7 +6982,7 @@
  },
  "ABBV": {
   "name": "AbbVie Inc.",
-  "market_cap": 470468444486.4679,
+  "market_cap": 468922216862.0929,
   "areas": [
    "Allergy",
    "Oncology"
@@ -7065,14 +7073,6 @@
     "title": "Safety and Efficacy of Upadacitinib in Combination With Topical Corticosteroids in Children From 2 to Less Than 12 Years of Age in Japan With Moderate to Severe Atopic Dermatitis",
     "area": "Allergy",
     "primary_completion": "2027-01",
-    "pc_type": "ESTIMATED",
-    "has_results": false
-   },
-   "NCT06614192": {
-    "status": "ACTIVE_NOT_RECRUITING",
-    "title": "A Study Assessing Adverse Events and Disease Activity of Intravenously (IV) Infused Telisotuzumab Adizutecan in Adult Participants With c-Met Protein Above Cutoff Level Above Refractory Metastatic Colorectal Cancer",
-    "area": "Oncology",
-    "primary_completion": "2027-08",
     "pc_type": "ESTIMATED",
     "has_results": false
    },
@@ -7239,8 +7239,8 @@
   }
  },
  "JNJ": {
-  "name": "Janssen Research & Development, LLC",
-  "market_cap": 648347077869.2073,
+  "name": "JOHNSON & JOHNSON",
+  "market_cap": 650046024020.614,
   "areas": [
    "Allergy",
    "Oncology"
