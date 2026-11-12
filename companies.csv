@@ -1,102 +1,101 @@
 ticker,name,market_cap_usd,cap_bucket,areas,phase3_trials,analyst_rating,rating_mean,analysts,target_price,upside_pct
-ATNM,"Actinium Pharmaceuticals, Inc.",50432062.47443819,Micro,Oncology,2,none,,4,4.0,149.4
-RNXT,"RenovoRx, Inc.",59830734.5401535,Micro,Oncology,1,strong_buy,1.0,4,7.25,484.7
-MAIA,"MAIA Biotechnology, Inc.",63594202.613548756,Micro,Oncology,1,none,,2,12.0,1065.0
-VRCA,Verrica Pharmaceuticals Inc.,64422167.36589265,Micro,Oncology,3,none,,6,13.83333,268.9
-CRBP,"Corbus Pharmaceuticals Holdings, Inc.",82942210.96521378,Micro,Oncology,1,strong_buy,1.1,9,34.55556,758.5
-GNLX,GENELUX Corp,85513682.50276029,Micro,Oncology,1,none,,6,18.83333,896.5
-KZIA,KAZIA THERAPEUTICS LTD,85816014.10540962,Micro,Oncology,1,strong_buy,1.33333,9,28.650541,281.5
-HURA,"TuHURA Biosciences, Inc./NV",95589925.5,Micro,Oncology,1,none,,5,8.04,436.0
+RNXT,"RenovoRx, Inc.",56453190.569309235,Micro,Oncology,1,strong_buy,1.0,4,7.25,519.7
+MAIA,"MAIA Biotechnology, Inc.",62985312.982206345,Micro,Oncology,1,none,,2,12.0,1076.5
+VRCA,Verrica Pharmaceuticals Inc.,65794752.899362564,Micro,Oncology,3,none,,6,13.83333,261.2
+CRBP,"Corbus Pharmaceuticals Holdings, Inc.",69856918.56173515,Micro,Oncology,1,strong_buy,1.1,9,33.22222,880.0
+KZIA,KAZIA THERAPEUTICS LTD,80673906.2861476,Micro,Oncology,1,strong_buy,1.33333,9,28.457523,303.1
+GNLX,GENELUX Corp,87432084.8189485,Micro,Oncology,1,none,,6,18.83333,874.6
+HURA,"TuHURA Biosciences, Inc./NV",93040863.25097752,Micro,Oncology,1,none,,5,8.04,450.7
+TARA,"Protara Therapeutics, Inc.",150231659.96308374,Micro,Oncology,1,strong_buy,1.25,6,25.33333,938.3
 SCNLD,Scancell Holdings plc,156017639.95,Micro,Melanoma; Oncology,2,none,,,,
-TARA,"Protara Therapeutics, Inc.",164392841.867445,Micro,Oncology,1,strong_buy,1.25,6,25.33333,848.8
-IPHA,Innate Pharma SA,170901527.71422744,Micro,Oncology,1,strong_buy,1.0,3,7.0,357.5
-RNAC,"Cartesian Therapeutics, Inc.",209555640.8592081,Micro,Oncology,1,strong_buy,1.14286,6,33.66667,390.1
-GLSI,"Greenwich LifeSciences, Inc.",241309747.3590088,Micro,Oncology,1,none,,2,57.0,246.7
-IMRX,Immuneering Corp,253223941.60866618,Micro,Oncology,1,strong_buy,1.28571,6,17.0,334.8
-KYTX,"Kyverna Therapeutics, Inc.",318802966.7952709,Small,Oncology,1,none,,5,30.4,489.7
-TTRX,Turn Therapeutics Inc.,324934427.0078201,Small,Allergy,1,none,,2,25.0,133.6
-AGEN,AGENUS INC,327878835.40540695,Small,Oncology,2,strong_buy,1.0,3,26.33333,263.4
-EIKN,"Eikon Therapeutics, Inc.",352235178.31247807,Small,Melanoma; Oncology,3,buy,1.85714,6,24.33333,274.2
-LYEL,"Lyell Immunopharma, Inc.",421150707.81697273,Small,Oncology,1,buy,1.625,8,38.375,124.0
-OCS,Oculis Holding AG,433466648.36957836,Small,Allergy,1,strong_buy,1.3,10,35.801205,360.2
-RLMD,"RELMADA THERAPEUTICS, INC.",481614340.44803905,Small,Oncology,1,none,,4,10.75,138.1
-ANGO,ANGIODYNAMICS INC,516849188.89575005,Small,Oncology,3,none,,4,19.75,60.7
-MYGN,MYRIAD GENETICS INC,540041974.4574242,Small,Allergy; Oncology,6,hold,3.11111,8,5.21875,-7.3
-GERN,GERON CORP,639664772.0712532,Small,Oncology,1,buy,1.6,4,3.5,252.5
-OLMA,"Olema Pharmaceuticals, Inc.",679824620.9314823,Small,Oncology,2,strong_buy,1.33333,10,36.0,363.9
-CADL,"Candel Therapeutics, Inc.",691304735.7104158,Small,Oncology,2,strong_buy,1.0,9,22.11111,134.4
-AVBP,"ArriVent BioPharma, Inc.",696451199.3023148,Small,Oncology,2,strong_buy,1.0,10,25.8,91.6
-KURA,"Kura Oncology, Inc.",708571343.9093132,Small,Oncology,1,strong_buy,1.3125,13,31.84615,299.8
-BCAX,Bicara Therapeutics Inc.,715985909.5151176,Small,Oncology,1,strong_buy,1.5,11,34.90909,223.7
-DCTH,"DELCATH SYSTEMS, INC.",754901102.1411896,Small,Melanoma; Oncology,2,strong_buy,1.2,5,28.6,31.8
-AURA,"Aura Biosciences, Inc.",797209137.4395218,Small,Melanoma; Oncology,2,strong_buy,1.16667,5,16.6,116.7
-SNDX,Syndax Pharmaceuticals Inc,875074672.3601379,Small,Oncology,2,strong_buy,1.16667,11,35.45455,264.8
-ORIC,"Oric Pharmaceuticals, Inc.",926654701.1456146,Small,Allergy; Oncology,2,strong_buy,1.26667,14,21.71429,142.9
-CRVS,"Corvus Pharmaceuticals, Inc.",968373847.8662033,Small,Oncology,1,strong_buy,1.16667,6,31.5,174.4
-VSTM,"Verastem, Inc.",1136023501.3237495,Small,Oncology,1,strong_buy,1.1,9,17.22222,91.0
-MLTX,MoonLake Immunotherapeutics,1172770096.5740633,Small,Oncology,1,buy,1.8125,14,30.28571,119.8
-VOR,Vor Biopharma Inc.,1240973795.6706848,Small,Oncology,1,strong_buy,1.3,8,39.0,93.1
-URGN,UroGen Pharma Ltd.,1270093399.0373116,Small,Oncology,2,strong_buy,1.14286,7,60.71429,134.5
-NKTR,NEKTAR THERAPEUTICS,1319780329.272194,Small,Allergy,2,none,,12,133.08333,244.3
-INBX,"Inhibrx Biosciences, Inc.",1331580266.042633,Small,Oncology,1,none,,3,266.66666,194.7
-NVCR,NovoCure Ltd,1388961606.2999697,Small,Oncology,2,buy,2.0,7,25.57143,115.2
-ADRX,"ADARx Pharmaceuticals, Inc.",1517121881.3782454,Small,Allergy,2,none,,4,34.25,150.0
-NUVB,Nuvation Bio Inc.,1519740870.9905062,Small,Oncology,4,strong_buy,1.38462,11,12.45455,189.3
-NTLA,"Intellia Therapeutics, Inc.",1628158792.7425232,Small,Allergy,1,buy,2.35,18,22.77778,96.4
-IMCR,Immunocore Ltd,1639715973.1380653,Small,Melanoma; Oncology,5,buy,1.83333,10,58.9,85.0
-WGS,GeneDx Holdings Corp.,1652233676.625,Small,Oncology,1,strong_buy,1.125,8,87.25,58.3
-SLS,"SELLAS Life Sciences Group, Inc.",1666461139.6593742,Small,Oncology,1,strong_buy,1.5,2,32.5,283.5
-PGEN,"PRECIGEN, INC.",1681778603.2277012,Small,Oncology,1,buy,1.75,3,14.0,198.5
-GENB,"Generate Biomedicines, Inc.",1771263641.2812843,Small,Allergy,2,strong_buy,1.33333,5,27.0,95.7
-NRIX,"Nurix Therapeutics, Inc.",1812454430.9301987,Small,Oncology,1,strong_buy,1.5,14,33.5,101.9
-AGIO,"AGIOS PHARMACEUTICALS, INC.",1952186972.135086,Small,Oncology,1,buy,1.6,9,46.11111,41.3
-BCRX,BIOCRYST PHARMACEUTICALS INC,1974771938.650941,Small,Allergy,2,buy,1.54545,11,20.45455,166.5
-VCYT,"VERACYTE, INC.",2034332976.9210815,Mid,Oncology,2,buy,1.66667,9,46.22222,83.3
-REPL,"Replimune, Inc.",2133009090.0,Mid,Melanoma; Oncology,3,buy,1.75,6,23.33333,3.7
-LKFT,Lakefront Biotherapeutics NV,2189759639.164715,Mid,Oncology,1,hold,2.83333,3,30.41851,-8.5
-IMNM,Immunome Inc.,2259916056.9539948,Mid,Oncology,1,strong_buy,1.29412,15,35.2,83.9
-BHVN,Biohaven Ltd.,2299114687.1570463,Mid,Oncology,1,buy,1.82353,15,23.73333,55.9
-CLDX,"Celldex Therapeutics, Inc.",2392089522.212488,Mid,Allergy,4,strong_buy,1.26667,14,64.0,110.1
-PVLA,"PALVELLA THERAPEUTICS, INC.",2416650254.6445923,Mid,Oncology,1,strong_buy,1.0,15,233.8,41.4
-RCUS,"Arcus Biosciences, Inc.",2702703890.693672,Mid,Oncology,4,strong_buy,1.33333,12,41.0,118.4
-IDYA,"IDEAYA Biosciences, Inc.",3138705815.9734726,Mid,Melanoma; Oncology,6,strong_buy,1.3125,13,51.07692,57.4
-CELC,Celcuity Inc.,3214337155.982666,Mid,Oncology,2,strong_buy,1.23077,13,150.84615,129.6
-ARQT,"Arcutis Biotherapeutics, Inc.",3566032027.0775337,Mid,Allergy,1,strong_buy,1.5,8,40.375,43.2
-IOVA,"IOVANCE BIOTHERAPEUTICS, INC.",3742880242.1855736,Mid,Melanoma; Oncology,2,buy,1.66667,10,14.5,79.2
-ELVN,"Enliven Therapeutics, Inc.",3791989288.5972595,Mid,Oncology,1,strong_buy,1.21429,12,74.33333,44.3
-RLAY,"Relay Therapeutics, Inc.",4384940530.4291725,Mid,Oncology,1,strong_buy,1.25,12,28.25,42.4
-IONS,IONIS PHARMACEUTICALS INC,4813153326.468086,Mid,Allergy; Oncology,3,buy,1.68,23,76.95652,166.3
-COGT,"Cogent Biosciences, Inc.",5197214427.261955,Mid,Oncology,1,strong_buy,1.33333,11,55.72727,86.6
-GRFS,Grifols SA,5992511571.831688,Mid,Oncology,1,buy,2.0,2,10.365,17.7
-ERAS,"Erasca, Inc.",6029897403.345823,Mid,Melanoma; Oncology,2,none,,9,24.11111,39.9
-CGON,"CG Oncology, Inc.",6620318299.24173,Mid,Oncology,2,strong_buy,1.42857,13,91.46154,23.4
-IBRX,"ImmunityBio, Inc.",7090400735.963256,Mid,Oncology,2,strong_buy,1.25,4,14.25,113.8
-IMVT,"Immunovant, Inc.",7671553325.904556,Mid,Oncology,1,buy,1.58824,16,48.3125,30.3
-AXSM,"Axsome Therapeutics, Inc.",7843709506.364136,Mid,Allergy,2,strong_buy,1.22727,21,265.85715,78.3
-CORT,CORCEPT THERAPEUTICS INC,8142567476.596931,Mid,Oncology,1,buy,2.0,5,142.6,91.7
-PTGX,"Protagonist Therapeutics, Inc",8737384169.149445,Mid,Oncology,2,strong_buy,1.21429,14,182.35715,36.2
-HALO,"HALOZYME THERAPEUTICS, INC.",11637000665.20691,Large,Melanoma; Oncology,2,buy,1.88889,9,119.88889,17.5
-SMMT,Summit Therapeutics Inc.,13508012086.882843,Large,Oncology,6,buy,1.76471,13,29.641203,75.5
-JAZZ,Jazz Pharmaceuticals,15817787334.98944,Large,Oncology,8,strong_buy,1.5,22,295.86365,20.1
-EXEL,"EXELIXIS, INC.",17119805286.794586,Large,Oncology,12,buy,2.41176,14,61.57143,-12.2
-GH,"Guardant Health, Inc.",21013970744.46602,Large,Oncology,2,strong_buy,1.26923,25,200.88,29.3
-BNTX,BioNTech SE,21693715750.0,Large,Oncology,13,buy,1.71429,20,113.04808,29.2
-INCY,INCYTE CORP,24915464784.02948,Large,Allergy; Oncology,9,buy,2.17857,24,131.5,7.6
-RVMD,"Revolution Medicines, Inc.",39393321844.10486,Large,Oncology,7,strong_buy,1.28,24,274.84375,50.9
-NTRA,"Natera, Inc.",46302844707.76483,Large,Oncology,5,strong_buy,1.36364,21,410.0238,28.4
-ONC,BeOne Medicines Ltd.,48058339472.595184,Large,Allergy; Oncology,21,strong_buy,1.33333,27,462.18964,9.9
-VEEV,VEEVA SYSTEMS INC,49845256189.28833,Large,Oncology,3,buy,1.93103,27,323.07407,4.9
-TAK,TAKEDA PHARMACEUTICAL CO LTD,66262179516.30592,Large,Oncology,7,strong_buy,1.0,3,22.740309,9.6
-REGN,Regeneron Pharmaceuticals,97548224570.531,Large,Allergy; Melanoma; Oncology,36,buy,1.78571,27,977.9259,3.7
-MRNA,"ModernaTX, Inc.",100386466367.11044,Large,Melanoma; Oncology,5,hold,2.91304,19,158.47368,-36.1
-SNY,Sanofi,116759901203.50829,Large,Allergy; Oncology,21,buy,2.09091,9,54.92222,14.2
-BMY,Bristol-Myers Squibb,127377205751.64029,Large,Allergy; Melanoma; Oncology,42,buy,2.5,24,65.25,4.7
-PFE,PFIZER INC,166977215543.09933,Large,Allergy; Melanoma; Oncology,50,buy,2.5,26,30.25962,3.3
-GILD,"GILEAD SCIENCES, INC.",210423438294.6739,Large,Oncology,14,buy,1.67857,26,174.76923,3.0
-AMGN,AMGEN INC,250715182813.6194,Large,Allergy; Melanoma; Oncology,24,hold,2.70588,29,429.7369,-7.3
-AZN,AstraZeneca,286586331026.2802,Large,Allergy; Oncology,170,buy,1.83333,12,208.075,12.6
-NVS,NOVARTIS AG,301669835086.48956,Large,Allergy; Oncology,42,hold,2.63636,10,157.1,-1.6
-MRK,Merck Sharp & Dohme LLC,361220109387.5344,Large,Allergy; Melanoma; Oncology,125,buy,1.82143,26,161.525,10.2
-RHHBY,Hoffmann-La Roche,385634701892.0,Large,Allergy; Melanoma; Oncology,59,buy,2.375,7,60.01429,-0.8
-ABBV,AbbVie Inc.,517646446000.77374,Large,Allergy; Oncology,32,buy,1.68966,26,310.65384,6.1
-JNJ,"Janssen Research & Development, LLC",671134049628.4182,Large,Allergy; Oncology,47,buy,1.91304,22,279.4091,0.2
+IPHA,Innate Pharma SA,168109021.70237124,Micro,Oncology,1,strong_buy,1.0,3,7.0,365.1
+RNAC,"Cartesian Therapeutics, Inc.",199489651.5364027,Micro,Oncology,1,strong_buy,1.14286,6,33.66667,414.8
+GLSI,"Greenwich LifeSciences, Inc.",226117790.3204956,Micro,Oncology,1,none,,2,57.0,270.0
+IMRX,Immuneering Corp,239694920.15970826,Micro,Oncology,1,strong_buy,1.28571,6,17.0,359.3
+TTRX,Turn Therapeutics Inc.,309143235.9874878,Small,Allergy,1,none,,2,25.0,145.6
+AGEN,AGENUS INC,309938589.18495655,Small,Oncology,2,strong_buy,1.0,3,27.0,294.2
+KYTX,"Kyverna Therapeutics, Inc.",325605724.4030094,Small,Oncology,1,none,,5,30.4,477.4
+EIKN,"Eikon Therapeutics, Inc.",329865040.9649277,Small,Melanoma; Oncology,3,buy,1.85714,6,24.33333,299.6
+LYEL,"Lyell Immunopharma, Inc.",387960209.13494587,Small,Oncology,1,buy,1.625,8,38.375,143.2
+OCS,Oculis Holding AG,417309127.1877327,Small,Allergy,1,strong_buy,1.3,10,35.713787,376.8
+RLMD,"RELMADA THERAPEUTICS, INC.",457080273.8334732,Small,Oncology,1,none,,4,10.75,150.9
+ANGO,ANGIODYNAMICS INC,510120483.31274986,Small,Oncology,3,none,,4,19.75,62.8
+MYGN,MYRIAD GENETICS INC,553950691.0478535,Small,Allergy; Oncology,6,hold,3.11111,8,5.4375,-5.8
+GERN,GERON CORP,625169373.167991,Small,Oncology,1,buy,1.6,4,3.5,260.7
+CADL,"Candel Therapeutics, Inc.",630856732.6346598,Small,Oncology,2,strong_buy,1.0,9,22.11111,156.8
+BCAX,Bicara Therapeutics Inc.,665199744.3296471,Small,Oncology,1,strong_buy,1.5,12,32.16667,221.0
+OLMA,"Olema Pharmaceuticals, Inc.",673254126.1421294,Small,Oncology,2,strong_buy,1.33333,10,35.5,361.9
+AVBP,"ArriVent BioPharma, Inc.",688951329.8953705,Small,Oncology,2,strong_buy,1.0,10,26.4,98.2
+KURA,"Kura Oncology, Inc.",690009012.9693642,Small,Oncology,1,strong_buy,1.3125,13,31.84615,324.0
+DCTH,"DELCATH SYSTEMS, INC.",747943462.0,Small,Melanoma; Oncology,2,strong_buy,1.2,5,28.6,33.0
+AURA,"Aura Biosciences, Inc.",748814620.755538,Small,Melanoma; Oncology,2,strong_buy,1.16667,5,16.6,130.7
+SNDX,Syndax Pharmaceuticals Inc,857519104.0569458,Small,Oncology,2,strong_buy,1.16667,11,35.45455,272.2
+ORIC,"Oric Pharmaceuticals, Inc.",893485882.8578949,Small,Allergy; Oncology,2,strong_buy,1.26667,14,21.71429,151.9
+CRVS,"Corvus Pharmaceuticals, Inc.",914387898.7112656,Small,Oncology,1,strong_buy,1.16667,6,31.5,190.6
+VSTM,"Verastem, Inc.",1078686775.117916,Small,Oncology,1,strong_buy,1.1,9,17.22222,101.2
+MLTX,MoonLake Immunotherapeutics,1116174154.2956257,Small,Oncology,1,buy,1.8125,14,30.28571,130.9
+VOR,Vor Biopharma Inc.,1177696379.1670685,Small,Oncology,1,strong_buy,1.3,8,39.0,103.4
+URGN,UroGen Pharma Ltd.,1276224376.9123116,Small,Oncology,2,strong_buy,1.14286,7,60.71429,133.3
+NKTR,NEKTAR THERAPEUTICS,1289410147.5707703,Small,Allergy,2,none,,12,133.08333,252.4
+INBX,"Inhibrx Biosciences, Inc.",1311784995.3767395,Small,Oncology,1,none,,3,266.66666,199.2
+NVCR,NovoCure Ltd,1393053647.02501,Small,Oncology,2,buy,2.0,7,25.57143,114.6
+NUVB,Nuvation Bio Inc.,1445607153.543952,Small,Oncology,4,strong_buy,1.38462,11,12.45455,204.1
+NTLA,"Intellia Therapeutics, Inc.",1514468339.1257477,Small,Allergy,1,buy,2.35,18,22.77778,111.1
+WGS,GeneDx Holdings Corp.,1547180056.6459236,Small,Oncology,1,strong_buy,1.125,8,87.25,69.0
+IMCR,Immunocore Ltd,1575765142.4110718,Small,Melanoma; Oncology,5,buy,1.83333,10,59.4,94.8
+SLS,"SELLAS Life Sciences Group, Inc.",1603538588.463438,Small,Oncology,1,none,,2,32.5,298.5
+GENB,"Generate Biomedicines, Inc.",1612748304.4811745,Small,Allergy,2,strong_buy,1.33333,5,27.0,114.9
+PGEN,"PRECIGEN, INC.",1672635643.0224037,Small,Oncology,1,buy,1.75,3,14.0,200.1
+NRIX,"Nurix Therapeutics, Inc.",1719592047.354702,Small,Oncology,1,strong_buy,1.5,14,33.5,112.8
+ADRX,"ADARx Pharmaceuticals, Inc.",1745243907.3461056,Small,Allergy,2,none,,4,34.25,117.3
+AGIO,"AGIOS PHARMACEUTICALS, INC.",1918992597.577629,Small,Oncology,1,buy,1.6,9,46.11111,43.7
+VCYT,"VERACYTE, INC.",1983091482.5657654,Small,Oncology,2,buy,1.66667,9,45.11111,83.6
+BCRX,BIOCRYST PHARMACEUTICALS INC,1983777373.8051882,Small,Allergy,2,buy,1.54545,11,20.45455,165.3
+REPL,"Replimune, Inc.",2058116684.047638,Mid,Melanoma; Oncology,3,buy,1.75,6,23.33333,7.5
+BHVN,Biohaven Ltd.,2166182942.5897408,Mid,Oncology,1,buy,1.82353,15,23.73333,65.5
+IMNM,Immunome Inc.,2200879585.4539948,Mid,Oncology,1,strong_buy,1.29412,15,35.2,88.8
+LKFT,Lakefront Biotherapeutics NV,2241488829.8446198,Mid,Oncology,1,hold,2.83333,3,30.490137,-10.4
+CLDX,"Celldex Therapeutics, Inc.",2267202879.1374645,Mid,Allergy,4,strong_buy,1.26667,14,64.0,121.7
+PVLA,"PALVELLA THERAPEUTICS, INC.",2285595841.1739807,Mid,Oncology,1,strong_buy,1.0,15,233.8,49.5
+RCUS,"Arcus Biosciences, Inc.",2632868355.018776,Mid,Oncology,4,strong_buy,1.33333,12,41.0,124.2
+IDYA,"IDEAYA Biosciences, Inc.",3065508025.649357,Mid,Melanoma; Oncology,6,strong_buy,1.3125,13,50.69231,59.9
+CELC,Celcuity Inc.,3178616698.8815002,Mid,Oncology,2,strong_buy,1.23077,13,150.84615,132.2
+ARQT,"Arcutis Biotherapeutics, Inc.",3580574326.9292736,Mid,Allergy,1,strong_buy,1.5,8,40.375,42.6
+IOVA,"IOVANCE BIOTHERAPEUTICS, INC.",3622589797.032213,Mid,Melanoma; Oncology,2,buy,1.66667,10,14.5,85.2
+ELVN,"Enliven Therapeutics, Inc.",3639279333.5486298,Mid,Oncology,1,strong_buy,1.21429,12,74.33333,50.3
+RLAY,"Relay Therapeutics, Inc.",4084435937.812958,Mid,Oncology,1,strong_buy,1.25,12,28.25,52.8
+IONS,IONIS PHARMACEUTICALS INC,4590182674.924088,Mid,Allergy; Oncology,3,buy,1.68,23,70.6087,156.2
+COGT,"Cogent Biosciences, Inc.",5132836334.0,Mid,Oncology,1,strong_buy,1.33333,11,55.81818,89.2
+ERAS,"Erasca, Inc.",5555970006.029177,Mid,Melanoma; Oncology,2,none,,9,24.11111,51.8
+GRFS,Grifols SA,5934730353.250328,Mid,Oncology,1,buy,2.0,2,10.365,18.9
+CGON,"CG Oncology, Inc.",6347448983.60376,Mid,Oncology,2,strong_buy,1.42857,13,91.46154,28.7
+IBRX,"ImmunityBio, Inc.",6484019691.735407,Mid,Oncology,2,strong_buy,1.25,4,14.25,133.8
+IMVT,"Immunovant, Inc.",7366305698.631775,Mid,Oncology,1,buy,1.58824,16,48.5,36.3
+AXSM,"Axsome Therapeutics, Inc.",7655401463.750687,Mid,Allergy,2,strong_buy,1.22727,21,265.85715,82.7
+CORT,CORCEPT THERAPEUTICS INC,8115206699.346931,Mid,Oncology,1,buy,2.0,5,142.6,92.3
+PTGX,"Protagonist Therapeutics, Inc",8853890565.72284,Mid,Oncology,2,strong_buy,1.21429,14,182.35715,34.4
+HALO,"HALOZYME THERAPEUTICS, INC.",11582846089.172363,Large,Melanoma; Oncology,2,buy,2.0,9,119.88889,18.0
+SMMT,Summit Therapeutics Inc.,12332359676.577145,Large,Oncology,6,buy,1.76471,13,29.544329,91.6
+JAZZ,Jazz Pharmaceuticals,15612382564.478882,Large,Oncology,8,strong_buy,1.5,22,296.77274,22.0
+EXEL,"EXELIXIS, INC.",17112459194.634018,Large,Oncology,12,buy,2.41176,14,61.57143,-12.2
+GH,"Guardant Health, Inc.",21076201136.95793,Large,Oncology,2,strong_buy,1.26923,25,200.76,28.9
+BNTX,BioNTech SE,21165629407.555084,Large,Oncology,13,buy,1.71429,20,112.67317,32.0
+INCY,INCYTE CORP,24987824447.82312,Large,Allergy; Oncology,9,buy,2.17857,24,131.5,7.3
+RVMD,"Revolution Medicines, Inc.",38384316309.10886,Large,Oncology,7,strong_buy,1.28,24,274.84375,54.9
+NTRA,"Natera, Inc.",46827760365.754944,Large,Oncology,5,strong_buy,1.36364,21,410.0238,27.0
+ONC,BeOne Medicines Ltd.,48047031202.32309,Large,Allergy; Oncology,21,strong_buy,1.33333,27,465.00443,10.5
+VEEV,VEEVA SYSTEMS INC,49004953803.56903,Large,Oncology,3,buy,1.93103,27,323.81482,7.0
+TAK,TAKEDA PHARMACEUTICAL CO LTD,67651958350.436424,Large,Oncology,7,strong_buy,1.0,3,22.745005,7.4
+MRNA,"ModernaTX, Inc.",95185059288.18665,Large,Melanoma; Oncology,5,hold,2.91304,19,158.47368,-32.6
+REGN,Regeneron Pharmaceuticals,98519083737.479,Large,Allergy; Melanoma; Oncology,36,buy,1.78571,27,977.9259,2.7
+SNY,Sanofi,117609776080.11258,Large,Allergy; Oncology,21,buy,2.09091,9,54.92222,13.4
+BMY,Bristol-Myers Squibb,127888227209.39029,Large,Allergy; Melanoma; Oncology,42,buy,2.5,24,65.25,4.3
+PFE,PFIZER INC,165096264246.07367,Large,Allergy; Melanoma; Oncology,50,buy,2.5,26,30.22115,4.3
+GILD,"GILEAD SCIENCES, INC.",210274603717.33478,Large,Oncology,14,buy,1.67857,26,174.76923,3.1
+AMGN,AMGEN INC,253768622232.03827,Large,Allergy; Melanoma; Oncology,24,hold,2.70588,29,431.80585,-8.0
+AZN,AstraZeneca,285687103572.9016,Large,Allergy; Oncology,170,buy,1.83333,12,208.075,13.0
+NVS,NOVARTIS AG,303076879243.9435,Large,Allergy; Oncology,42,hold,2.63636,10,157.1,-2.1
+MRK,Merck Sharp & Dohme LLC,363475830257.3862,Large,Allergy; Melanoma; Oncology,125,buy,1.82143,26,161.525,9.6
+RHHBY,Hoffmann-La Roche,386590830713.7464,Large,Allergy; Melanoma; Oncology,59,buy,2.375,7,60.01429,-1.0
+ABBV,AbbVie Inc.,522365951329.50726,Large,Allergy; Oncology,32,buy,1.68966,26,311.80768,5.5
+JNJ,"Janssen Research & Development, LLC",685312848497.3757,Large,Allergy; Oncology,47,buy,1.91304,22,279.4091,-1.9

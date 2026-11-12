@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11 18:56",
+ "generated": "2026-11-12 19:16",
  "filters": {
   "min_cap": 50000000.0,
   "max_cap": 5000000000000.0,
@@ -13,129 +13,22 @@
  },
  "companies": [
   {
-   "ticker": "ATNM",
-   "name": "Actinium Pharmaceuticals, Inc.",
-   "cik": 1388320,
-   "sponsor_names": [
-    "Actinium Pharmaceuticals"
-   ],
-   "market_cap": 50432062.47443819,
-   "cap_bucket": "Micro",
-   "price": 1.6039999723434448,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "none",
-   "rating_mean": null,
-   "analyst_count": 4,
-   "target_price": 4.0,
-   "upside_pct": 149.4,
-   "rating_spread": [
-    1,
-    2,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 2,
-   "trials": [
-    {
-     "nct_id": "NCT07157514",
-     "title": "Radioimmunotherapy Conditioning With 131I- Apamistamab for Allogeneic Transplant in Relapse/Refractory AML",
-     "area": "Oncology",
-     "sponsor": "Actinium Pharmaceuticals",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": true,
-     "status": "NOT_YET_RECRUITING",
-     "start_date": "2026-01",
-     "primary_completion": "2029-02",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2034-02",
-     "last_update": "2025-09-10",
-     "conditions": [
-      "Acute Leukemia",
-      "Myeloid Leukemia",
-      "Acute Myelogenous Leukemia",
-      "Acute Myeloid Leukemia",
-      "Acute Myeloid Leukemia, in Relapse",
-      "Myelogenous Leukemia",
-      "Myelogenous Leukemia, Acute",
-      "Myelogenous Leukemia in Relapse",
-      "Transplant-Related Disorder",
-      "Allogeneic Disease",
-      "Refractory AML"
-     ],
-     "enrollment": 306,
-     "interventions": [
-      "131I-apamistamab",
-      "Fludarabine",
-      "Cyclophosphamide",
-      "Total Body Irradiation (TBI)",
-      "Allogeneic Hematopoietic Stem Cell Transplant (HSCT)"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07157514",
-     "role": "lead"
-    },
-    {
-     "nct_id": "NCT02665065",
-     "title": "Study of Iomab-B vs. Conventional Care in Older Subjects With Active, Relapsed or Refractory Acute Myeloid Leukemia",
-     "area": "Oncology",
-     "sponsor": "Actinium Pharmaceuticals",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2016-06",
-     "primary_completion": "2022-06",
-     "pc_type": "ACTUAL",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2026-12",
-     "last_update": "2023-07-19",
-     "conditions": [
-      "Acute Myeloid Leukemia",
-      "Leukemia, Acute Myeloid",
-      "Myeloid Leukemia, Acute",
-      "Leukemia, Myeloid, Acute",
-      "Acute Myelogenous Leukemia",
-      "Leukemia, Acute Myelogenous",
-      "Myelogenous Leukemia, Acute",
-      "AML",
-      "Bone Marrow Transplant"
-     ],
-     "enrollment": 153,
-     "interventions": [
-      "Iomab-B",
-      "Conventional Care",
-      "HCT"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT02665065",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "RNXT",
    "name": "RenovoRx, Inc.",
    "cik": 1574094,
    "sponsor_names": [
     "RenovoRx"
    ],
-   "market_cap": 59830734.5401535,
+   "market_cap": 56453190.569309235,
    "cap_bucket": "Micro",
-   "price": 1.2400000095367432,
+   "price": 1.1699999570846558,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.0,
    "analyst_count": 4,
    "target_price": 7.25,
-   "upside_pct": 484.7,
+   "upside_pct": 519.7,
    "rating_spread": [
     0,
     4,
@@ -185,16 +78,16 @@
    "sponsor_names": [
     "Maia Biotechnology"
    ],
-   "market_cap": 63594202.613548756,
+   "market_cap": 62985312.982206345,
    "cap_bucket": "Micro",
-   "price": 1.0299999713897705,
+   "price": 1.0199999809265137,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 2,
    "target_price": 12.0,
-   "upside_pct": 1065.0,
+   "upside_pct": 1076.5,
    "rating_spread": [
     0,
     1,
@@ -246,16 +139,16 @@
    "sponsor_names": [
     "Verrica Pharmaceuticals Inc."
    ],
-   "market_cap": 64422167.36589265,
+   "market_cap": 65794752.899362564,
    "cap_bucket": "Micro",
-   "price": 3.7500998973846436,
+   "price": 3.8299999237060547,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 6,
    "target_price": 13.83333,
-   "upside_pct": 268.9,
+   "upside_pct": 261.2,
    "rating_spread": [
     0,
     6,
@@ -386,16 +279,16 @@
    "sponsor_names": [
     "Corbus Pharmaceuticals Inc."
    ],
-   "market_cap": 82942210.96521378,
+   "market_cap": 69856918.56173515,
    "cap_bucket": "Micro",
-   "price": 4.025000095367432,
+   "price": 3.390000104904175,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.1,
    "analyst_count": 9,
-   "target_price": 34.55556,
-   "upside_pct": 758.5,
+   "target_price": 33.22222,
+   "upside_pct": 880.0,
    "rating_spread": [
     1,
     9,
@@ -442,88 +335,22 @@
    ]
   },
   {
-   "ticker": "GNLX",
-   "name": "GENELUX Corp",
-   "cik": 1231457,
-   "sponsor_names": [
-    "Genelux Corporation"
-   ],
-   "market_cap": 85513682.50276029,
-   "cap_bucket": "Micro",
-   "price": 1.8899999856948853,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "none",
-   "rating_mean": null,
-   "analyst_count": 6,
-   "target_price": 18.83333,
-   "upside_pct": 896.5,
-   "rating_spread": [
-    1,
-    5,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT05281471",
-     "title": "Efficacy & Safety of Olvi-Vec and Platinum-doublet + Bevacizumab Compared to Physician's Choice of Chemotherapy and Bevacizumab in Platinum-Resistant/Refractory Ovarian Cancer (PRROC) (OnPrime, GOG-3076)",
-     "area": "Oncology",
-     "sponsor": "Genelux Corporation",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2022-08-31",
-     "primary_completion": "2026-12",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2027-12",
-     "last_update": "2026-08-26",
-     "conditions": [
-      "Platinum-resistant Ovarian Cancer",
-      "Platinum-refractory Ovarian Cancer",
-      "Fallopian Tube Cancer",
-      "Primary Peritoneal Cancer",
-      "High-grade Serous Ovarian Cancer",
-      "Endometrioid Ovarian Cancer",
-      "Ovarian Clear Cell Carcinoma"
-     ],
-     "enrollment": 186,
-     "interventions": [
-      "olvimulogene nanivacirepvec",
-      "Platinum chemotherapy: carboplatin (preferred) or cisplatin",
-      "Non-platinum chemotherapy: Physician's Choice of gemcitabine, taxane (paclitaxel, docetaxel or nab-paclitaxel) or pegylated liposomal doxorubicin",
-      "Bevacizumab (or biosimilar)"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05281471",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "KZIA",
    "name": "KAZIA THERAPEUTICS LTD",
    "cik": 1075880,
    "sponsor_names": [
     "Kazia Therapeutics Limited"
    ],
-   "market_cap": 85816014.10540962,
+   "market_cap": 80673906.2861476,
    "cap_bucket": "Micro",
-   "price": 7.510000228881836,
+   "price": 7.059999942779541,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.33333,
    "analyst_count": 9,
-   "target_price": 28.650541,
-   "upside_pct": 281.5,
+   "target_price": 28.457523,
+   "upside_pct": 303.1,
    "rating_spread": [
     3,
     6,
@@ -578,22 +405,88 @@
    ]
   },
   {
+   "ticker": "GNLX",
+   "name": "GENELUX Corp",
+   "cik": 1231457,
+   "sponsor_names": [
+    "Genelux Corporation"
+   ],
+   "market_cap": 87432084.8189485,
+   "cap_bucket": "Micro",
+   "price": 1.9323999881744385,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 6,
+   "target_price": 18.83333,
+   "upside_pct": 874.6,
+   "rating_spread": [
+    1,
+    5,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT05281471",
+     "title": "Efficacy & Safety of Olvi-Vec and Platinum-doublet + Bevacizumab Compared to Physician's Choice of Chemotherapy and Bevacizumab in Platinum-Resistant/Refractory Ovarian Cancer (PRROC) (OnPrime, GOG-3076)",
+     "area": "Oncology",
+     "sponsor": "Genelux Corporation",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2022-08-31",
+     "primary_completion": "2026-12",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2027-12",
+     "last_update": "2026-08-26",
+     "conditions": [
+      "Platinum-resistant Ovarian Cancer",
+      "Platinum-refractory Ovarian Cancer",
+      "Fallopian Tube Cancer",
+      "Primary Peritoneal Cancer",
+      "High-grade Serous Ovarian Cancer",
+      "Endometrioid Ovarian Cancer",
+      "Ovarian Clear Cell Carcinoma"
+     ],
+     "enrollment": 186,
+     "interventions": [
+      "olvimulogene nanivacirepvec",
+      "Platinum chemotherapy: carboplatin (preferred) or cisplatin",
+      "Non-platinum chemotherapy: Physician's Choice of gemcitabine, taxane (paclitaxel, docetaxel or nab-paclitaxel) or pegylated liposomal doxorubicin",
+      "Bevacizumab (or biosimilar)"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05281471",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "HURA",
    "name": "TuHURA Biosciences, Inc./NV",
    "cik": 1498382,
    "sponsor_names": [
     "TuHURA Biosciences, Inc."
    ],
-   "market_cap": 95589925.5,
+   "market_cap": 93040863.25097752,
    "cap_bucket": "Micro",
-   "price": 1.5,
+   "price": 1.4600000381469727,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 5,
    "target_price": 8.04,
-   "upside_pct": 436.0,
+   "upside_pct": 450.7,
    "rating_spread": [
     2,
     2,
@@ -632,6 +525,66 @@
       "Pembrolizumab"
      ],
      "url": "https://clinicaltrials.gov/study/NCT06947928",
+     "role": "lead"
+    }
+   ]
+  },
+  {
+   "ticker": "TARA",
+   "name": "Protara Therapeutics, Inc.",
+   "cik": 1359931,
+   "sponsor_names": [
+    "Protara Therapeutics"
+   ],
+   "market_cap": 150231659.96308374,
+   "cap_bucket": "Micro",
+   "price": 2.440000057220459,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.25,
+   "analyst_count": 6,
+   "target_price": 25.33333,
+   "upside_pct": 938.3,
+   "rating_spread": [
+    2,
+    6,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT07480356",
+     "title": "Efficacy and Safety of Intravesical TARA-002 Compared With Investigator's Choice of Intravesical Chemotherapy in Participants With BCG-na\u00efve High-grade Non-muscle Invasive Bladder Cancer",
+     "area": "Oncology",
+     "sponsor": "Protara Therapeutics",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2026-05-29",
+     "primary_completion": "2028-04",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2032-11",
+     "last_update": "2026-10-06",
+     "conditions": [
+      "Bladder (Urothelial, Transitional Cell) Cancer",
+      "Non-Muscle Invasive Bladder Carcinoma",
+      "Non-muscle Invasive Bladder Cancer With Carcinoma in Situ"
+     ],
+     "enrollment": 284,
+     "interventions": [
+      "TARA-002",
+      "Investigator's Choice of Intravesical Chemotherapy"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT07480356",
      "role": "lead"
     }
    ]
@@ -729,82 +682,22 @@
    ]
   },
   {
-   "ticker": "TARA",
-   "name": "Protara Therapeutics, Inc.",
-   "cik": 1359931,
-   "sponsor_names": [
-    "Protara Therapeutics"
-   ],
-   "market_cap": 164392841.867445,
-   "cap_bucket": "Micro",
-   "price": 2.6700000762939453,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "strong_buy",
-   "rating_mean": 1.25,
-   "analyst_count": 6,
-   "target_price": 25.33333,
-   "upside_pct": 848.8,
-   "rating_spread": [
-    2,
-    6,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT07480356",
-     "title": "Efficacy and Safety of Intravesical TARA-002 Compared With Investigator's Choice of Intravesical Chemotherapy in Participants With BCG-na\u00efve High-grade Non-muscle Invasive Bladder Cancer",
-     "area": "Oncology",
-     "sponsor": "Protara Therapeutics",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2026-05-29",
-     "primary_completion": "2028-04",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2032-11",
-     "last_update": "2026-10-06",
-     "conditions": [
-      "Bladder (Urothelial, Transitional Cell) Cancer",
-      "Non-Muscle Invasive Bladder Carcinoma",
-      "Non-muscle Invasive Bladder Cancer With Carcinoma in Situ"
-     ],
-     "enrollment": 284,
-     "interventions": [
-      "TARA-002",
-      "Investigator's Choice of Intravesical Chemotherapy"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07480356",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "IPHA",
    "name": "Innate Pharma SA",
    "cik": 1598599,
    "sponsor_names": [
     "Innate Pharma"
    ],
-   "market_cap": 170901527.71422744,
+   "market_cap": 168109021.70237124,
    "cap_bucket": "Micro",
-   "price": 1.5299999713897705,
+   "price": 1.5049999952316284,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.0,
    "analyst_count": 3,
    "target_price": 7.0,
-   "upside_pct": 357.5,
+   "upside_pct": 365.1,
    "rating_spread": [
     0,
     3,
@@ -856,16 +749,16 @@
    "sponsor_names": [
     "Cartesian Therapeutics"
    ],
-   "market_cap": 209555640.8592081,
+   "market_cap": 199489651.5364027,
    "cap_bucket": "Micro",
-   "price": 6.869999885559082,
+   "price": 6.539999961853027,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.14286,
    "analyst_count": 6,
    "target_price": 33.66667,
-   "upside_pct": 390.1,
+   "upside_pct": 414.8,
    "rating_spread": [
     1,
     6,
@@ -914,16 +807,16 @@
    "sponsor_names": [
     "Greenwich LifeSciences, Inc."
    ],
-   "market_cap": 241309747.3590088,
+   "market_cap": 226117790.3204956,
    "cap_bucket": "Micro",
-   "price": 16.440000534057617,
+   "price": 15.404999732971191,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 2,
    "target_price": 57.0,
-   "upside_pct": 246.7,
+   "upside_pct": 270.0,
    "rating_spread": null,
    "areas": [
     "Oncology"
@@ -966,16 +859,16 @@
    "sponsor_names": [
     "Immuneering Corporation"
    ],
-   "market_cap": 253223941.60866618,
+   "market_cap": 239694920.15970826,
    "cap_bucket": "Micro",
-   "price": 3.9100000858306885,
+   "price": 3.7011001110076904,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.28571,
    "analyst_count": 6,
    "target_price": 17.0,
-   "upside_pct": 334.8,
+   "upside_pct": 359.3,
    "rating_spread": [
     2,
     5,
@@ -1026,82 +919,22 @@
    ]
   },
   {
-   "ticker": "KYTX",
-   "name": "Kyverna Therapeutics, Inc.",
-   "cik": 1994702,
-   "sponsor_names": [
-    "Kyverna Therapeutics"
-   ],
-   "market_cap": 318802966.7952709,
-   "cap_bucket": "Small",
-   "price": 5.15500020980835,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "none",
-   "rating_mean": null,
-   "analyst_count": 5,
-   "target_price": 30.4,
-   "upside_pct": 489.7,
-   "rating_spread": [
-    2,
-    4,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT06193889",
-     "title": "KYSA-6: A Study of Anti-CD19 Chimeric Antigen Receptor T-Cell Therapy, in Patients With Generalized Myasthenia Gravis",
-     "area": "Oncology",
-     "sponsor": "Kyverna Therapeutics",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2024-08-28",
-     "primary_completion": "2027-09",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2028-09",
-     "last_update": "2026-07-29",
-     "conditions": [
-      "Myasthenia Gravis",
-      "Generalized Myasthenia Gravis"
-     ],
-     "enrollment": 66,
-     "interventions": [
-      "Standard of Care Treatment",
-      "Standard lymphodepletion regimen",
-      "KYV-101"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06193889",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "TTRX",
    "name": "Turn Therapeutics Inc.",
    "cik": 2023016,
    "sponsor_names": [
     "Turn Therapeutics"
    ],
-   "market_cap": 324934427.0078201,
+   "market_cap": 309143235.9874878,
    "cap_bucket": "Small",
-   "price": 10.699999809265137,
+   "price": 10.180000305175781,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 2,
    "target_price": 25.0,
-   "upside_pct": 133.6,
+   "upside_pct": 145.6,
    "rating_spread": [
     0,
     2,
@@ -1152,16 +985,16 @@
    "sponsor_names": [
     "Agenus Inc."
    ],
-   "market_cap": 327878835.40540695,
+   "market_cap": 309938589.18495655,
    "cap_bucket": "Small",
-   "price": 7.246500015258789,
+   "price": 6.849999904632568,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.0,
    "analyst_count": 3,
-   "target_price": 26.33333,
-   "upside_pct": 263.4,
+   "target_price": 27.0,
+   "upside_pct": 294.2,
    "rating_spread": [
     0,
     3,
@@ -1243,22 +1076,82 @@
    ]
   },
   {
+   "ticker": "KYTX",
+   "name": "Kyverna Therapeutics, Inc.",
+   "cik": 1994702,
+   "sponsor_names": [
+    "Kyverna Therapeutics"
+   ],
+   "market_cap": 325605724.4030094,
+   "cap_bucket": "Small",
+   "price": 5.264999866485596,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 5,
+   "target_price": 30.4,
+   "upside_pct": 477.4,
+   "rating_spread": [
+    2,
+    4,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT06193889",
+     "title": "KYSA-6: A Study of Anti-CD19 Chimeric Antigen Receptor T-Cell Therapy, in Patients With Generalized Myasthenia Gravis",
+     "area": "Oncology",
+     "sponsor": "Kyverna Therapeutics",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2024-08-28",
+     "primary_completion": "2027-09",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2028-09",
+     "last_update": "2026-07-29",
+     "conditions": [
+      "Myasthenia Gravis",
+      "Generalized Myasthenia Gravis"
+     ],
+     "enrollment": 66,
+     "interventions": [
+      "Standard of Care Treatment",
+      "Standard lymphodepletion regimen",
+      "KYV-101"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06193889",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "EIKN",
    "name": "Eikon Therapeutics, Inc.",
    "cik": 1861123,
    "sponsor_names": [
     "Eikon Therapeutics"
    ],
-   "market_cap": 352235178.31247807,
+   "market_cap": 329865040.9649277,
    "cap_bucket": "Small",
-   "price": 6.502999782562256,
+   "price": 6.090000152587891,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.85714,
    "analyst_count": 6,
    "target_price": 24.33333,
-   "upside_pct": 274.2,
+   "upside_pct": 299.6,
    "rating_spread": [
     2,
     4,
@@ -1373,16 +1266,16 @@
    "sponsor_names": [
     "Lyell Immunopharma, Inc."
    ],
-   "market_cap": 421150707.81697273,
+   "market_cap": 387960209.13494587,
    "cap_bucket": "Small",
-   "price": 17.1299991607666,
+   "price": 15.779999732971191,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.625,
    "analyst_count": 8,
    "target_price": 38.375,
-   "upside_pct": 124.0,
+   "upside_pct": 143.2,
    "rating_spread": [
     2,
     5,
@@ -1440,16 +1333,16 @@
    "sponsor_names": [
     "Oculis"
    ],
-   "market_cap": 433466648.36957836,
+   "market_cap": 417309127.1877327,
    "cap_bucket": "Small",
-   "price": 7.78000020980835,
+   "price": 7.489999771118164,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.3,
    "analyst_count": 10,
-   "target_price": 35.801205,
-   "upside_pct": 360.2,
+   "target_price": 35.713787,
+   "upside_pct": 376.8,
    "rating_spread": [
     3,
     7,
@@ -1499,16 +1392,16 @@
    "sponsor_names": [
     "Relmada Therapeutics, Inc."
    ],
-   "market_cap": 481614340.44803905,
+   "market_cap": 457080273.8334732,
    "cap_bucket": "Small",
-   "price": 4.514999866485596,
+   "price": 4.284999847412109,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 4,
    "target_price": 10.75,
-   "upside_pct": 138.1,
+   "upside_pct": 150.9,
    "rating_spread": [
     1,
     3,
@@ -1560,16 +1453,16 @@
    "sponsor_names": [
     "Angiodynamics, Inc."
    ],
-   "market_cap": 516849188.89575005,
+   "market_cap": 510120483.31274986,
    "cap_bucket": "Small",
-   "price": 12.289999961853027,
+   "price": 12.130000114440918,
    "currency": "USD",
    "sector": "Medical Instruments & Supplies",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 4,
    "target_price": 19.75,
-   "upside_pct": 60.7,
+   "upside_pct": 62.8,
    "rating_spread": [
     0,
     4,
@@ -1680,16 +1573,16 @@
     "Myriad Genetic Laboratories, Inc.",
     "Myriad Genetics, Inc."
    ],
-   "market_cap": 540041974.4574242,
+   "market_cap": 553950691.0478535,
    "cap_bucket": "Small",
-   "price": 5.630000114440918,
+   "price": 5.775000095367432,
    "currency": "USD",
    "sector": "Diagnostics & Research",
    "rating": "hold",
    "rating_mean": 3.11111,
    "analyst_count": 8,
-   "target_price": 5.21875,
-   "upside_pct": -7.3,
+   "target_price": 5.4375,
+   "upside_pct": -5.8,
    "rating_spread": [
     0,
     1,
@@ -1906,16 +1799,16 @@
    "sponsor_names": [
     "Geron Corporation"
    ],
-   "market_cap": 639664772.0712532,
+   "market_cap": 625169373.167991,
    "cap_bucket": "Small",
-   "price": 0.992900013923645,
+   "price": 0.9703999757766724,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.6,
    "analyst_count": 4,
    "target_price": 3.5,
-   "upside_pct": 252.5,
+   "upside_pct": 260.7,
    "rating_spread": [
     1,
     3,
@@ -1958,22 +1851,169 @@
    ]
   },
   {
+   "ticker": "CADL",
+   "name": "Candel Therapeutics, Inc.",
+   "cik": 1841387,
+   "sponsor_names": [
+    "Candel Therapeutics, Inc."
+   ],
+   "market_cap": 630856732.6346598,
+   "cap_bucket": "Small",
+   "price": 8.609999656677246,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.0,
+   "analyst_count": 9,
+   "target_price": 22.11111,
+   "upside_pct": 156.8,
+   "rating_spread": [
+    0,
+    10,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 2,
+   "trials": [
+    {
+     "nct_id": "NCT07660094",
+     "title": "Aglatimagene Besadenovec + Prodrug and Pembrolizumab vs Docetaxel for Stage IV Non-Squamous NSCLC Progressing on Pembrolizumab (AURORA)",
+     "area": "Oncology",
+     "sponsor": "Candel Therapeutics, Inc.",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2026-06-15",
+     "primary_completion": "2031-10-22",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2031-10-22",
+     "last_update": "2026-06-22",
+     "conditions": [
+      "Non-squamous, Non-Small Cell Lung Cancer"
+     ],
+     "enrollment": 500,
+     "interventions": [
+      "Aglatimagene Besadenovec",
+      "Valacyclovir",
+      "Pembrolizumab",
+      "Docetaxel"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT07660094",
+     "role": "lead"
+    },
+    {
+     "nct_id": "NCT01436968",
+     "title": "Phase 3 Study of ProstAtak\u00ae Immunotherapy With Standard Radiation Therapy for Localized Prostate Cancer",
+     "area": "Oncology",
+     "sponsor": "Candel Therapeutics, Inc.",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2011-09",
+     "primary_completion": "2024-08",
+     "pc_type": "ACTUAL",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2030-12",
+     "last_update": "2026-10-02",
+     "conditions": [
+      "Prostate Cancer"
+     ],
+     "enrollment": 711,
+     "interventions": [
+      "Aglatimagene besadenovec + valacyclovir",
+      "Placebo + valacyclovir"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT01436968",
+     "role": "lead"
+    }
+   ]
+  },
+  {
+   "ticker": "BCAX",
+   "name": "Bicara Therapeutics Inc.",
+   "cik": 2023658,
+   "sponsor_names": [
+    "Bicara Therapeutics"
+   ],
+   "market_cap": 665199744.3296471,
+   "cap_bucket": "Small",
+   "price": 10.020000457763672,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.5,
+   "analyst_count": 12,
+   "target_price": 32.16667,
+   "upside_pct": 221.0,
+   "rating_spread": [
+    3,
+    10,
+    0,
+    1,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT06788990",
+     "title": "FORTIFI-HN01: A Study of Ficerafusp Alfa (BCA101) or Placebo in Combination With Pembrolizumab in First-Line PD-L1-pos, R or M HNSCC",
+     "area": "Oncology",
+     "sponsor": "Bicara Therapeutics",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2025-01-28",
+     "primary_completion": "2028-04",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2029-07",
+     "last_update": "2026-10-29",
+     "conditions": [
+      "Metastatic Head and Neck Squamous Cell Carcinoma",
+      "Recurrent Head and Neck Squamous Cell Carcinoma"
+     ],
+     "enrollment": 650,
+     "interventions": [
+      "Ficerafusp alfa",
+      "Pembrolizumab (KEYTRUDA\u00ae)",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06788990",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "OLMA",
    "name": "Olema Pharmaceuticals, Inc.",
    "cik": 1750284,
    "sponsor_names": [
     "Olema Pharmaceuticals, Inc."
    ],
-   "market_cap": 679824620.9314823,
+   "market_cap": 673254126.1421294,
    "cap_bucket": "Small",
-   "price": 7.760000228881836,
+   "price": 7.684999942779541,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.33333,
    "analyst_count": 10,
-   "target_price": 36.0,
-   "upside_pct": 363.9,
+   "target_price": 35.5,
+   "upside_pct": 361.9,
    "rating_spread": [
     2,
     9,
@@ -2059,109 +2099,22 @@
    ]
   },
   {
-   "ticker": "CADL",
-   "name": "Candel Therapeutics, Inc.",
-   "cik": 1841387,
-   "sponsor_names": [
-    "Candel Therapeutics, Inc."
-   ],
-   "market_cap": 691304735.7104158,
-   "cap_bucket": "Small",
-   "price": 9.4350004196167,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "strong_buy",
-   "rating_mean": 1.0,
-   "analyst_count": 9,
-   "target_price": 22.11111,
-   "upside_pct": 134.4,
-   "rating_spread": [
-    0,
-    10,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 2,
-   "trials": [
-    {
-     "nct_id": "NCT07660094",
-     "title": "Aglatimagene Besadenovec + Prodrug and Pembrolizumab vs Docetaxel for Stage IV Non-Squamous NSCLC Progressing on Pembrolizumab (AURORA)",
-     "area": "Oncology",
-     "sponsor": "Candel Therapeutics, Inc.",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2026-06-15",
-     "primary_completion": "2031-10-22",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2031-10-22",
-     "last_update": "2026-06-22",
-     "conditions": [
-      "Non-squamous, Non-Small Cell Lung Cancer"
-     ],
-     "enrollment": 500,
-     "interventions": [
-      "Aglatimagene Besadenovec",
-      "Valacyclovir",
-      "Pembrolizumab",
-      "Docetaxel"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07660094",
-     "role": "lead"
-    },
-    {
-     "nct_id": "NCT01436968",
-     "title": "Phase 3 Study of ProstAtak\u00ae Immunotherapy With Standard Radiation Therapy for Localized Prostate Cancer",
-     "area": "Oncology",
-     "sponsor": "Candel Therapeutics, Inc.",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2011-09",
-     "primary_completion": "2024-08",
-     "pc_type": "ACTUAL",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2030-12",
-     "last_update": "2026-10-02",
-     "conditions": [
-      "Prostate Cancer"
-     ],
-     "enrollment": 711,
-     "interventions": [
-      "Aglatimagene besadenovec + valacyclovir",
-      "Placebo + valacyclovir"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT01436968",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "AVBP",
    "name": "ArriVent BioPharma, Inc.",
    "cik": 1868279,
    "sponsor_names": [
     "ArriVent BioPharma, Inc."
    ],
-   "market_cap": 696451199.3023148,
+   "market_cap": 688951329.8953705,
    "cap_bucket": "Small",
-   "price": 13.46500015258789,
+   "price": 13.319999694824219,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.0,
    "analyst_count": 10,
-   "target_price": 25.8,
-   "upside_pct": 91.6,
+   "target_price": 26.4,
+   "upside_pct": 98.2,
    "rating_spread": [
     0,
     11,
@@ -2247,16 +2200,16 @@
    "sponsor_names": [
     "Kura Oncology, Inc."
    ],
-   "market_cap": 708571343.9093132,
+   "market_cap": 690009012.9693642,
    "cap_bucket": "Small",
-   "price": 7.965000152587891,
+   "price": 7.510000228881836,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.3125,
    "analyst_count": 13,
    "target_price": 31.84615,
-   "upside_pct": 299.8,
+   "upside_pct": 324.0,
    "rating_spread": [
     3,
     12,
@@ -2284,7 +2237,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2031-11",
-     "last_update": "2026-10-13",
+     "last_update": "2026-11-12",
      "conditions": [
       "Acute Myeloid Leukemia (AML)"
      ],
@@ -2303,82 +2256,22 @@
    ]
   },
   {
-   "ticker": "BCAX",
-   "name": "Bicara Therapeutics Inc.",
-   "cik": 2023658,
-   "sponsor_names": [
-    "Bicara Therapeutics"
-   ],
-   "market_cap": 715985909.5151176,
-   "cap_bucket": "Small",
-   "price": 10.78499984741211,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "strong_buy",
-   "rating_mean": 1.5,
-   "analyst_count": 11,
-   "target_price": 34.90909,
-   "upside_pct": 223.7,
-   "rating_spread": [
-    3,
-    10,
-    0,
-    1,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT06788990",
-     "title": "FORTIFI-HN01: A Study of Ficerafusp Alfa (BCA101) or Placebo in Combination With Pembrolizumab in First-Line PD-L1-pos, R or M HNSCC",
-     "area": "Oncology",
-     "sponsor": "Bicara Therapeutics",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2025-01-28",
-     "primary_completion": "2028-04",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2029-07",
-     "last_update": "2026-10-29",
-     "conditions": [
-      "Metastatic Head and Neck Squamous Cell Carcinoma",
-      "Recurrent Head and Neck Squamous Cell Carcinoma"
-     ],
-     "enrollment": 650,
-     "interventions": [
-      "Ficerafusp alfa",
-      "Pembrolizumab (KEYTRUDA\u00ae)",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06788990",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "DCTH",
    "name": "DELCATH SYSTEMS, INC.",
    "cik": 872912,
    "sponsor_names": [
     "Delcath Systems Inc."
    ],
-   "market_cap": 754901102.1411896,
+   "market_cap": 747943462.0,
    "cap_bucket": "Small",
-   "price": 21.700000762939453,
+   "price": 21.5,
    "currency": "USD",
    "sector": "Medical Devices",
    "rating": "strong_buy",
    "rating_mean": 1.2,
    "analyst_count": 5,
    "target_price": 28.6,
-   "upside_pct": 31.8,
+   "upside_pct": 33.0,
    "rating_spread": [
     1,
     4,
@@ -2455,16 +2348,16 @@
    "sponsor_names": [
     "Aura Biosciences"
    ],
-   "market_cap": 797209137.4395218,
+   "market_cap": 748814620.755538,
    "cap_bucket": "Small",
-   "price": 7.659999847412109,
+   "price": 7.195000171661377,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.16667,
    "analyst_count": 5,
    "target_price": 16.6,
-   "upside_pct": 116.7,
+   "upside_pct": 130.7,
    "rating_spread": [
     1,
     5,
@@ -2553,16 +2446,16 @@
    "sponsor_names": [
     "Syndax Pharmaceuticals"
    ],
-   "market_cap": 875074672.3601379,
+   "market_cap": 857519104.0569458,
    "cap_bucket": "Small",
-   "price": 9.720000267028809,
+   "price": 9.524999618530273,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.16667,
    "analyst_count": 11,
    "target_price": 35.45455,
-   "upside_pct": 264.8,
+   "upside_pct": 272.2,
    "rating_spread": [
     2,
     10,
@@ -2646,16 +2539,16 @@
    "sponsor_names": [
     "ORIC Pharmaceuticals"
    ],
-   "market_cap": 926654701.1456146,
+   "market_cap": 893485882.8578949,
    "cap_bucket": "Small",
-   "price": 8.9399995803833,
+   "price": 8.619999885559082,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.26667,
    "analyst_count": 14,
    "target_price": 21.71429,
-   "upside_pct": 142.9,
+   "upside_pct": 151.9,
    "rating_spread": [
     2,
     12,
@@ -2740,16 +2633,16 @@
    "sponsor_names": [
     "Corvus Pharmaceuticals, Inc."
    ],
-   "market_cap": 968373847.8662033,
+   "market_cap": 914387898.7112656,
    "cap_bucket": "Small",
-   "price": 11.479999542236328,
+   "price": 10.84000015258789,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.16667,
    "analyst_count": 6,
    "target_price": 31.5,
-   "upside_pct": 174.4,
+   "upside_pct": 190.6,
    "rating_spread": [
     1,
     5,
@@ -2805,16 +2698,16 @@
    "sponsor_names": [
     "Verastem, Inc."
    ],
-   "market_cap": 1136023501.3237495,
+   "market_cap": 1078686775.117916,
    "cap_bucket": "Small",
-   "price": 9.015000343322754,
+   "price": 8.5600004196167,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.1,
    "analyst_count": 9,
    "target_price": 17.22222,
-   "upside_pct": 91.0,
+   "upside_pct": 101.2,
    "rating_spread": [
     1,
     9,
@@ -2867,16 +2760,16 @@
    "sponsor_names": [
     "MoonLake Immunotherapeutics AG"
    ],
-   "market_cap": 1172770096.5740633,
+   "market_cap": 1116174154.2956257,
    "cap_bucket": "Small",
-   "price": 13.779999732971191,
+   "price": 13.114999771118164,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.8125,
    "analyst_count": 14,
    "target_price": 30.28571,
-   "upside_pct": 119.8,
+   "upside_pct": 130.9,
    "rating_spread": [
     1,
     11,
@@ -2926,16 +2819,16 @@
    "sponsor_names": [
     "Vor Biopharma"
    ],
-   "market_cap": 1240973795.6706848,
+   "market_cap": 1177696379.1670685,
    "cap_bucket": "Small",
-   "price": 20.200000762939453,
+   "price": 19.170000076293945,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.3,
    "analyst_count": 8,
    "target_price": 39.0,
-   "upside_pct": 93.1,
+   "upside_pct": 103.4,
    "rating_spread": [
     1,
     8,
@@ -2984,16 +2877,16 @@
    "sponsor_names": [
     "UroGen Pharma Ltd."
    ],
-   "market_cap": 1270093399.0373116,
+   "market_cap": 1276224376.9123116,
    "cap_bucket": "Small",
-   "price": 25.895000457763672,
+   "price": 26.020000457763672,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.14286,
    "analyst_count": 7,
    "target_price": 60.71429,
-   "upside_pct": 134.5,
+   "upside_pct": 133.3,
    "rating_spread": [
     1,
     6,
@@ -3070,16 +2963,16 @@
    "sponsor_names": [
     "Nektar Therapeutics"
    ],
-   "market_cap": 1319780329.272194,
+   "market_cap": 1289410147.5707703,
    "cap_bucket": "Small",
-   "price": 38.65449905395508,
+   "price": 37.76499938964844,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 12,
    "target_price": 133.08333,
-   "upside_pct": 244.3,
+   "upside_pct": 252.4,
    "rating_spread": [
     1,
     10,
@@ -3155,16 +3048,16 @@
    "sponsor_names": [
     "Inhibrx Biosciences, Inc"
    ],
-   "market_cap": 1331580266.042633,
+   "market_cap": 1311784995.3767395,
    "cap_bucket": "Small",
-   "price": 90.4749984741211,
+   "price": 89.12999725341797,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 3,
    "target_price": 266.66666,
-   "upside_pct": 194.7,
+   "upside_pct": 199.2,
    "rating_spread": [
     0,
     3,
@@ -3214,16 +3107,16 @@
    "sponsor_names": [
     "NovoCure GmbH"
    ],
-   "market_cap": 1388961606.2999697,
+   "market_cap": 1393053647.02501,
    "cap_bucket": "Small",
-   "price": 11.880000114440918,
+   "price": 11.914999961853027,
    "currency": "USD",
    "sector": "Medical Devices",
    "rating": "buy",
    "rating_mean": 2.0,
    "analyst_count": 7,
    "target_price": 25.57143,
-   "upside_pct": 115.2,
+   "upside_pct": 114.6,
    "rating_spread": [
     1,
     3,
@@ -3298,113 +3191,22 @@
    ]
   },
   {
-   "ticker": "ADRX",
-   "name": "ADARx Pharmaceuticals, Inc.",
-   "cik": 1802369,
-   "sponsor_names": [
-    "ADARx Pharmaceuticals, Inc."
-   ],
-   "market_cap": 1517121881.3782454,
-   "cap_bucket": "Small",
-   "price": 13.699999809265137,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "none",
-   "rating_mean": null,
-   "analyst_count": 4,
-   "target_price": 34.25,
-   "upside_pct": 150.0,
-   "rating_spread": [
-    2,
-    3,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Allergy"
-   ],
-   "trial_count": 2,
-   "trials": [
-    {
-     "nct_id": "NCT07428499",
-     "title": "Phase 3 Extension Study of ADX-324 in Participants With Hereditary Angioedema (HAE)",
-     "area": "Allergy",
-     "sponsor": "ADARx Pharmaceuticals, Inc.",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2026-04-02",
-     "primary_completion": "2030-06-30",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2030-06-30",
-     "last_update": "2026-09-04",
-     "conditions": [
-      "Hereditary Angioedema (HAE)",
-      "Hereditary Angioedema - Type 1",
-      "Hereditary Angioedema - Type 2",
-      "HAE"
-     ],
-     "enrollment": 90,
-     "interventions": [
-      "ADX-324 Dose Level 1",
-      "ADX-324 Dose Level 2"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07428499",
-     "role": "lead"
-    },
-    {
-     "nct_id": "NCT06960213",
-     "title": "STOP-HAE: A Phase 3 Study of ADX-324 in HAE",
-     "area": "Allergy",
-     "sponsor": "ADARx Pharmaceuticals, Inc.",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2025-08-28",
-     "primary_completion": "2027-11-30",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2027-12-31",
-     "last_update": "2026-09-10",
-     "conditions": [
-      "Hereditary Angioedema",
-      "HAE",
-      "Hereditary Angioedema - Type 1",
-      "Hereditary Angioedema - Type 2"
-     ],
-     "enrollment": 90,
-     "interventions": [
-      "ADX-324",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06960213",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "NUVB",
    "name": "Nuvation Bio Inc.",
    "cik": null,
    "sponsor_names": [
     "Nuvation Bio Inc."
    ],
-   "market_cap": 1519740870.9905062,
+   "market_cap": 1445607153.543952,
    "cap_bucket": "Small",
-   "price": 4.304999828338623,
+   "price": 4.09499979019165,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.38462,
    "analyst_count": 11,
    "target_price": 12.45455,
-   "upside_pct": 189.3,
+   "upside_pct": 204.1,
    "rating_spread": [
     3,
     9,
@@ -3547,16 +3349,16 @@
    "sponsor_names": [
     "Intellia Therapeutics"
    ],
-   "market_cap": 1628158792.7425232,
+   "market_cap": 1514468339.1257477,
    "cap_bucket": "Small",
-   "price": 11.600000381469727,
+   "price": 10.789999961853027,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 2.35,
    "analyst_count": 18,
    "target_price": 22.77778,
-   "upside_pct": 96.4,
+   "upside_pct": 111.1,
    "rating_spread": [
     1,
     9,
@@ -3599,22 +3401,83 @@
    ]
   },
   {
+   "ticker": "WGS",
+   "name": "GeneDx Holdings Corp.",
+   "cik": 1818331,
+   "sponsor_names": [
+    "GeneDx"
+   ],
+   "market_cap": 1547180056.6459236,
+   "cap_bucket": "Small",
+   "price": 51.619998931884766,
+   "currency": "USD",
+   "sector": "Diagnostics & Research",
+   "rating": "strong_buy",
+   "rating_mean": 1.125,
+   "analyst_count": 8,
+   "target_price": 87.25,
+   "upside_pct": 69.0,
+   "rating_spread": [
+    1,
+    7,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT06472245",
+     "title": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
+     "area": "Oncology",
+     "sponsor": "OSE Immunotherapeutics",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "GeneDx"
+     ],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2024-12-03",
+     "primary_completion": "2028-05-01",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2028-12-15",
+     "last_update": "2026-11-12",
+     "conditions": [
+      "Patients With Non-Small Cell Lung Cancer"
+     ],
+     "enrollment": 363,
+     "interventions": [
+      "OSE2101",
+      "Docetaxel",
+      "NGS HLAA2 assay"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06472245",
+     "role": "partner"
+    }
+   ]
+  },
+  {
    "ticker": "IMCR",
    "name": "Immunocore Ltd",
    "cik": null,
    "sponsor_names": [
     "Immunocore Ltd"
    ],
-   "market_cap": 1639715973.1380653,
+   "market_cap": 1575765142.4110718,
    "cap_bucket": "Small",
-   "price": 31.84000015258789,
+   "price": 30.489999771118164,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.83333,
    "analyst_count": 10,
-   "target_price": 58.9,
-   "upside_pct": 85.0,
+   "target_price": 59.4,
+   "upside_pct": 94.8,
    "rating_spread": [
     2,
     6,
@@ -3771,83 +3634,22 @@
    ]
   },
   {
-   "ticker": "WGS",
-   "name": "GeneDx Holdings Corp.",
-   "cik": 1818331,
-   "sponsor_names": [
-    "GeneDx"
-   ],
-   "market_cap": 1652233676.625,
-   "cap_bucket": "Small",
-   "price": 55.125,
-   "currency": "USD",
-   "sector": "Diagnostics & Research",
-   "rating": "strong_buy",
-   "rating_mean": 1.125,
-   "analyst_count": 8,
-   "target_price": 87.25,
-   "upside_pct": 58.3,
-   "rating_spread": [
-    1,
-    7,
-    0,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT06472245",
-     "title": "Trial of Therapeutic Cancer Vaccine OSE2101 in Patients With Non-Small Cell Lung Cancer and Secondary Resistance to Immune Checkpoint Inhibitor",
-     "area": "Oncology",
-     "sponsor": "OSE Immunotherapeutics",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "GeneDx"
-     ],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2024-12-03",
-     "primary_completion": "2027-12-15",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2028-12-15",
-     "last_update": "2026-10-02",
-     "conditions": [
-      "Patients With Non-Small Cell Lung Cancer"
-     ],
-     "enrollment": 363,
-     "interventions": [
-      "OSE2101",
-      "Docetaxel",
-      "NGS HLAA2 assay"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06472245",
-     "role": "partner"
-    }
-   ]
-  },
-  {
    "ticker": "SLS",
    "name": "SELLAS Life Sciences Group, Inc.",
    "cik": 1390478,
    "sponsor_names": [
     "Sellas Life Sciences Group"
    ],
-   "market_cap": 1666461139.6593742,
+   "market_cap": 1603538588.463438,
    "cap_bucket": "Small",
-   "price": 8.475000381469727,
+   "price": 8.154999732971191,
    "currency": "USD",
    "sector": "Biotechnology",
-   "rating": "strong_buy",
-   "rating_mean": 1.5,
+   "rating": "none",
+   "rating_mean": null,
    "analyst_count": 2,
    "target_price": 32.5,
-   "upside_pct": 283.5,
+   "upside_pct": 298.5,
    "rating_spread": [
     1,
     1,
@@ -3896,81 +3698,22 @@
    ]
   },
   {
-   "ticker": "PGEN",
-   "name": "PRECIGEN, INC.",
-   "cik": 1356090,
-   "sponsor_names": [
-    "Precigen, Inc"
-   ],
-   "market_cap": 1681778603.2277012,
-   "cap_bucket": "Small",
-   "price": 4.690499782562256,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "buy",
-   "rating_mean": 1.75,
-   "analyst_count": 3,
-   "target_price": 14.0,
-   "upside_pct": 198.5,
-   "rating_spread": [
-    1,
-    2,
-    1,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT07901738",
-     "title": "Zopapogene Imadenovec for the Treatment of Recurrent Respiratory Papillomatosis in Children",
-     "area": "Oncology",
-     "sponsor": "Precigen, Inc",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "NOT_YET_RECRUITING",
-     "start_date": "2026-12-31",
-     "primary_completion": "2029-01",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2033-01",
-     "last_update": "2026-10-28",
-     "conditions": [
-      "Recurrent Respiratory Papillomatosis (RRP)",
-      "Juvenile-onset Recurrent Respiratory Papillomatosis",
-      "Papillomavirus Infections"
-     ],
-     "enrollment": 15,
-     "interventions": [
-      "Zopapogene imadenovec-drba"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07901738",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "GENB",
    "name": "Generate Biomedicines, Inc.",
    "cik": 2100782,
    "sponsor_names": [
     "Generate Biomedicines"
    ],
-   "market_cap": 1771263641.2812843,
+   "market_cap": 1612748304.4811745,
    "cap_bucket": "Small",
-   "price": 13.800000190734863,
+   "price": 12.5649995803833,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.33333,
    "analyst_count": 5,
    "target_price": 27.0,
-   "upside_pct": 95.7,
+   "upside_pct": 114.9,
    "rating_spread": [
     2,
     4,
@@ -4040,22 +3783,81 @@
    ]
   },
   {
+   "ticker": "PGEN",
+   "name": "PRECIGEN, INC.",
+   "cik": 1356090,
+   "sponsor_names": [
+    "Precigen, Inc"
+   ],
+   "market_cap": 1672635643.0224037,
+   "cap_bucket": "Small",
+   "price": 4.664999961853027,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "buy",
+   "rating_mean": 1.75,
+   "analyst_count": 3,
+   "target_price": 14.0,
+   "upside_pct": 200.1,
+   "rating_spread": [
+    1,
+    2,
+    1,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT07901738",
+     "title": "Zopapogene Imadenovec for the Treatment of Recurrent Respiratory Papillomatosis in Children",
+     "area": "Oncology",
+     "sponsor": "Precigen, Inc",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "NOT_YET_RECRUITING",
+     "start_date": "2026-12-31",
+     "primary_completion": "2029-01",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2033-01",
+     "last_update": "2026-10-28",
+     "conditions": [
+      "Recurrent Respiratory Papillomatosis (RRP)",
+      "Juvenile-onset Recurrent Respiratory Papillomatosis",
+      "Papillomavirus Infections"
+     ],
+     "enrollment": 15,
+     "interventions": [
+      "Zopapogene imadenovec-drba"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT07901738",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "NRIX",
    "name": "Nurix Therapeutics, Inc.",
    "cik": 1549595,
    "sponsor_names": [
     "Nurix Therapeutics, Inc."
    ],
-   "market_cap": 1812454430.9301987,
+   "market_cap": 1719592047.354702,
    "cap_bucket": "Small",
-   "price": 16.59000015258789,
+   "price": 15.739999771118164,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.5,
    "analyst_count": 14,
    "target_price": 33.5,
-   "upside_pct": 101.9,
+   "upside_pct": 112.8,
    "rating_spread": [
     5,
     8,
@@ -4100,22 +3902,113 @@
    ]
   },
   {
+   "ticker": "ADRX",
+   "name": "ADARx Pharmaceuticals, Inc.",
+   "cik": 1802369,
+   "sponsor_names": [
+    "ADARx Pharmaceuticals, Inc."
+   ],
+   "market_cap": 1745243907.3461056,
+   "cap_bucket": "Small",
+   "price": 15.760000228881836,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "none",
+   "rating_mean": null,
+   "analyst_count": 4,
+   "target_price": 34.25,
+   "upside_pct": 117.3,
+   "rating_spread": [
+    2,
+    3,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    "Allergy"
+   ],
+   "trial_count": 2,
+   "trials": [
+    {
+     "nct_id": "NCT07428499",
+     "title": "Phase 3 Extension Study of ADX-324 in Participants With Hereditary Angioedema (HAE)",
+     "area": "Allergy",
+     "sponsor": "ADARx Pharmaceuticals, Inc.",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2026-04-02",
+     "primary_completion": "2030-06-30",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2030-06-30",
+     "last_update": "2026-09-04",
+     "conditions": [
+      "Hereditary Angioedema (HAE)",
+      "Hereditary Angioedema - Type 1",
+      "Hereditary Angioedema - Type 2",
+      "HAE"
+     ],
+     "enrollment": 90,
+     "interventions": [
+      "ADX-324 Dose Level 1",
+      "ADX-324 Dose Level 2"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT07428499",
+     "role": "lead"
+    },
+    {
+     "nct_id": "NCT06960213",
+     "title": "STOP-HAE: A Phase 3 Study of ADX-324 in HAE",
+     "area": "Allergy",
+     "sponsor": "ADARx Pharmaceuticals, Inc.",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2025-08-28",
+     "primary_completion": "2027-11-30",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2027-12-31",
+     "last_update": "2026-09-10",
+     "conditions": [
+      "Hereditary Angioedema",
+      "HAE",
+      "Hereditary Angioedema - Type 1",
+      "Hereditary Angioedema - Type 2"
+     ],
+     "enrollment": 90,
+     "interventions": [
+      "ADX-324",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06960213",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "AGIO",
    "name": "AGIOS PHARMACEUTICALS, INC.",
    "cik": 1439222,
    "sponsor_names": [
     "Agios Pharmaceuticals, Inc."
    ],
-   "market_cap": 1952186972.135086,
+   "market_cap": 1918992597.577629,
    "cap_bucket": "Small",
-   "price": 32.63999938964844,
+   "price": 32.084999084472656,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.6,
    "analyst_count": 9,
    "target_price": 46.11111,
-   "upside_pct": 41.3,
+   "upside_pct": 43.7,
    "rating_spread": [
     0,
     7,
@@ -4158,107 +4051,22 @@
    ]
   },
   {
-   "ticker": "BCRX",
-   "name": "BIOCRYST PHARMACEUTICALS INC",
-   "cik": 882796,
-   "sponsor_names": [
-    "BioCryst Pharmaceuticals"
-   ],
-   "market_cap": 1974771938.650941,
-   "cap_bucket": "Small",
-   "price": 7.675000190734863,
-   "currency": "USD",
-   "sector": "Drug Manufacturers - Specialty & Generic",
-   "rating": "buy",
-   "rating_mean": 1.54545,
-   "analyst_count": 11,
-   "target_price": 20.45455,
-   "upside_pct": 166.5,
-   "rating_spread": [
-    2,
-    7,
-    2,
-    0,
-    0
-   ],
-   "areas": [
-    "Allergy"
-   ],
-   "trial_count": 2,
-   "trials": [
-    {
-     "nct_id": "NCT05453968",
-     "title": "Berotralstat Treatment in Children With Hereditary Angioedema",
-     "area": "Allergy",
-     "sponsor": "BioCryst Pharmaceuticals",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2022-10-25",
-     "primary_completion": "2024-09-11",
-     "pc_type": "ACTUAL",
-     "has_results": true,
-     "results_posted": "2026-02-25",
-     "completion": "2027-02",
-     "last_update": "2026-02-25",
-     "conditions": [
-      "Hereditary Angioedema",
-      "Pediatric"
-     ],
-     "enrollment": 29,
-     "interventions": [
-      "Berotralstat"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05453968",
-     "role": "lead"
-    },
-    {
-     "nct_id": "NCT04933721",
-     "title": "Open-label Berotralstat Access to HAE Patients Previously Enrolled in Berotralstat Studies",
-     "area": "Allergy",
-     "sponsor": "BioCryst Pharmaceuticals",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ENROLLING_BY_INVITATION",
-     "start_date": "2021-07-23",
-     "primary_completion": "2031-08",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2031-08",
-     "last_update": "2025-12-23",
-     "conditions": [
-      "Hereditary Angioedema",
-      "HAE"
-     ],
-     "enrollment": 139,
-     "interventions": [
-      "berotralstat"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT04933721",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "VCYT",
    "name": "VERACYTE, INC.",
    "cik": 1384101,
    "sponsor_names": [
     "Veracyte, Inc."
    ],
-   "market_cap": 2034332976.9210815,
-   "cap_bucket": "Mid",
-   "price": 25.209999084472656,
+   "market_cap": 1983091482.5657654,
+   "cap_bucket": "Small",
+   "price": 24.575000762939453,
    "currency": "USD",
    "sector": "Diagnostics & Research",
    "rating": "buy",
    "rating_mean": 1.66667,
    "analyst_count": 9,
-   "target_price": 46.22222,
-   "upside_pct": 83.3,
+   "target_price": 45.11111,
+   "upside_pct": 83.6,
    "rating_spread": [
     2,
     7,
@@ -4343,22 +4151,107 @@
    ]
   },
   {
+   "ticker": "BCRX",
+   "name": "BIOCRYST PHARMACEUTICALS INC",
+   "cik": 882796,
+   "sponsor_names": [
+    "BioCryst Pharmaceuticals"
+   ],
+   "market_cap": 1983777373.8051882,
+   "cap_bucket": "Small",
+   "price": 7.710000038146973,
+   "currency": "USD",
+   "sector": "Drug Manufacturers - Specialty & Generic",
+   "rating": "buy",
+   "rating_mean": 1.54545,
+   "analyst_count": 11,
+   "target_price": 20.45455,
+   "upside_pct": 165.3,
+   "rating_spread": [
+    2,
+    7,
+    2,
+    0,
+    0
+   ],
+   "areas": [
+    "Allergy"
+   ],
+   "trial_count": 2,
+   "trials": [
+    {
+     "nct_id": "NCT05453968",
+     "title": "Berotralstat Treatment in Children With Hereditary Angioedema",
+     "area": "Allergy",
+     "sponsor": "BioCryst Pharmaceuticals",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2022-10-25",
+     "primary_completion": "2024-09-11",
+     "pc_type": "ACTUAL",
+     "has_results": true,
+     "results_posted": "2026-02-25",
+     "completion": "2027-02",
+     "last_update": "2026-02-25",
+     "conditions": [
+      "Hereditary Angioedema",
+      "Pediatric"
+     ],
+     "enrollment": 29,
+     "interventions": [
+      "Berotralstat"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05453968",
+     "role": "lead"
+    },
+    {
+     "nct_id": "NCT04933721",
+     "title": "Open-label Berotralstat Access to HAE Patients Previously Enrolled in Berotralstat Studies",
+     "area": "Allergy",
+     "sponsor": "BioCryst Pharmaceuticals",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "ENROLLING_BY_INVITATION",
+     "start_date": "2021-07-23",
+     "primary_completion": "2031-08",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2031-08",
+     "last_update": "2025-12-23",
+     "conditions": [
+      "Hereditary Angioedema",
+      "HAE"
+     ],
+     "enrollment": 139,
+     "interventions": [
+      "berotralstat"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT04933721",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "REPL",
    "name": "Replimune, Inc.",
    "cik": null,
    "sponsor_names": [
     "Replimune, Inc."
    ],
-   "market_cap": 2133009090.0,
+   "market_cap": 2058116684.047638,
    "cap_bucket": "Mid",
-   "price": 22.5,
+   "price": 21.709999084472656,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.75,
    "analyst_count": 6,
    "target_price": 23.33333,
-   "upside_pct": 3.7,
+   "upside_pct": 7.5,
    "rating_spread": [
     2,
     5,
@@ -4461,138 +4354,22 @@
    ]
   },
   {
-   "ticker": "LKFT",
-   "name": "Lakefront Biotherapeutics NV",
-   "cik": 1421876,
-   "sponsor_names": [
-    "Lakefront Biotherapeutics NV"
-   ],
-   "market_cap": 2189759639.164715,
-   "cap_bucket": "Mid",
-   "price": 33.22999954223633,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "hold",
-   "rating_mean": 2.83333,
-   "analyst_count": 3,
-   "target_price": 30.41851,
-   "upside_pct": -8.5,
-   "rating_spread": [
-    1,
-    1,
-    3,
-    1,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT06652633",
-     "title": "Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies",
-     "area": "Oncology",
-     "sponsor": "Lakefront Biotherapeutics NV",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2024-09-09",
-     "primary_completion": "2039-07",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2039-07",
-     "last_update": "2026-07-13",
-     "conditions": [
-      "Hematological Malignancies"
-     ],
-     "enrollment": 546,
-     "interventions": [
-      "GLPG CAR T-cell therapy"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06652633",
-     "role": "lead"
-    }
-   ]
-  },
-  {
-   "ticker": "IMNM",
-   "name": "Immunome Inc.",
-   "cik": 1472012,
-   "sponsor_names": [
-    "Immunome, Inc."
-   ],
-   "market_cap": 2259916056.9539948,
-   "cap_bucket": "Mid",
-   "price": 19.139999389648438,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "strong_buy",
-   "rating_mean": 1.29412,
-   "analyst_count": 15,
-   "target_price": 35.2,
-   "upside_pct": 83.9,
-   "rating_spread": [
-    3,
-    13,
-    1,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT04871282",
-     "title": "A Study of AL102 in Patients With Progressing Desmoid Tumors",
-     "area": "Oncology",
-     "sponsor": "Immunome, Inc.",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2021-09-01",
-     "primary_completion": "2025-12-03",
-     "pc_type": "ACTUAL",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2026-12",
-     "last_update": "2026-06-08",
-     "conditions": [
-      "Desmoid",
-      "Desmoid Tumor"
-     ],
-     "enrollment": 198,
-     "interventions": [
-      "AL102",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT04871282",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "BHVN",
    "name": "Biohaven Ltd.",
    "cik": 1935979,
    "sponsor_names": [
     "Biohaven Pharmaceuticals, Inc."
    ],
-   "market_cap": 2299114687.1570463,
+   "market_cap": 2166182942.5897408,
    "cap_bucket": "Mid",
-   "price": 15.220000267028809,
+   "price": 14.34000015258789,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.82353,
    "analyst_count": 15,
    "target_price": 23.73333,
-   "upside_pct": 55.9,
+   "upside_pct": 65.5,
    "rating_spread": [
     3,
     9,
@@ -4647,22 +4424,138 @@
    ]
   },
   {
+   "ticker": "IMNM",
+   "name": "Immunome Inc.",
+   "cik": 1472012,
+   "sponsor_names": [
+    "Immunome, Inc."
+   ],
+   "market_cap": 2200879585.4539948,
+   "cap_bucket": "Mid",
+   "price": 18.639999389648438,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "strong_buy",
+   "rating_mean": 1.29412,
+   "analyst_count": 15,
+   "target_price": 35.2,
+   "upside_pct": 88.8,
+   "rating_spread": [
+    3,
+    13,
+    1,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT04871282",
+     "title": "A Study of AL102 in Patients With Progressing Desmoid Tumors",
+     "area": "Oncology",
+     "sponsor": "Immunome, Inc.",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2021-09-01",
+     "primary_completion": "2025-12-03",
+     "pc_type": "ACTUAL",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2026-12",
+     "last_update": "2026-06-08",
+     "conditions": [
+      "Desmoid",
+      "Desmoid Tumor"
+     ],
+     "enrollment": 198,
+     "interventions": [
+      "AL102",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT04871282",
+     "role": "lead"
+    }
+   ]
+  },
+  {
+   "ticker": "LKFT",
+   "name": "Lakefront Biotherapeutics NV",
+   "cik": 1421876,
+   "sponsor_names": [
+    "Lakefront Biotherapeutics NV"
+   ],
+   "market_cap": 2241488829.8446198,
+   "cap_bucket": "Mid",
+   "price": 34.01499938964844,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "hold",
+   "rating_mean": 2.83333,
+   "analyst_count": 3,
+   "target_price": 30.490137,
+   "upside_pct": -10.4,
+   "rating_spread": [
+    1,
+    1,
+    3,
+    1,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT06652633",
+     "title": "Long-term Follow-up of Participants Treated With Galapagos Chimeric Antigen Receptor (CAR) T-cell Therapies",
+     "area": "Oncology",
+     "sponsor": "Lakefront Biotherapeutics NV",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2024-09-09",
+     "primary_completion": "2039-07",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2039-07",
+     "last_update": "2026-07-13",
+     "conditions": [
+      "Hematological Malignancies"
+     ],
+     "enrollment": 546,
+     "interventions": [
+      "GLPG CAR T-cell therapy"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06652633",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "CLDX",
    "name": "Celldex Therapeutics, Inc.",
    "cik": 744218,
    "sponsor_names": [
     "Celldex Therapeutics"
    ],
-   "market_cap": 2392089522.212488,
+   "market_cap": 2267202879.1374645,
    "cap_bucket": "Mid",
-   "price": 30.454999923706055,
+   "price": 28.864999771118164,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.26667,
    "analyst_count": 14,
    "target_price": 64.0,
-   "upside_pct": 110.1,
+   "upside_pct": 121.7,
    "rating_spread": [
     2,
     12,
@@ -4742,12 +4635,12 @@
      "is_platform": false,
      "status": "ACTIVE_NOT_RECRUITING",
      "start_date": "2024-07-19",
-     "primary_completion": "2026-10",
-     "pc_type": "ESTIMATED",
+     "primary_completion": "2026-08-04",
+     "pc_type": "ACTUAL",
      "has_results": false,
      "results_posted": null,
-     "completion": "2027-04",
-     "last_update": "2026-03-25",
+     "completion": "2027-06",
+     "last_update": "2026-11-12",
      "conditions": [
       "Chronic Spontaneous Urticaria"
      ],
@@ -4769,12 +4662,12 @@
      "is_platform": false,
      "status": "ACTIVE_NOT_RECRUITING",
      "start_date": "2024-07-11",
-     "primary_completion": "2026-10",
-     "pc_type": "ESTIMATED",
+     "primary_completion": "2026-08-12",
+     "pc_type": "ACTUAL",
      "has_results": false,
      "results_posted": null,
-     "completion": "2027-04",
-     "last_update": "2026-03-25",
+     "completion": "2027-06",
+     "last_update": "2026-11-12",
      "conditions": [
       "Chronic Spontaneous Urticaria"
      ],
@@ -4795,16 +4688,16 @@
    "sponsor_names": [
     "Palvella Therapeutics, Inc."
    ],
-   "market_cap": 2416650254.6445923,
+   "market_cap": 2285595841.1739807,
    "cap_bucket": "Mid",
-   "price": 165.31500244140625,
+   "price": 156.35000610351562,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.0,
    "analyst_count": 15,
    "target_price": 233.8,
-   "upside_pct": 41.4,
+   "upside_pct": 49.5,
    "rating_spread": [
     0,
     16,
@@ -4852,16 +4745,16 @@
    "sponsor_names": [
     "Arcus Biosciences, Inc."
    ],
-   "market_cap": 2702703890.693672,
+   "market_cap": 2632868355.018776,
    "cap_bucket": "Mid",
-   "price": 18.770000457763672,
+   "price": 18.28499984741211,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.33333,
    "analyst_count": 12,
    "target_price": 41.0,
-   "upside_pct": 118.4,
+   "upside_pct": 124.2,
    "rating_spread": [
     1,
     12,
@@ -5006,16 +4899,16 @@
    "sponsor_names": [
     "IDEAYA Biosciences"
    ],
-   "market_cap": 3138705815.9734726,
+   "market_cap": 3065508025.649357,
    "cap_bucket": "Mid",
-   "price": 32.459999084472656,
+   "price": 31.702999114990234,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.3125,
    "analyst_count": 13,
-   "target_price": 51.07692,
-   "upside_pct": 57.4,
+   "target_price": 50.69231,
+   "upside_pct": 59.9,
    "rating_spread": [
     3,
     12,
@@ -5038,13 +4931,13 @@
      "collaborators": [],
      "is_platform": false,
      "status": "RECRUITING",
-     "start_date": "2026-09",
+     "start_date": "2026-09-04",
      "primary_completion": "2034-03",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
      "completion": "2034-04",
-     "last_update": "2026-09-15",
+     "last_update": "2026-11-12",
      "conditions": [
       "Uveal Melanoma"
      ],
@@ -5065,13 +4958,13 @@
      "collaborators": [],
      "is_platform": false,
      "status": "RECRUITING",
-     "start_date": "2026-09",
+     "start_date": "2026-09-04",
      "primary_completion": "2034-03",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
      "completion": "2034-04",
-     "last_update": "2026-09-15",
+     "last_update": "2026-11-12",
      "conditions": [
       "Uveal Melanoma"
      ],
@@ -5208,16 +5101,16 @@
    "sponsor_names": [
     "Celcuity Inc"
    ],
-   "market_cap": 3214337155.982666,
+   "market_cap": 3178616698.8815002,
    "cap_bucket": "Mid",
-   "price": 65.69000244140625,
+   "price": 64.95999908447266,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.23077,
    "analyst_count": 13,
    "target_price": 150.84615,
-   "upside_pct": 129.6,
+   "upside_pct": 132.2,
    "rating_spread": [
     3,
     10,
@@ -5297,16 +5190,16 @@
    "sponsor_names": [
     "Arcutis Biotherapeutics, Inc."
    ],
-   "market_cap": 3566032027.0775337,
+   "market_cap": 3580574326.9292736,
    "cap_bucket": "Mid",
-   "price": 28.200000762939453,
+   "price": 28.315000534057617,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.5,
    "analyst_count": 8,
    "target_price": 40.375,
-   "upside_pct": 43.2,
+   "upside_pct": 42.6,
    "rating_spread": [
     2,
     5,
@@ -5357,16 +5250,16 @@
    "sponsor_names": [
     "Iovance Biotherapeutics, Inc."
    ],
-   "market_cap": 3742880242.1855736,
+   "market_cap": 3622589797.032213,
    "cap_bucket": "Mid",
-   "price": 8.09000015258789,
+   "price": 7.829999923706055,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.66667,
    "analyst_count": 10,
    "target_price": 14.5,
-   "upside_pct": 79.2,
+   "upside_pct": 85.2,
    "rating_spread": [
     2,
     5,
@@ -5447,16 +5340,16 @@
    "sponsor_names": [
     "Enliven Therapeutics"
    ],
-   "market_cap": 3791989288.5972595,
+   "market_cap": 3639279333.5486298,
    "cap_bucket": "Mid",
-   "price": 51.525001525878906,
+   "price": 49.45000076293945,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.21429,
    "analyst_count": 12,
    "target_price": 74.33333,
-   "upside_pct": 44.3,
+   "upside_pct": 50.3,
    "rating_spread": [
     3,
     11,
@@ -5507,16 +5400,16 @@
    "sponsor_names": [
     "Relay Therapeutics, Inc."
    ],
-   "market_cap": 4384940530.4291725,
+   "market_cap": 4084435937.812958,
    "cap_bucket": "Mid",
-   "price": 19.844999313354492,
+   "price": 18.485000610351562,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.25,
    "analyst_count": 12,
    "target_price": 28.25,
-   "upside_pct": 42.4,
+   "upside_pct": 52.8,
    "rating_spread": [
     3,
     9,
@@ -5571,16 +5464,16 @@
    "sponsor_names": [
     "Ionis Pharmaceuticals, Inc."
    ],
-   "market_cap": 4813153326.468086,
+   "market_cap": 4590182674.924088,
    "cap_bucket": "Mid",
-   "price": 28.899999618530273,
+   "price": 27.561199188232422,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.68,
    "analyst_count": 23,
-   "target_price": 76.95652,
-   "upside_pct": 166.3,
+   "target_price": 70.6087,
+   "upside_pct": 156.2,
    "rating_spread": [
     9,
     12,
@@ -5682,16 +5575,16 @@
    "sponsor_names": [
     "Cogent Biosciences, Inc."
    ],
-   "market_cap": 5197214427.261955,
+   "market_cap": 5132836334.0,
    "cap_bucket": "Mid",
-   "price": 29.8700008392334,
+   "price": 29.5,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.33333,
    "analyst_count": 11,
-   "target_price": 55.72727,
-   "upside_pct": 86.6,
+   "target_price": 55.81818,
+   "upside_pct": 89.2,
    "rating_spread": [
     2,
     9,
@@ -5739,84 +5632,22 @@
    ]
   },
   {
-   "ticker": "GRFS",
-   "name": "Grifols SA",
-   "cik": 1438569,
-   "sponsor_names": [
-    "Grifols Therapeutics LLC"
-   ],
-   "market_cap": 5992511571.831688,
-   "cap_bucket": "Mid",
-   "price": 8.805000305175781,
-   "currency": "USD",
-   "sector": "Drug Manufacturers - General",
-   "rating": "buy",
-   "rating_mean": 2.0,
-   "analyst_count": 2,
-   "target_price": 10.365,
-   "upside_pct": 17.7,
-   "rating_spread": [
-    0,
-    1,
-    1,
-    0,
-    0
-   ],
-   "areas": [
-    "Oncology"
-   ],
-   "trial_count": 1,
-   "trials": [
-    {
-     "nct_id": "NCT05645107",
-     "title": "A Study to Evaluate Efficacy, Safety, and PK of XEMBIFY\u00ae+Standard Medical Treatment (SMT) Compared to Placebo+SMT to Prevent Infections in Participants With HGG and Recurrent or Severe Infections Associated With B-cell Chronic Lymphocytic Leukemia, Multiple Myeloma, and Non-Hodgkin Lymphoma",
-     "area": "Oncology",
-     "sponsor": "Grifols Therapeutics LLC",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2022-12-26",
-     "primary_completion": "2029-08",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2029-08",
-     "last_update": "2026-09-30",
-     "conditions": [
-      "Hypogammaglobulinemia",
-      "Bacterial Infections",
-      "B-cell Chronic Lymphocytic Leukemia",
-      "Multiple Myleoma",
-      "Non-Hodgkin Lymphoma"
-     ],
-     "enrollment": 386,
-     "interventions": [
-      "Xembify",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05645107",
-     "role": "lead"
-    }
-   ]
-  },
-  {
    "ticker": "ERAS",
    "name": "Erasca, Inc.",
    "cik": 1761918,
    "sponsor_names": [
     "Erasca, Inc."
    ],
-   "market_cap": 6029897403.345823,
+   "market_cap": 5555970006.029177,
    "cap_bucket": "Mid",
-   "price": 17.239999771118164,
+   "price": 15.885000228881836,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "none",
    "rating_mean": null,
    "analyst_count": 9,
    "target_price": 24.11111,
-   "upside_pct": 39.9,
+   "upside_pct": 51.8,
    "rating_spread": [
     2,
     5,
@@ -5891,22 +5722,84 @@
    ]
   },
   {
+   "ticker": "GRFS",
+   "name": "Grifols SA",
+   "cik": 1438569,
+   "sponsor_names": [
+    "Grifols Therapeutics LLC"
+   ],
+   "market_cap": 5934730353.250328,
+   "cap_bucket": "Mid",
+   "price": 8.720100402832031,
+   "currency": "USD",
+   "sector": "Drug Manufacturers - General",
+   "rating": "buy",
+   "rating_mean": 2.0,
+   "analyst_count": 2,
+   "target_price": 10.365,
+   "upside_pct": 18.9,
+   "rating_spread": [
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "areas": [
+    "Oncology"
+   ],
+   "trial_count": 1,
+   "trials": [
+    {
+     "nct_id": "NCT05645107",
+     "title": "A Study to Evaluate Efficacy, Safety, and PK of XEMBIFY\u00ae+Standard Medical Treatment (SMT) Compared to Placebo+SMT to Prevent Infections in Participants With HGG and Recurrent or Severe Infections Associated With B-cell Chronic Lymphocytic Leukemia, Multiple Myeloma, and Non-Hodgkin Lymphoma",
+     "area": "Oncology",
+     "sponsor": "Grifols Therapeutics LLC",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2022-12-26",
+     "primary_completion": "2029-08",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2029-08",
+     "last_update": "2026-11-12",
+     "conditions": [
+      "Hypogammaglobulinemia",
+      "Bacterial Infections",
+      "B-cell Chronic Lymphocytic Leukemia",
+      "Multiple Myleoma",
+      "Non-Hodgkin Lymphoma"
+     ],
+     "enrollment": 386,
+     "interventions": [
+      "Xembify",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05645107",
+     "role": "lead"
+    }
+   ]
+  },
+  {
    "ticker": "CGON",
    "name": "CG Oncology, Inc.",
    "cik": 1991792,
    "sponsor_names": [
     "CG Oncology, Inc."
    ],
-   "market_cap": 6620318299.24173,
+   "market_cap": 6347448983.60376,
    "cap_bucket": "Mid",
-   "price": 74.12000274658203,
+   "price": 71.06500244140625,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.42857,
    "analyst_count": 13,
    "target_price": 91.46154,
-   "upside_pct": 23.4,
+   "upside_pct": 28.7,
    "rating_spread": [
     4,
     9,
@@ -5986,16 +5879,16 @@
    "sponsor_names": [
     "ImmunityBio, Inc."
    ],
-   "market_cap": 7090400735.963256,
+   "market_cap": 6484019691.735407,
    "cap_bucket": "Mid",
-   "price": 6.664999961853027,
+   "price": 6.09499979019165,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.25,
    "analyst_count": 4,
    "target_price": 14.25,
-   "upside_pct": 113.8,
+   "upside_pct": 133.8,
    "rating_spread": [
     1,
     3,
@@ -6073,16 +5966,16 @@
    "sponsor_names": [
     "Immunovant Sciences GmbH"
    ],
-   "market_cap": 7671553325.904556,
+   "market_cap": 7366305698.631775,
    "cap_bucket": "Mid",
-   "price": 37.06999969482422,
+   "price": 35.595001220703125,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.58824,
    "analyst_count": 16,
-   "target_price": 48.3125,
-   "upside_pct": 30.3,
+   "target_price": 48.5,
+   "upside_pct": 36.3,
    "rating_spread": [
     2,
     11,
@@ -6133,16 +6026,16 @@
    "sponsor_names": [
     "Axsome Therapeutics, Inc."
    ],
-   "market_cap": 7843709506.364136,
+   "market_cap": 7655401463.750687,
    "cap_bucket": "Mid",
-   "price": 149.1199951171875,
+   "price": 145.5399932861328,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.22727,
    "analyst_count": 21,
    "target_price": 265.85715,
-   "upside_pct": 78.3,
+   "upside_pct": 82.7,
    "rating_spread": [
     3,
     18,
@@ -6217,16 +6110,16 @@
    "sponsor_names": [
     "Corcept Therapeutics"
    ],
-   "market_cap": 8142567476.596931,
+   "market_cap": 8115206699.346931,
    "cap_bucket": "Mid",
-   "price": 74.4000015258789,
+   "price": 74.1500015258789,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 2.0,
    "analyst_count": 5,
    "target_price": 142.6,
-   "upside_pct": 91.7,
+   "upside_pct": 92.3,
    "rating_spread": [
     1,
     3,
@@ -6278,16 +6171,16 @@
    "sponsor_names": [
     "Protagonist Therapeutics, Inc."
    ],
-   "market_cap": 8737384169.149445,
+   "market_cap": 8853890565.72284,
    "cap_bucket": "Mid",
-   "price": 133.86500549316406,
+   "price": 135.64999389648438,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.21429,
    "analyst_count": 14,
    "target_price": 182.35715,
-   "upside_pct": 36.2,
+   "upside_pct": 34.4,
    "rating_spread": [
     3,
     11,
@@ -6362,16 +6255,16 @@
    "sponsor_names": [
     "Halozyme Therapeutics"
    ],
-   "market_cap": 11637000665.20691,
+   "market_cap": 11582846089.172363,
    "cap_bucket": "Large",
-   "price": 102.06999969482422,
+   "price": 101.59500122070312,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
-   "rating_mean": 1.88889,
+   "rating_mean": 2.0,
    "analyst_count": 9,
    "target_price": 119.88889,
-   "upside_pct": 17.5,
+   "upside_pct": 18.0,
    "rating_spread": [
     1,
     4,
@@ -6452,16 +6345,16 @@
    "sponsor_names": [
     "Summit Therapeutics"
    ],
-   "market_cap": 13508012086.882843,
+   "market_cap": 12332359676.577145,
    "cap_bucket": "Large",
-   "price": 16.889999389648438,
+   "price": 15.420000076293945,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.76471,
    "analyst_count": 13,
-   "target_price": 29.641203,
-   "upside_pct": 75.5,
+   "target_price": 29.544329,
+   "upside_pct": 91.6,
    "rating_spread": [
     1,
     10,
@@ -6654,16 +6547,16 @@
    "sponsor_names": [
     "Jazz Pharmaceuticals"
    ],
-   "market_cap": 15817787334.98944,
+   "market_cap": 15612382564.478882,
    "cap_bucket": "Large",
-   "price": 246.4250030517578,
+   "price": 243.22500610351562,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.5,
    "analyst_count": 22,
-   "target_price": 295.86365,
-   "upside_pct": 20.1,
+   "target_price": 296.77274,
+   "upside_pct": 22.0,
    "rating_spread": [
     7,
     13,
@@ -6937,9 +6830,9 @@
    "sponsor_names": [
     "Exelixis"
    ],
-   "market_cap": 17119805286.794586,
+   "market_cap": 17112459194.634018,
    "cap_bucket": "Large",
-   "price": 70.16000366210938,
+   "price": 70.12989807128906,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
@@ -6970,13 +6863,13 @@
      ],
      "is_platform": false,
      "status": "RECRUITING",
-     "start_date": "2026-08-25",
+     "start_date": "2026-12-18",
      "primary_completion": "2030-04-05",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
      "completion": "2030-04-05",
-     "last_update": "2026-09-21",
+     "last_update": "2026-11-12",
      "conditions": [
       "Colorectal Cancer"
      ],
@@ -7076,8 +6969,8 @@
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
-     "completion": "2032-02-27",
-     "last_update": "2026-08-03",
+     "completion": "2033-03-21",
+     "last_update": "2026-11-12",
      "conditions": [
       "Renal Cell Carcinoma"
      ],
@@ -7334,16 +7227,16 @@
    "sponsor_names": [
     "Guardant Health, Inc."
    ],
-   "market_cap": 21013970744.46602,
+   "market_cap": 21076201136.95793,
    "cap_bucket": "Large",
-   "price": 155.3300018310547,
+   "price": 155.7899932861328,
    "currency": "USD",
    "sector": "Diagnostics & Research",
    "rating": "strong_buy",
    "rating_mean": 1.26923,
    "analyst_count": 25,
-   "target_price": 200.88,
-   "upside_pct": 29.3,
+   "target_price": 200.76,
+   "upside_pct": 28.9,
    "rating_spread": [
     4,
     21,
@@ -7428,16 +7321,16 @@
    "sponsor_names": [
     "BioNTech SE"
    ],
-   "market_cap": 21693715750.0,
+   "market_cap": 21165629407.555084,
    "cap_bucket": "Large",
-   "price": 87.5,
+   "price": 85.37000274658203,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.71429,
    "analyst_count": 20,
-   "target_price": 113.04808,
-   "upside_pct": 29.2,
+   "target_price": 112.67317,
+   "upside_pct": 32.0,
    "rating_spread": [
     1,
     13,
@@ -7857,16 +7750,16 @@
    "sponsor_names": [
     "Incyte Corporation"
    ],
-   "market_cap": 24915464784.02948,
+   "market_cap": 24987824447.82312,
    "cap_bucket": "Large",
-   "price": 122.23500061035156,
+   "price": 122.58999633789062,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 2.17857,
    "analyst_count": 24,
    "target_price": 131.5,
-   "upside_pct": 7.6,
+   "upside_pct": 7.3,
    "rating_spread": [
     2,
     11,
@@ -8153,16 +8046,16 @@
    "sponsor_names": [
     "Revolution Medicines, Inc."
    ],
-   "market_cap": 39393321844.10486,
+   "market_cap": 38384316309.10886,
    "cap_bucket": "Large",
-   "price": 182.1300048828125,
+   "price": 177.46499633789062,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.28,
    "analyst_count": 24,
    "target_price": 274.84375,
-   "upside_pct": 50.9,
+   "upside_pct": 54.9,
    "rating_spread": [
     5,
     19,
@@ -8422,16 +8315,16 @@
    "sponsor_names": [
     "Natera, Inc."
    ],
-   "market_cap": 46302844707.76483,
+   "market_cap": 46827760365.754944,
    "cap_bucket": "Large",
-   "price": 319.32000732421875,
+   "price": 322.94000244140625,
    "currency": "USD",
    "sector": "Diagnostics & Research",
    "rating": "strong_buy",
    "rating_mean": 1.36364,
    "analyst_count": 21,
    "target_price": 410.0238,
-   "upside_pct": 28.4,
+   "upside_pct": 27.0,
    "rating_spread": [
     4,
     16,
@@ -8622,16 +8515,16 @@
     "BeOne Medicines",
     "BeiGene"
    ],
-   "market_cap": 48058339472.595184,
+   "market_cap": 48047031202.32309,
    "cap_bucket": "Large",
-   "price": 420.7300109863281,
+   "price": 420.6310119628906,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "strong_buy",
    "rating_mean": 1.33333,
    "analyst_count": 27,
-   "target_price": 462.18964,
-   "upside_pct": 9.9,
+   "target_price": 465.00443,
+   "upside_pct": 10.5,
    "rating_spread": [
     7,
     19,
@@ -8932,10 +8825,11 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2030-02-14",
-     "last_update": "2026-09-28",
+     "last_update": "2026-11-12",
      "conditions": [
       "CLL",
-      "Chronic Lymphocytic Leukemia"
+      "Chronic Lymphocytic Leukemia",
+      "SLL"
      ],
      "enrollment": 250,
      "interventions": [
@@ -9275,16 +9169,16 @@
    "sponsor_names": [
     "Veeva Systems"
    ],
-   "market_cap": 49845256189.28833,
+   "market_cap": 49004953803.56903,
    "cap_bucket": "Large",
-   "price": 307.8599853515625,
+   "price": 302.6700134277344,
    "currency": "USD",
    "sector": "Health Information Services",
    "rating": "buy",
    "rating_mean": 1.93103,
    "analyst_count": 27,
-   "target_price": 323.07407,
-   "upside_pct": 4.9,
+   "target_price": 323.81482,
+   "upside_pct": 7.0,
    "rating_spread": [
     7,
     13,
@@ -9415,16 +9309,16 @@
    "sponsor_names": [
     "Takeda"
    ],
-   "market_cap": 66262179516.30592,
+   "market_cap": 67651958350.436424,
    "cap_bucket": "Large",
-   "price": 20.739999771118164,
+   "price": 21.174999237060547,
    "currency": "USD",
    "sector": "Drug Manufacturers - Specialty & Generic",
    "rating": "strong_buy",
    "rating_mean": 1.0,
    "analyst_count": 3,
-   "target_price": 22.740309,
-   "upside_pct": 9.6,
+   "target_price": 22.745005,
+   "upside_pct": 7.4,
    "rating_spread": [
     0,
     3,
@@ -9655,22 +9549,207 @@
    ]
   },
   {
+   "ticker": "MRNA",
+   "name": "ModernaTX, Inc.",
+   "cik": null,
+   "sponsor_names": [
+    "ModernaTX, Inc."
+   ],
+   "market_cap": 95185059288.18665,
+   "cap_bucket": "Large",
+   "price": 235.2449951171875,
+   "currency": "USD",
+   "sector": "Biotechnology",
+   "rating": "hold",
+   "rating_mean": 2.91304,
+   "analyst_count": 19,
+   "target_price": 158.47368,
+   "upside_pct": -32.6,
+   "rating_spread": [
+    1,
+    3,
+    16,
+    2,
+    1
+   ],
+   "areas": [
+    "Melanoma",
+    "Oncology"
+   ],
+   "trial_count": 5,
+   "trials": [
+    {
+     "nct_id": "NCT07513376",
+     "title": "A Clinical Trial of Adjuvant Intismeran (V940) With or Without Pembrolizumab Coformulated With Berahyaluronidase Alfa (MK-3475A) in High-Risk Stage I Non-Small Cell Lung Cancer (V940-014)",
+     "area": "Oncology",
+     "sponsor": "Merck Sharp & Dohme LLC",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "ModernaTX, Inc."
+     ],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2026-05-04",
+     "primary_completion": "2034-08-22",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2038-05-11",
+     "last_update": "2026-11-09",
+     "conditions": [
+      "Non-small Cell Lung Cancer"
+     ],
+     "enrollment": 876,
+     "interventions": [
+      "Intismeran",
+      "Pembrolizumab coformulated with berahyaluronidase alfa",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT07513376",
+     "role": "partner"
+    },
+    {
+     "nct_id": "NCT06623422",
+     "title": "A Study of Pembrolizumab (MK-3475) With or Without Intismeran Autogene (V940) in Participants With Non-small Cell Lung Cancer (V940-009/INTerpath-009)",
+     "area": "Oncology",
+     "sponsor": "Merck Sharp & Dohme LLC",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "ModernaTX, Inc."
+     ],
+     "is_platform": true,
+     "status": "RECRUITING",
+     "start_date": "2024-10-21",
+     "primary_completion": "2033-05-16",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2038-01-26",
+     "last_update": "2026-11-09",
+     "conditions": [
+      "Carcinoma, Non-Small-Cell Lung"
+     ],
+     "enrollment": 680,
+     "interventions": [
+      "Pembrolizumab",
+      "Cisplatin",
+      "Carboplatin",
+      "Pemetrexed",
+      "Gemcitabine",
+      "Paclitaxel"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06623422",
+     "role": "partner"
+    },
+    {
+     "nct_id": "NCT06077760",
+     "title": "A Study of Intismeran Autogene (V940) Plus Pembrolizumab (MK-3475) Versus Placebo Plus Pembrolizumab in Participants With Non-small Cell Lung Cancer (V940-002)",
+     "area": "Oncology",
+     "sponsor": "Merck Sharp & Dohme LLC",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "ModernaTX, Inc."
+     ],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2023-12-06",
+     "primary_completion": "2030-06-25",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2035-12-21",
+     "last_update": "2026-09-18",
+     "conditions": [
+      "Non-small Cell Lung Cancer"
+     ],
+     "enrollment": 868,
+     "interventions": [
+      "Intismeran autogene",
+      "Pembrolizumab",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT06077760",
+     "role": "partner"
+    },
+    {
+     "nct_id": "NCT05933577",
+     "title": "A Clinical Study of Intismeran Autogene (V940) Plus Pembrolizumab in People With High-Risk Melanoma (V940-001)",
+     "area": "Oncology",
+     "sponsor": "Merck Sharp & Dohme LLC",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "ModernaTX, Inc."
+     ],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2023-07-19",
+     "primary_completion": "2029-10-26",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2030-09-26",
+     "last_update": "2025-09-24",
+     "conditions": [
+      "Melanoma"
+     ],
+     "enrollment": 1089,
+     "interventions": [
+      "Intismeran autogene",
+      "Pembrolizumab",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05933577",
+     "role": "partner"
+    },
+    {
+     "nct_id": "NCT05933577",
+     "title": "A Clinical Study of Intismeran Autogene (V940) Plus Pembrolizumab in People With High-Risk Melanoma (V940-001)",
+     "area": "Melanoma",
+     "sponsor": "Merck Sharp & Dohme LLC",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "ModernaTX, Inc."
+     ],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2023-07-19",
+     "primary_completion": "2029-10-26",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2030-09-26",
+     "last_update": "2025-09-24",
+     "conditions": [
+      "Melanoma"
+     ],
+     "enrollment": 1089,
+     "interventions": [
+      "Intismeran autogene",
+      "Pembrolizumab",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05933577",
+     "role": "partner"
+    }
+   ]
+  },
+  {
    "ticker": "REGN",
    "name": "Regeneron Pharmaceuticals",
    "cik": null,
    "sponsor_names": [
     "Regeneron Pharmaceuticals"
    ],
-   "market_cap": 97548224570.531,
+   "market_cap": 98519083737.479,
    "cap_bucket": "Large",
-   "price": 942.969970703125,
+   "price": 952.35498046875,
    "currency": "USD",
    "sector": "Biotechnology",
    "rating": "buy",
    "rating_mean": 1.78571,
    "analyst_count": 27,
    "target_price": 977.9259,
-   "upside_pct": 3.7,
+   "upside_pct": 2.7,
    "rating_spread": [
     4,
     15,
@@ -10382,7 +10461,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2031-04-30",
-     "last_update": "2026-10-07",
+     "last_update": "2026-11-12",
      "conditions": [
       "Relapsed/Refractory Follicular Lymphoma",
       "Relapsed/Refractory Marginal Zone Lymphoma (R/R MZL)"
@@ -10437,12 +10516,12 @@
      "is_platform": true,
      "status": "RECRUITING",
      "start_date": "2023-12-12",
-     "primary_completion": "2028-02-07",
+     "primary_completion": "2028-02-29",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
-     "completion": "2029-11-03",
-     "last_update": "2026-10-06",
+     "completion": "2029-11-30",
+     "last_update": "2026-11-12",
      "conditions": [
       "Follicular Lymphoma (FL)"
      ],
@@ -10752,207 +10831,22 @@
    ]
   },
   {
-   "ticker": "MRNA",
-   "name": "ModernaTX, Inc.",
-   "cik": null,
-   "sponsor_names": [
-    "ModernaTX, Inc."
-   ],
-   "market_cap": 100386466367.11044,
-   "cap_bucket": "Large",
-   "price": 248.10000610351562,
-   "currency": "USD",
-   "sector": "Biotechnology",
-   "rating": "hold",
-   "rating_mean": 2.91304,
-   "analyst_count": 19,
-   "target_price": 158.47368,
-   "upside_pct": -36.1,
-   "rating_spread": [
-    1,
-    3,
-    16,
-    2,
-    1
-   ],
-   "areas": [
-    "Melanoma",
-    "Oncology"
-   ],
-   "trial_count": 5,
-   "trials": [
-    {
-     "nct_id": "NCT07513376",
-     "title": "A Clinical Trial of Adjuvant Intismeran (V940) With or Without Pembrolizumab Coformulated With Berahyaluronidase Alfa (MK-3475A) in High-Risk Stage I Non-Small Cell Lung Cancer (V940-014)",
-     "area": "Oncology",
-     "sponsor": "Merck Sharp & Dohme LLC",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "ModernaTX, Inc."
-     ],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2026-05-04",
-     "primary_completion": "2034-08-22",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2038-05-11",
-     "last_update": "2026-11-09",
-     "conditions": [
-      "Non-small Cell Lung Cancer"
-     ],
-     "enrollment": 876,
-     "interventions": [
-      "Intismeran",
-      "Pembrolizumab coformulated with berahyaluronidase alfa",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07513376",
-     "role": "partner"
-    },
-    {
-     "nct_id": "NCT06623422",
-     "title": "A Study of Pembrolizumab (MK-3475) With or Without Intismeran Autogene (V940) in Participants With Non-small Cell Lung Cancer (V940-009/INTerpath-009)",
-     "area": "Oncology",
-     "sponsor": "Merck Sharp & Dohme LLC",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "ModernaTX, Inc."
-     ],
-     "is_platform": true,
-     "status": "RECRUITING",
-     "start_date": "2024-10-21",
-     "primary_completion": "2033-05-16",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2038-01-26",
-     "last_update": "2026-11-09",
-     "conditions": [
-      "Carcinoma, Non-Small-Cell Lung"
-     ],
-     "enrollment": 680,
-     "interventions": [
-      "Pembrolizumab",
-      "Cisplatin",
-      "Carboplatin",
-      "Pemetrexed",
-      "Gemcitabine",
-      "Paclitaxel"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06623422",
-     "role": "partner"
-    },
-    {
-     "nct_id": "NCT06077760",
-     "title": "A Study of Intismeran Autogene (V940) Plus Pembrolizumab (MK-3475) Versus Placebo Plus Pembrolizumab in Participants With Non-small Cell Lung Cancer (V940-002)",
-     "area": "Oncology",
-     "sponsor": "Merck Sharp & Dohme LLC",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "ModernaTX, Inc."
-     ],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2023-12-06",
-     "primary_completion": "2030-06-25",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2035-12-21",
-     "last_update": "2026-09-18",
-     "conditions": [
-      "Non-small Cell Lung Cancer"
-     ],
-     "enrollment": 868,
-     "interventions": [
-      "Intismeran autogene",
-      "Pembrolizumab",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT06077760",
-     "role": "partner"
-    },
-    {
-     "nct_id": "NCT05933577",
-     "title": "A Clinical Study of Intismeran Autogene (V940) Plus Pembrolizumab in People With High-Risk Melanoma (V940-001)",
-     "area": "Oncology",
-     "sponsor": "Merck Sharp & Dohme LLC",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "ModernaTX, Inc."
-     ],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2023-07-19",
-     "primary_completion": "2029-10-26",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2030-09-26",
-     "last_update": "2025-09-24",
-     "conditions": [
-      "Melanoma"
-     ],
-     "enrollment": 1089,
-     "interventions": [
-      "Intismeran autogene",
-      "Pembrolizumab",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05933577",
-     "role": "partner"
-    },
-    {
-     "nct_id": "NCT05933577",
-     "title": "A Clinical Study of Intismeran Autogene (V940) Plus Pembrolizumab in People With High-Risk Melanoma (V940-001)",
-     "area": "Melanoma",
-     "sponsor": "Merck Sharp & Dohme LLC",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "ModernaTX, Inc."
-     ],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2023-07-19",
-     "primary_completion": "2029-10-26",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2030-09-26",
-     "last_update": "2025-09-24",
-     "conditions": [
-      "Melanoma"
-     ],
-     "enrollment": 1089,
-     "interventions": [
-      "Intismeran autogene",
-      "Pembrolizumab",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05933577",
-     "role": "partner"
-    }
-   ]
-  },
-  {
    "ticker": "SNY",
    "name": "Sanofi",
    "cik": 1121404,
    "sponsor_names": [
     "Sanofi"
    ],
-   "market_cap": 116759901203.50829,
+   "market_cap": 117609776080.11258,
    "cap_bucket": "Large",
-   "price": 48.084999084472656,
+   "price": 48.435001373291016,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 2.09091,
    "analyst_count": 9,
    "target_price": 54.92222,
-   "upside_pct": 14.2,
+   "upside_pct": 13.4,
    "rating_spread": [
     2,
     4,
@@ -11615,16 +11509,16 @@
    "sponsor_names": [
     "Bristol-Myers Squibb"
    ],
-   "market_cap": 127377205751.64029,
+   "market_cap": 127888227209.39029,
    "cap_bucket": "Large",
-   "price": 62.314998626708984,
+   "price": 62.564998626708984,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 2.5,
    "analyst_count": 24,
    "target_price": 65.25,
-   "upside_pct": 4.7,
+   "upside_pct": 4.3,
    "rating_spread": [
     4,
     6,
@@ -11900,12 +11794,12 @@
     },
     {
      "nct_id": "NCT07100080",
-     "title": "Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-Pemetrexed for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)",
+     "title": "Study of Izalontamab Brengitecan (BMS-986507) Versus Platinum-based Chemotherapy With or Without Amivantamab for EGFR-mutated Non-small Cell Lung Cancer After Failure of EGFR TKI Therapy (IZABRIGHT-Lung01)",
      "area": "Oncology",
      "sponsor": "Bristol-Myers Squibb",
      "sponsor_is_industry": true,
      "collaborators": [],
-     "is_platform": false,
+     "is_platform": true,
      "status": "RECRUITING",
      "start_date": "2025-11-05",
      "primary_completion": "2028-12-15",
@@ -11913,16 +11807,17 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2030-11-15",
-     "last_update": "2026-10-09",
+     "last_update": "2026-11-12",
      "conditions": [
       "Non-Small Cell Lung Cancer"
      ],
-     "enrollment": 500,
+     "enrollment": 661,
      "interventions": [
       "Iza-bren",
       "Carboplatin",
       "Cisplatin",
-      "Pemetrexed"
+      "Pemetrexed",
+      "Amivantamab"
      ],
      "url": "https://clinicaltrials.gov/study/NCT07100080",
      "role": "lead"
@@ -12923,16 +12818,16 @@
    "sponsor_names": [
     "Pfizer"
    ],
-   "market_cap": 166977215543.09933,
+   "market_cap": 165096264246.07367,
    "cap_bucket": "Large",
-   "price": 29.295000076293945,
+   "price": 28.96500015258789,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 2.5,
    "analyst_count": 26,
-   "target_price": 30.25962,
-   "upside_pct": 3.3,
+   "target_price": 30.22115,
+   "upside_pct": 4.3,
    "rating_spread": [
     1,
     8,
@@ -13130,7 +13025,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2028-06-02",
-     "last_update": "2026-10-15",
+     "last_update": "2026-11-12",
      "conditions": [
       "Atopic Dermatitis"
      ],
@@ -13522,18 +13417,18 @@
      "sponsor_is_industry": true,
      "collaborators": [],
      "is_platform": false,
-     "status": "RECRUITING",
+     "status": "ACTIVE_NOT_RECRUITING",
      "start_date": "2025-07-24",
      "primary_completion": "2027-05-02",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
      "completion": "2027-05-02",
-     "last_update": "2026-09-25",
+     "last_update": "2026-11-12",
      "conditions": [
       "Eczema"
      ],
-     "enrollment": 150,
+     "enrollment": 151,
      "interventions": [
       "Abrocitinib",
       "Placebo"
@@ -13556,7 +13451,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2029-03-01",
-     "last_update": "2026-09-25",
+     "last_update": "2026-11-12",
      "conditions": [
       "Non-Small Cell Lung Cancer",
       "Carcinoma, Non-Small-Cell Lung",
@@ -13735,12 +13630,12 @@
      "is_platform": true,
      "status": "RECRUITING",
      "start_date": "2024-02-08",
-     "primary_completion": "2026-08-30",
-     "pc_type": "ESTIMATED",
+     "primary_completion": "2026-08-26",
+     "pc_type": "ACTUAL",
      "has_results": false,
      "results_posted": null,
      "completion": "2027-12-30",
-     "last_update": "2026-08-24",
+     "last_update": "2026-11-12",
      "conditions": [
       "Multiple Myeloma"
      ],
@@ -13893,7 +13788,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2029-02-28",
-     "last_update": "2026-09-22",
+     "last_update": "2026-11-12",
      "conditions": [
       "HPV-unrelated Head and Neck Squamous Cell Carcinoma"
      ],
@@ -14470,16 +14365,16 @@
    "sponsor_names": [
     "Gilead Sciences"
    ],
-   "market_cap": 210423438294.6739,
+   "market_cap": 210274603717.33478,
    "cap_bucket": "Large",
-   "price": 169.64999389648438,
+   "price": 169.52999877929688,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 1.67857,
    "analyst_count": 26,
    "target_price": 174.76923,
-   "upside_pct": 3.0,
+   "upside_pct": 3.1,
    "rating_spread": [
     6,
     16,
@@ -14922,16 +14817,16 @@
    "sponsor_names": [
     "Amgen"
    ],
-   "market_cap": 250715182813.6194,
+   "market_cap": 253768622232.03827,
    "cap_bucket": "Large",
-   "price": 463.5050048828125,
+   "price": 469.1499938964844,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "hold",
    "rating_mean": 2.70588,
    "analyst_count": 29,
-   "target_price": 429.7369,
-   "upside_pct": -7.3,
+   "target_price": 431.80585,
+   "upside_pct": -8.0,
    "rating_spread": [
     4,
     7,
@@ -15652,16 +15547,16 @@
    "sponsor_names": [
     "AstraZeneca"
    ],
-   "market_cap": 286586331026.2802,
+   "market_cap": 285687103572.9016,
    "cap_bucket": "Large",
-   "price": 184.78500366210938,
+   "price": 184.2052001953125,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 1.83333,
    "analyst_count": 12,
    "target_price": 208.075,
-   "upside_pct": 12.6,
+   "upside_pct": 13.0,
    "rating_spread": [
     2,
     7,
@@ -16206,7 +16101,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2028-03-07",
-     "last_update": "2026-10-16",
+     "last_update": "2026-11-12",
      "conditions": [
       "Chronic Rhinosinusitis With Nasal Polyps"
      ],
@@ -18578,7 +18473,7 @@
      "has_results": true,
      "results_posted": "2025-10-20",
      "completion": "2029-02-15",
-     "last_update": "2026-03-23",
+     "last_update": "2026-11-12",
      "conditions": [
       "Neurofibromatosis 1",
       "Plexiform Neurofibroma (PN)"
@@ -18919,7 +18814,7 @@
      "has_results": true,
      "results_posted": "2025-05-16",
      "completion": "2027-05-26",
-     "last_update": "2026-08-11",
+     "last_update": "2026-11-12",
      "conditions": [
       "Breast Cancer"
      ],
@@ -19956,6 +19851,34 @@
      "role": "lead"
     },
     {
+     "nct_id": "NCT03703297",
+     "title": "Study of Durvalumab + Tremelimumab, Durvalumab, and Placebo in Limited Stage Small-Cell Lung Cancer in Patients Who Have Not Progressed Following Concurrent Chemoradiation Therapy",
+     "area": "Oncology",
+     "sponsor": "AstraZeneca",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2018-09-27",
+     "primary_completion": "2024-01-15",
+     "pc_type": "ACTUAL",
+     "has_results": true,
+     "results_posted": "2025-08-01",
+     "completion": "2026-10-23",
+     "last_update": "2025-11-21",
+     "conditions": [
+      "Small Cell Lung Cancer"
+     ],
+     "enrollment": 730,
+     "interventions": [
+      "Durvalumab",
+      "Tremelimumab",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT03703297",
+     "role": "lead"
+    },
+    {
      "nct_id": "NCT03682068",
      "title": "Study of Durvalumab Given With Chemotherapy, Durvalumab in Combination With Tremelimumab Given With Chemotherapy, or Chemotherapy in Patients With Unresectable Urothelial Cancer",
      "area": "Oncology",
@@ -19986,61 +19909,6 @@
      "role": "lead"
     },
     {
-     "nct_id": "NCT03703297",
-     "title": "Study of Durvalumab + Tremelimumab, Durvalumab, and Placebo in Limited Stage Small-Cell Lung Cancer in Patients Who Have Not Progressed Following Concurrent Chemoradiation Therapy",
-     "area": "Oncology",
-     "sponsor": "AstraZeneca",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2018-09-27",
-     "primary_completion": "2024-01-15",
-     "pc_type": "ACTUAL",
-     "has_results": true,
-     "results_posted": "2025-08-01",
-     "completion": "2026-10-23",
-     "last_update": "2025-11-21",
-     "conditions": [
-      "Small Cell Lung Cancer"
-     ],
-     "enrollment": 730,
-     "interventions": [
-      "Durvalumab",
-      "Tremelimumab",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT03703297",
-     "role": "lead"
-    },
-    {
-     "nct_id": "NCT03521154",
-     "title": "A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)",
-     "area": "Oncology",
-     "sponsor": "AstraZeneca",
-     "sponsor_is_industry": true,
-     "collaborators": [],
-     "is_platform": false,
-     "status": "ACTIVE_NOT_RECRUITING",
-     "start_date": "2018-07-19",
-     "primary_completion": "2024-01-05",
-     "pc_type": "ACTUAL",
-     "has_results": true,
-     "results_posted": "2025-04-03",
-     "completion": "2027-10-29",
-     "last_update": "2026-08-04",
-     "conditions": [
-      "Non Small Cell Lung Cancer (Stage III)"
-     ],
-     "enrollment": 216,
-     "interventions": [
-      "Osimertinib 80mg/40mg",
-      "Placebo Osimertinib 80mg/40mg"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT03521154",
-     "role": "lead"
-    },
-    {
      "nct_id": "NCT03288532",
      "title": "Renal Adjuvant MultiPle Arm Randomised Trial",
      "area": "Oncology",
@@ -20068,6 +19936,33 @@
      ],
      "url": "https://clinicaltrials.gov/study/NCT03288532",
      "role": "partner"
+    },
+    {
+     "nct_id": "NCT03521154",
+     "title": "A Global Study to Assess the Effects of Osimertinib Following Chemoradiation in Patients With Stage III Unresectable Non-small Cell Lung Cancer (LAURA)",
+     "area": "Oncology",
+     "sponsor": "AstraZeneca",
+     "sponsor_is_industry": true,
+     "collaborators": [],
+     "is_platform": false,
+     "status": "ACTIVE_NOT_RECRUITING",
+     "start_date": "2018-07-19",
+     "primary_completion": "2024-01-05",
+     "pc_type": "ACTUAL",
+     "has_results": true,
+     "results_posted": "2025-04-03",
+     "completion": "2027-10-29",
+     "last_update": "2026-08-04",
+     "conditions": [
+      "Non Small Cell Lung Cancer (Stage III)"
+     ],
+     "enrollment": 216,
+     "interventions": [
+      "Osimertinib 80mg/40mg",
+      "Placebo Osimertinib 80mg/40mg"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT03521154",
+     "role": "lead"
     },
     {
      "nct_id": "NCT03528694",
@@ -20810,16 +20705,16 @@
     "Novartis",
     "Novartis Pharmaceuticals"
    ],
-   "market_cap": 301669835086.48956,
+   "market_cap": 303076879243.9435,
    "cap_bucket": "Large",
-   "price": 159.72999572753906,
+   "price": 160.47500610351562,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "hold",
    "rating_mean": 2.63636,
    "analyst_count": 10,
    "target_price": 157.1,
-   "upside_pct": -1.6,
+   "upside_pct": -2.1,
    "rating_spread": [
     3,
     2,
@@ -21233,12 +21128,12 @@
      "is_platform": false,
      "status": "RECRUITING",
      "start_date": "2024-08-13",
-     "primary_completion": "2027-06-02",
+     "primary_completion": "2029-12-31",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
-     "completion": "2027-06-30",
-     "last_update": "2026-06-11",
+     "completion": "2029-12-31",
+     "last_update": "2026-11-12",
      "conditions": [
       "Hematologic Malignancy",
       "Solid Tumor",
@@ -21246,7 +21141,8 @@
      ],
      "enrollment": 50,
      "interventions": [
-      "Pelabresib"
+      "Pelabresib",
+      "Ruxolitinib"
      ],
      "url": "https://clinicaltrials.gov/study/NCT06401356",
      "role": "lead"
@@ -22027,12 +21923,12 @@
      "is_platform": false,
      "status": "ACTIVE_NOT_RECRUITING",
      "start_date": "2017-08-23",
-     "primary_completion": "2026-12-30",
+     "primary_completion": "2027-02-26",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
-     "completion": "2026-12-30",
-     "last_update": "2026-08-21",
+     "completion": "2027-02-26",
+     "last_update": "2026-11-12",
      "conditions": [
       "Tuberous Sclerosis Complex"
      ],
@@ -22086,16 +21982,16 @@
    "sponsor_names": [
     "Merck Sharp & Dohme LLC"
    ],
-   "market_cap": 361220109387.5344,
+   "market_cap": 363475830257.3862,
    "cap_bucket": "Large",
-   "price": 146.52499389648438,
+   "price": 147.44000244140625,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 1.82143,
    "analyst_count": 26,
    "target_price": 161.525,
-   "upside_pct": 10.2,
+   "upside_pct": 9.6,
    "rating_spread": [
     5,
     14,
@@ -22110,6 +22006,36 @@
    ],
    "trial_count": 125,
    "trials": [
+    {
+     "nct_id": "NCT07750158",
+     "title": "Zanzalintinib Alone or in Combination With Pembrolizumab and Berahyaluronidase Alfa in Participants With Colorectal Cancer With Molecular Residual Disease",
+     "area": "Oncology",
+     "sponsor": "Exelixis",
+     "sponsor_is_industry": true,
+     "collaborators": [
+      "Merck Sharp & Dohme LLC"
+     ],
+     "is_platform": false,
+     "status": "RECRUITING",
+     "start_date": "2026-12-18",
+     "primary_completion": "2030-04-05",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2030-04-05",
+     "last_update": "2026-11-12",
+     "conditions": [
+      "Colorectal Cancer"
+     ],
+     "enrollment": 600,
+     "interventions": [
+      "Zanzalintinib",
+      "Pembrolizumab (+) Berahyaluronidase alfa",
+      "Placebo"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT07750158",
+     "role": "partner"
+    },
     {
      "nct_id": "NCT07917754",
      "title": "A Clinical Trial of MK-1045 With Zilovertamab Vedotin in Participants With Diffuse Large B-cell Lymphoma (MK-1045-010)",
@@ -22425,36 +22351,6 @@
      "role": "lead"
     },
     {
-     "nct_id": "NCT07750158",
-     "title": "Zanzalintinib Alone or in Combination With Pembrolizumab and Berahyaluronidase Alfa in Participants With Colorectal Cancer With Molecular Residual Disease",
-     "area": "Oncology",
-     "sponsor": "Exelixis",
-     "sponsor_is_industry": true,
-     "collaborators": [
-      "Merck Sharp & Dohme LLC"
-     ],
-     "is_platform": false,
-     "status": "RECRUITING",
-     "start_date": "2026-08-25",
-     "primary_completion": "2030-04-05",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2030-04-05",
-     "last_update": "2026-09-21",
-     "conditions": [
-      "Colorectal Cancer"
-     ],
-     "enrollment": 600,
-     "interventions": [
-      "Zanzalintinib",
-      "Pembrolizumab (+) Berahyaluronidase alfa",
-      "Placebo"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT07750158",
-     "role": "partner"
-    },
-    {
      "nct_id": "NCT07634471",
      "title": "A Clinical Trial of MK-1045 and Rituximab in People With Follicular Lymphoma (MK-1045-007)",
      "area": "Oncology",
@@ -22500,7 +22396,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2037-08-17",
-     "last_update": "2026-11-10",
+     "last_update": "2026-11-12",
      "conditions": [
       "Non-small Cell Lung Cancer"
      ],
@@ -22714,7 +22610,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2039-10-26",
-     "last_update": "2026-11-10",
+     "last_update": "2026-11-12",
      "conditions": [
       "Non-small Cell Lung Cancer"
      ],
@@ -22803,8 +22699,8 @@
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
-     "completion": "2032-02-27",
-     "last_update": "2026-08-03",
+     "completion": "2033-03-21",
+     "last_update": "2026-11-12",
      "conditions": [
       "Renal Cell Carcinoma"
      ],
@@ -22863,7 +22759,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2032-08-06",
-     "last_update": "2026-11-10",
+     "last_update": "2026-11-12",
      "conditions": [
       "Non-small Cell Lung Cancer"
      ],
@@ -22926,7 +22822,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2030-10-27",
-     "last_update": "2026-11-04",
+     "last_update": "2026-11-12",
      "conditions": [
       "Colon Adenocarcinoma",
       "Rectal Adenocarcinoma"
@@ -23637,7 +23533,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2031-02-18",
-     "last_update": "2026-11-10",
+     "last_update": "2026-11-12",
      "conditions": [
       "Non-small Cell Lung Cancer"
      ],
@@ -24853,7 +24749,7 @@
      "has_results": true,
      "results_posted": "2025-10-20",
      "completion": "2029-02-15",
-     "last_update": "2026-03-23",
+     "last_update": "2026-11-12",
      "conditions": [
       "Neurofibromatosis 1",
       "Plexiform Neurofibroma (PN)"
@@ -25929,16 +25825,16 @@
     "Genentech, Inc.",
     "Hoffmann-La Roche"
    ],
-   "market_cap": 385634701892.0,
+   "market_cap": 386590830713.7464,
    "cap_bucket": "Large",
-   "price": 60.5,
+   "price": 60.650001525878906,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 2.375,
    "analyst_count": 7,
    "target_price": 60.01429,
-   "upside_pct": -0.8,
+   "upside_pct": -1.0,
    "rating_spread": [
     1,
     2,
@@ -25962,13 +25858,13 @@
      "collaborators": [],
      "is_platform": false,
      "status": "RECRUITING",
-     "start_date": "2026-12-11",
+     "start_date": "2026-11-30",
      "primary_completion": "2028-11-30",
      "pc_type": "ESTIMATED",
      "has_results": false,
      "results_posted": null,
      "completion": "2032-11-30",
-     "last_update": "2026-11-03",
+     "last_update": "2026-11-12",
      "conditions": [
       "Early Breast Cancer",
       "Estrogen Receptor-Positive Breast Cancer",
@@ -26024,7 +25920,7 @@
      "has_results": false,
      "results_posted": null,
      "completion": "2034-06-30",
-     "last_update": "2026-10-20",
+     "last_update": "2026-11-12",
      "conditions": [
       "Early Breast Cancer"
      ],
@@ -26760,6 +26656,41 @@
      "role": "partner"
     },
     {
+     "nct_id": "NCT05722886",
+     "title": "DETERMINE (Determining Extended Therapeutic Indications for Existing Drugs in Rare Molecularly Defined Indications Using a National Evaluation Platform Trial) - Master Screening Protocol",
+     "area": "Oncology",
+     "sponsor": "Cancer Research UK",
+     "sponsor_is_industry": false,
+     "collaborators": [
+      "Hoffmann-La Roche",
+      "Novartis Pharmaceuticals"
+     ],
+     "is_platform": true,
+     "status": "RECRUITING",
+     "start_date": "2023-03-01",
+     "primary_completion": "2029-10",
+     "pc_type": "ESTIMATED",
+     "has_results": false,
+     "results_posted": null,
+     "completion": "2029-10",
+     "last_update": "2026-07-01",
+     "conditions": [
+      "Haematological Malignancy",
+      "Solid Tumour"
+     ],
+     "enrollment": 825,
+     "interventions": [
+      "Alectinib",
+      "Atezolizumab",
+      "Entrectinib",
+      "Trastuzumab in combination with pertuzumab",
+      "Vemurafenib in combination with cobimetinib",
+      "Capmatinib"
+     ],
+     "url": "https://clinicaltrials.gov/study/NCT05722886",
+     "role": "partner"
+    },
+    {
      "nct_id": "NCT05768178",
      "title": "DETERMINE Trial Treatment Arm 05: Vemurafenib in Combination With Cobimetinib in Adult Patients With BRAF Positive Cancers.",
      "area": "Oncology",
@@ -26797,41 +26728,6 @@
       "Cobimetinib"
      ],
      "url": "https://clinicaltrials.gov/study/NCT05768178",
-     "role": "partner"
-    },
-    {
-     "nct_id": "NCT05722886",
-     "title": "DETERMINE (Determining Extended Therapeutic Indications for Existing Drugs in Rare Molecularly Defined Indications Using a National Evaluation Platform Trial) - Master Screening Protocol",
-     "area": "Oncology",
-     "sponsor": "Cancer Research UK",
-     "sponsor_is_industry": false,
-     "collaborators": [
-      "Hoffmann-La Roche",
-      "Novartis Pharmaceuticals"
-     ],
-     "is_platform": true,
-     "status": "RECRUITING",
-     "start_date": "2023-03-01",
-     "primary_completion": "2029-10",
-     "pc_type": "ESTIMATED",
-     "has_results": false,
-     "results_posted": null,
-     "completion": "2029-10",
-     "last_update": "2026-07-01",
-     "conditions": [
-      "Haematological Malignancy",
-      "Solid Tumour"
-     ],
-     "enrollment": 825,
-     "interventions": [
-      "Alectinib",
-      "Atezolizumab",
-      "Entrectinib",
-      "Trastuzumab in combination with pertuzumab",
-      "Vemurafenib in combination with cobimetinib",
-      "Capmatinib"
-     ],
-     "url": "https://clinicaltrials.gov/study/NCT05722886",
      "role": "partner"
     },
     {
@@ -27424,8 +27320,8 @@
      "pc_type": "ACTUAL",
      "has_results": false,
      "results_posted": null,
-     "completion": "2027-07-31",
-     "last_update": "2026-08-17",
+     "completion": "2028-07-28",
+     "last_update": "2026-11-12",
      "conditions": [
       "Estrogen Receptor-Positive, HER2-Negative Locally Advanced or Metastatic Breast Cancer"
      ],
@@ -27822,16 +27718,16 @@
    "sponsor_names": [
     "AbbVie"
    ],
-   "market_cap": 517646446000.77374,
+   "market_cap": 522365951329.50726,
    "cap_bucket": "Large",
-   "price": 292.8500061035156,
+   "price": 295.5199890136719,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 1.68966,
    "analyst_count": 26,
-   "target_price": 310.65384,
-   "upside_pct": 6.1,
+   "target_price": 311.80768,
+   "upside_pct": 5.5,
    "rating_spread": [
     7,
     16,
@@ -28810,16 +28706,16 @@
     "Janssen, LP",
     "Johnson & Johnson"
    ],
-   "market_cap": 671134049628.4182,
+   "market_cap": 685312848497.3757,
    "cap_bucket": "Large",
-   "price": 278.7900085449219,
+   "price": 284.6799011230469,
    "currency": "USD",
    "sector": "Drug Manufacturers - General",
    "rating": "buy",
    "rating_mean": 1.91304,
    "analyst_count": 22,
    "target_price": 279.4091,
-   "upside_pct": 0.2,
+   "upside_pct": -1.9,
    "rating_spread": [
     5,
     11,
